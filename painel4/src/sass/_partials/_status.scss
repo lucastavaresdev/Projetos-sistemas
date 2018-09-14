@@ -1,0 +1,40 @@
+.titulo_status {
+    line-height: 0;
+    margin: 11px;
+    margin-left: 9px;
+}
+
+.center-status {
+    margin-left: 15% !important;
+}
+
+.status-1 {
+    background: $aguardando !important;
+    @include tamanho_status;
+}
+
+.status-2 {
+    background: $em_atendimento !important;
+    @include tamanho_status;
+}
+
+.status-3 {
+    background: $cancelado !important;
+    @include tamanho_status;
+}
+
+.status-4 {
+    background: $finalizado !important;
+    @include tamanho_status;
+}
+
+.status-5 {
+    background: $atendido !important;
+    @include tamanho_status;
+}
+
+.status-6,
+.status-null {
+    background: darken($cinza, 20%) !important;
+    @include tamanho_status;
+}

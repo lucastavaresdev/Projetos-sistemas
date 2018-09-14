@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Cousine");
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+div {
+  font-family: "Montserrat", sans-serif; }
+
+body {
+  background: #F8FAFC; }
+
+.borda-topo-left {
+  border-top-left-radius: 25px; }
+
+.borda-topo-right {
+  border-top-right-radius: 25px; }
+
+.icone {
+  margin-right: 10px; }
+
+@media (max-device-width: 767px) {
+  main {
+    margin-top: 13%; } }
+.cor-aviso {
+  color: #E82C0C; }
+
+.ocultar {
+  display: none !important; }
+
+.negrito-informacoes {
+  font-weight: 500; }
+
+.sem_negrito-informacoes {
+  font-weight: 400; }
+
+body {
+  background-image: url("../img/bg_login.jpg");
+  height: 100%;
+  background-size: cover; }
+
+main {
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  left: 50%; }
+
+.logo_login {
+  padding-top: 10px; }
+
+.btn_login {
+  background: #006db3; }
+  .btn_login:hover {
+    background: #006db3; }
+
+/*# sourceMappingURL=login.css.map */

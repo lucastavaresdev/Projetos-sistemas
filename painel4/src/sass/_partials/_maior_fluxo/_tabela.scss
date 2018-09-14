@@ -1,0 +1,19 @@
+#qtd_por_horario_de_procedimento,
+#qtd_por_horario_de_pacientes {
+    td {
+        background: #ffffff;
+    }
+    b {
+        color: darken($cor-primaria, 5%);
+        font-weight: 600;
+    }
+}
+
+.maior_fluxo_subtitulo {
+    @include fontebase($monte-serrat, '18px', 400, $cor-primaria);
+    padding-bottom: 25px;
+}
+
+.maior_fluxo_titulo {
+    @include fontebase($monte-serrat, '20px', 500, darken($cinza, 70%));
+}

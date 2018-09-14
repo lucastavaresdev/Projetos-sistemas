@@ -1,0 +1,123 @@
+.dados_consolidados {
+    background: $branco;
+    border-bottom: 2px solid darken($cinza, 3%);
+    z-index: 5000px;
+    .bg-consolidado {
+        padding-top: 1.5%;
+        padding-button: 1.5%;
+    }
+    p {
+        @include fontebase($monte-serrat, '15px', 400, darken($cinza, 50%));
+    }
+    h4 {
+        line-height: 0.4;
+        @include fontebase($monte-serrat, '39px', 400, $cor-primaria);
+    }
+    .dash_btn_superior {
+        width: 60%;
+        height: 18%;
+        border-radius: 7px;
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.7s ease;
+        &:hover {
+            background: $cor-primaria;
+            p,
+            h4,
+            li,
+            .p-msg,
+            span {
+                color: $branco;
+            }
+        }
+    }
+}
+
+.m-fluxo {
+    p {
+        padding-top: 7px;
+    }
+}
+
+.tamanho_da_linha_titulo_fluxo {
+    line-height: 0.7;
+}
+
+.fluxo-1 {
+    li {
+        line-height: 1;
+        @include fontebase($monte-serrat, '22px', 400, $cor-primaria);
+        cursor: pointer;
+    }
+    span {
+        white-space: nowrap;
+        line-height: 0.8;
+        @include fontebase($monte-serrat, '17px', 400, darken($cinza, 45%));
+    }
+}
+
+.p-msg {
+    @include fontebase($monte-serrat, '19px', 400, $cor-primaria);
+    cursor: pointer;
+    line-height: 1.1;
+    &:hover {
+        color: $branco;
+    }
+}
+
+@media(max-width: 920px) {
+    .bg-consolidado {
+        p {
+            @include fontebase($monte-serrat, '9px', 400, darken($cinza, 50%));
+        }
+        h4 {
+            line-height: 0.4;
+            @include fontebase($monte-serrat, '23px', 400, $cor-primaria);
+        }
+    }
+    .fluxo-1 {
+        li {
+            line-height: 1;
+            @include fontebase($monte-serrat, '17px', 400, $cor-primaria);
+            cursor: pointer;
+        }
+        span {
+            white-space: nowrap;
+            line-height: 0.8;
+            @include fontebase($monte-serrat, '12px', 400, darken($cinza, 45%));
+        }
+    }
+    .tamanho_da_linha_titulo_fluxo {
+        line-height: 0.7;
+    }
+}
+
+.fade-in {
+    opacity: 1;
+    animation: fadein 2s;
+    -webkit-animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+//semhover 
+.dash_btn_superior_sem_hover {
+    width: 60%;
+    height: 18%;
+    border-radius: 7px;
+    text-align: center;
+    &:hover {
+        p,
+        h4,
+        li,
+        .p-msg,
+        span {}
+    }
+}

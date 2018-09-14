@@ -1,0 +1,49 @@
+.tamanho-barra {
+    z-index: 0;
+    height: 100%;
+    width: 22px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: $branco;
+    box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.082);
+    top: 51px;
+    .material-icons {
+        padding-left: 4px;
+        color: $cor-primaria;
+    }
+}
+
+.close {
+    height: 88.2%;
+    width: 22px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    cursor: pointer;
+    background: $branco;
+    box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.082);
+    .material-icons {
+        padding-left: 4px;
+        color: $cor-primaria;
+    }
+}
+
+.open-a {
+    transform: translateX(0);
+    transition: 400ms;
+}
+
+.open-b {
+    transform: translateX(-105%);
+    transition: 400ms;
+}
+
+.datepicker-container {
+    width: 500px;
+    height: 500px;
+}

@@ -1,0 +1,78 @@
+.tabela_bg {
+    background: $branco;
+}
+
+.tabs {
+    color: darken($cinza, 50%);
+    position: inherit;
+    .tab {
+        @include fontebase($monte-serrat, '14px', 500, $cor-primaria);
+        a {
+            color: darken($cinza, 50%);
+            &.active {
+                @include fontebase($monte-serrat, '14px', 500, $cor-primaria);
+            }
+            &:hover {
+                color: darken($cor-primaria, 10%);
+            }
+            &:focus.active {
+                background-color: rgba($cor-primaria, 0.2);
+            }
+        }
+    }
+    .indicator {
+        background: $cor-primaria;
+    }
+}
+
+.indicator {
+    display: none;
+}
+
+select {
+    display: block;
+    .titulo_do_setor_mobile {
+        display: none
+    }
+}
+
+drop_topo {
+    .mobile {
+        display: block;
+    }
+}
+
+.obs {
+    z-index: 0;
+}
+
+@media (max-width: 920px) {
+    .mobile {
+        display: none;
+    }
+    .mobile2 {
+        display: block;
+        a {
+            color: red !important;
+        }
+    }
+    .qtd_pag {
+        display: none;
+    }
+    html {
+        font-size: 13px;
+    }
+    .dataTables_paginate paging_simple_numbers {
+        margin-bottom: 11px;
+    }
+    table.dataTable thead th,
+    table.dataTable thead td {
+        border-bottom: none !important;
+    }
+    table.responsive-table td {
+        min-height: 1.8em;
+    }
+    .drop_topo {
+        @include fontebase($monte-serrat, '10px', 300, $branco);
+    }
+}

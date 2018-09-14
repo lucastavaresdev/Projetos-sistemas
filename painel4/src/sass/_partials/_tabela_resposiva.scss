@@ -1,0 +1,178 @@
+@media (max-width: 620px) {
+    .datepicker-container {
+        width: 300px !important;
+    }
+    .datepicker-date-display {
+        background-color: $cor-primaria;
+        padding-left: 355px;
+        .date-text,
+        .year-text {
+            margin-left: -410px;
+        }
+    }
+    .ocutarmobile {
+        display: none !important;
+    }
+    table.responsive-table {
+        thead {
+            th {
+                display: none;
+            }
+        }
+    }
+    .agendamento {
+        ::-webkit-scrollbar {
+            width: 4px;
+            background: darken($cinza, 1%);
+        }
+        ::-webkit-scrollbar-button {
+            display: none;
+        }
+        ::-webkit-scrollbar-track {
+            border-radius: 5px;
+            /*3*/
+        }
+        ::-webkit-scrollbar-track-piece {
+            border-radius: 20px;
+            background: none;
+            /* 4 */
+        }
+        ::-webkit-scrollbar-thumb {
+            width: 4px;
+            background: darken($cinza, 5%);
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+        }
+        ::-webkit-scrollbar-corner {
+            /* 6 */
+            background: fuchsia;
+        }
+        ::-webkit-resizer {
+            /* 7 */
+            background: springgreen;
+        }
+    }
+    .titulo_mobile_estrutura {
+        width: 50% !important;
+    }
+    .setor_mobile_estrutura {
+        width: 1px !important;
+        margin-left: 13% !important;
+    }
+    .dash_btn_superior {
+        .p-msg {
+            font-size: 10px;
+        }
+    }
+    .dados_consolidados {
+        .dash_btn_superior {
+            width: 80% !important;
+        }
+        .dash_btn_superior_sem_hover {
+            width: 80% !important;
+        }
+    }
+    .input-calendario {
+        input {
+            border: none;
+            border-bottom: none !important;
+        }
+        .figuras {
+            display: inline-block;
+            padding-left: 24px;
+            line-height: 16px;
+            background-position: 2px center;
+            background-repeat: no-repeat;
+            background-image: url(../img/icon-calendario.jpg);
+        }
+        ::-webkit-input-placeholder {
+            color: transparent;
+        }
+        :-moz-placeholder {
+            /* Firefox 18- */
+            color: transparent;
+        }
+        ::-moz-placeholder {
+            /* Firefox 19+ */
+            color: transparent;
+        }
+        :-ms-input-placeholder {
+            color: transparent;
+        }
+    }
+}
+
+@media (min-width: 621px) and (max-width: 920px) {
+    .datepicker-container {
+        width: 300px !important;
+    }
+    .datepicker-date-display {
+        background-color: $cor-primaria;
+        padding-left: 245px;
+        .date-text,
+        .year-text {
+            margin-left: -220px;
+        }
+    }
+    .ocutarmobile {
+        display: none !important;
+    }
+    .agendamento {
+        ::-webkit-scrollbar {
+            width: 4px;
+            background: darken($cinza, 1%);
+        }
+        ::-webkit-scrollbar-button {
+            display: none;
+        }
+        ::-webkit-scrollbar-track {
+            border-radius: 5px;
+            /*3*/
+        }
+        ::-webkit-scrollbar-track-piece {
+            border-radius: 20px;
+            background: none;
+            /* 4 */
+        }
+        ::-webkit-scrollbar-thumb {
+            width: 4px;
+            background: darken($cinza, 5%);
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+        }
+        ::-webkit-scrollbar-corner {
+            /* 6 */
+            background: fuchsia;
+        }
+        ::-webkit-resizer {
+            /* 7 */
+            background: springgreen;
+        }
+    }
+    .titulo_mobile_estrutura {
+        width: 50% !important;
+    }
+    .setor_mobile_estrutura {
+        width: 1px !important;
+        margin-left: 13% !important;
+    }
+    .dash_btn_superior {
+        .p-msg {
+            font-size: 10px;
+        }
+    }
+    .dados_consolidados {
+        .dash_btn_superior {
+            width: 80% !important;
+        }
+        .dash_btn_superior_sem_hover {
+            width: 80% !important;
+        }
+    }
+}

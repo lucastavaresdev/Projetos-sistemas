@@ -1,0 +1,30 @@
+@import "./_variaveis.scss";
+@import "./_base.scss";
+
+body{
+    background-image: url("../img/bg_login.jpg") ;
+    height: 100%;
+    background-size: cover;
+}
+
+main {
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+}
+
+.logo_login{
+    padding-top: 10px;
+}
+
+.btn_login{
+    background: darken($cor-primaria, 5%);
+    &:hover{
+        background:  darken($cor-primaria, 5%);
+    }
+}
