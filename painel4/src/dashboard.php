@@ -81,13 +81,13 @@
                             <tr>
                                 <th  class="ocutarmobile"></th>
                                 <th class="ocultar">id_agendamento</th>
-                                <th>hora</th>
-                                <th>atividade</th>
+                                <th>Hora</th>
+                                <th>Atividade</th>
                                 <th>IH</th>
-                                <th>paciente</th>
-                                <th>servico</th>
+                                <th>Paciente</th>
+                                <th>Servico</th>
                                 <th>Localização</th>
-                                <th>status</th>
+                                <th>Status</th>
                                 <th>Obs</th>
                                 <th class="ocultar">codigo_exame</th>
                                 <th class="ocultar">codigo_servico</th>
