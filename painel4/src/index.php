@@ -2,12 +2,11 @@
 
 <!DOCTYPE html>
 <?php
- session_start();  
+ session_start();
 
- if(isset($_SESSION["username"]))  
- {  
-    header("location:./dashboard.php");  
- }  
+ if (isset($_SESSION["username"])) {
+     header("location:./dashboard.php");
+ }
    
 
 ?>
@@ -58,9 +57,9 @@
                                     </form>
                                     
                                     <?php
-                                                if(isset($_GET['login']) && $_GET['login'] == "true") {
-                                                        echo "<h5>Usuario e senha incorretos</h5>";
-                                                } 
+                                                if (isset($_GET['login']) && $_GET['login'] == "true") {
+                                                    echo "<h5>Usuario e senha incorretos</h5>";
+                                                }
                                     ?>
 
                                 </div>
@@ -71,6 +70,14 @@
             </div>
         </main>
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125496401-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments); }
+        gtag('js', new Date());
+      
+        gtag('config', 'UA-125496401-1');
+</script>
 
 
 

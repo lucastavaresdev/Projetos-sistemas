@@ -129,6 +129,14 @@
 ?>
 <script src="./js/index.js"></script>
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125496401-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments); }
+        gtag('js', new Date());
+      
+        gtag('config', 'UA-125496401-1');
+</script>
 
 
 <script>

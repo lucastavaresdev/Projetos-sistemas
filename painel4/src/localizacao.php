@@ -35,6 +35,14 @@
 		</div>
 	</div>
 </section>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125496401-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments); }
+        gtag('js', new Date());
+      
+        gtag('config', 'UA-125496401-1');
+</script>
 
 <?php include './templates/frameworks.html'; ?>
    <!-- <script src="./js/localizacao.js"></script> -->
