@@ -1,0 +1,25 @@
+.sidenav {
+    width: 250px;
+    top: 51px;
+    &-overlay {
+        background: none;
+    }
+}
+
+.conteudo_side {
+    width: 90.333333% !important;
+    padding: 0 !important;
+    .bg_nav {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.logo-sidenav {
+    width: 109%;
+}
+
+.sair {
+    position: absolute !important;
+    bottom: 112px !important;
+}

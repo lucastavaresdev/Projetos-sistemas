@@ -1,0 +1,62 @@
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+.agendamento {
+    position: relative;
+    #agendamemento_card_notificacao {
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        top: 0;
+        transition: background .3s ease-out .1s;
+        height: 700px;
+        .titulo {
+            font-size: 15px;
+        }
+        .card {
+            .card-content {
+                padding: 12px;
+            }
+        }
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-button {
+        display: none;
+    }
+    ::-webkit-scrollbar-track {
+        border-radius: 20px;
+        /* 3 */
+    }
+    ::-webkit-scrollbar-track-piece {
+        border-radius: 20px;
+        background: none;
+        /* 4 */
+    }
+    ::-webkit-scrollbar-thumb {
+        background: darken($cinza, 5%);
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+    }
+    ::-webkit-scrollbar-corner {
+        /* 6 */
+        background: fuchsia;
+    }
+    ::-webkit-resizer {
+        /* 7 */
+        background: springgreen;
+    }
+    .paging_simple_numbers {
+        font-size: 11px;
+    }
+    .dataTables_wrapper .dataTables_filter input {
+        margin-left: 0em;
+    }
+}

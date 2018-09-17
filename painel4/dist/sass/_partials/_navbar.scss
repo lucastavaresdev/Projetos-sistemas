@@ -1,0 +1,60 @@
+nav {
+    box-shadow: none;
+    background: $cor-primaria;
+    height: 50px;
+    border-bottom: solid 2px darken($cor-primaria, 10%);
+    position: fixed;
+    z-index: 1;
+    #titulo_do_setor {
+        @include fontebase($monte-serrat, '26px', 300, $branco);
+        line-height: 2;
+    }
+    .logo {
+        @include fontebase($monte-serrat, '26px', 300, $branco);
+        margin-left: 4%;
+        line-height: 53px;
+        b {
+            @include fontebase($monte-serrat, '26px', 600, $branco);
+        }
+    }
+    ul {
+        a {
+            @include fontebase($monte-serrat, '26px', 300, $branco);
+            padding: 0;
+            line-height: 1.9;
+        }
+    }
+    .drop_topo {
+        i {
+            line-height: 53px;
+        }
+    }
+}
+
+.setor_espacamento {
+    padding-right: 0 !important;
+}
+
+.icon_mobile_menu {
+    padding-right: 10px;
+}
+
+@media (max-width: 920px) {
+    #titulo_do_setor {
+        @include fontebase($monte-serrat, '13px !important', 300, $branco);
+        line-height: 53px !important;
+        margin-left: -50px;
+    }
+    .logo {
+        @include fontebase($monte-serrat, '13px !important', 300, $branco);
+        margin-left: 4%;
+        line-height: 53px;
+        b {
+            @include fontebase($monte-serrat, '13px !important', 300, $branco);
+        }
+    }
+    .drop_topo {
+        @include fontebase($monte-serrat, '13px !important', 300, $branco);
+        line-height: 53px;
+    }
+}

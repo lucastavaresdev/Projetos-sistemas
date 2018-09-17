@@ -1,0 +1,10 @@
+.pacientes {
+    .topo {
+        margin-top: 60px;
+    }
+    .titulo {
+        @include fontebase($monte-serrat, '30px', 500, $cor-primaria);
+        text-align: center;
+        line-height: 21px !important;
+    }
+}
