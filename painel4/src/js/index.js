@@ -85,7 +85,7 @@ function lista_de_pacientes(data) {
 function status(vinculado, desvinculado, inicio_do_exame, final_do_exame, status_cancelado_vindo_do_banco) {
     nstatus = '';
     status_cancelado_vindo_do_banco = parseInt(status_cancelado_vindo_do_banco);
-    if (status_cancelado_vindo_do_banco === 3 && status_cancelado_vindo_do_banco !== null) {
+    if (status_cancelado_vindo_do_banco === 3) {
         console.log('cancelado')
         nstatus = 3;
         return nstatus
@@ -97,7 +97,7 @@ function status(vinculado, desvinculado, inicio_do_exame, final_do_exame, status
         console.log('Finalizado')
         nstatus = 4
         return nstatus
-    } else if (vinculado && !inicio_do_exame) {
+    } else if (vinculado && !inicio_do_exame || status_cancelado_vindo_do_banco === 5) {
         console.log('Aguardando')
         nstatus = 1
         return nstatus
