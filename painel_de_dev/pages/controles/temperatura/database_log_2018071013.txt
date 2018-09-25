@@ -1,1 +1,0 @@
-10/07/2018 13:03:20 Table 'nipo.tracking' doesn't exist

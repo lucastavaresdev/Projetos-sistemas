@@ -1,3 +1,0 @@
-11/07/2018 15:26:34 Unknown column 'rssi' in 'field list'
-11/07/2018 15:27:06 Unknown column 'rssi' in 'field list'
-11/07/2018 15:35:54 Unknown column 'rssi' in 'field list'

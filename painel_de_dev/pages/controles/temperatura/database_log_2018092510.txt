@@ -1,1 +1,0 @@
-25/09/2018 10:01:01 Table 'hcor.tracking' doesn't exist

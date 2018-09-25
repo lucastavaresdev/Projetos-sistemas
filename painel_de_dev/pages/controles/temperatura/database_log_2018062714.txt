@@ -1,3 +1,0 @@
-27/06/2018 14:00:29 Table 'nipo.tracking' doesn't exist
-27/06/2018 14:09:31 Table 'nipo.tracking' doesn't exist
-27/06/2018 14:33:20 Table 'nipo.tracking' doesn't exist
