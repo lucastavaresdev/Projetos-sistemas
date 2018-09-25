@@ -1,0 +1,54 @@
+10/07/2018 14:30:53 - 
+
+Gateway: F90F18F949B2
+Devices: 1
+Status: 1
+
+Beacon: DB5AB5698FE9 Tag 1 status: 0 | power:-56 rssi:-57 acc:1.06 | major: 24 minor: 1 | temp:  umid:  bat: 
+
+---------------------------------------------
+Gateway: F90F18F949B2
+---------------------------------------------
+Devices: 1
+action: update
+status: 1
+maxrssi: -100
+maxacc: 4.00
+stabilizer: 2
+timein: 0
+timeout: 30
+garbage: 10
+id_sala: 
+
+---------------------------------------------
+Beacon: DB5AB5698FE9
+---------------------------------------------
+model: Tag
+mac: DB5AB5698FE9
+uuid: EBEFD083-70A2-47C8-9837-E7B5634D17EC
+major: 24
+minor: 1
+rssi: -51 (real)
+type: 061A
+temp: 
+umid: 
+bat: 
+adv: 0201061AFF4C000215EBEFD08370A247C89837E7B5634D17EC00180001C5
+action: update
+status: 0
+codigo: 1
+id_vinculado: 
+categoria: 
+power: -56
+factor: 4
+rssi_buffer3: -60
+rssi_buffer2: -62
+rssi_buffer1: -51
+---
+rssi: -57 (final)
+acc: 1.06
+
+-- skip --
+id_sala: (none)
+
+

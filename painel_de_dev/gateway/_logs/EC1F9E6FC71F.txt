@@ -1,0 +1,68 @@
+26/07/2018 19:47:36 - 
+
+Gateway: EC1F9E6FC71F
+Devices: 4
+Status: 1
+
+Beacon: C7BAC8834822 Pulseira 40 status: 1 | power:-56 rssi:-79 acc:3.76 | major: 22 minor: 40 | temp:  umid:  bat: 
+
+---------------------------------------------
+Gateway: EC1F9E6FC71F
+---------------------------------------------
+Devices: 4
+action: update
+status: 1
+maxrssi: -70
+maxacc: 4.00
+stabilizer: 2
+timein: 30
+timeout: 50000
+garbage: 10
+id_sala: 26
+
+---------------------------------------------
+Beacon: C7BAC8834822
+---------------------------------------------
+model: Pulseira
+mac: C7BAC8834822
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 40
+rssi: -83 (real)
+type: 061A
+temp: 
+umid: 
+bat: 
+adv: 0201061AFF4C000215EBEFD08370A247C89837E7B5634DF52400160028B007086A61616C65650303F0FF
+action: update
+status: 1
+codigo: 40
+id_vinculado: 98395
+categoria: Paciente
+power: -56
+factor: 4
+rssi_buffer3: -80
+rssi_buffer2: -75
+rssi_buffer1: -83
+---
+rssi: -79 (final)
+acc: 3.76
+
+-- skip --
+Out of range: -79 < -70
+
+---------------------------------------------
+Beacon: 29969D46F0C5
+---------------------------------------------
+model: Desconhecido
+mac: 29969D46F0C5
+uuid: 40A6316F-14AF-56AF-7268-3928CC6AB729
+major: 44970
+minor: 8238
+rssi: -82 (real)
+type: 0600
+temp: 
+umid: 
+bat: 
+adv: 1EFF060001092000A940A6316F14AF56AF72683928CC6AB729AFAA202E6519
+

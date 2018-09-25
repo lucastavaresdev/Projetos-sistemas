@@ -1,0 +1,22 @@
+26/07/2018 19:47:33 - 
+
+Gateway: FD753965318E
+Devices: 0
+Status: 1
+
+
+---------------------------------------------
+Gateway: FD753965318E
+---------------------------------------------
+Devices: 0
+action: update
+status: 1
+maxrssi: -70
+maxacc: 4.00
+stabilizer: 2
+timein: 30
+timeout: 240
+garbage: 10
+id_sala: 35
+
+

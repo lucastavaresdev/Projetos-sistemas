@@ -1,0 +1,9 @@
+﻿Gateway: CAD196DCE679
+Nome: 'Gateway 01', Setor: Setor 01, Tracking: Automático, Time-In: 10, Time-Out: 60, Trocar de Setor: Fechar Log, RSSI: -53
+Movimentações fechadas: 0
+Movimentações apagadas: 0
+Beacons Encontrados: 1 
+
+#1
+mac: 7D820A3461C8, data: 02011A0AFF4C0010050B10E0500D, rssi: -76
+Beacon não cadastrado ou inativo 

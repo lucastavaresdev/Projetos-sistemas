@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="pt-br"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Dashboard</title><link rel="stylesheet" href="css/bootstrap.css"><link rel="stylesheet" href="css/style.css"></head><body><!--navbar topo--><nav class="navbar navbar-expand-lg"><div class="navbar-brand" href="#"><h1 class="tituloprincipal">Dashboard</h1></div><button href="#menu-toggle" id="menu-toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span><svg class="menu" viewBox="0 0 24 24" version="1.1" width="24px" height="24px"><g id="surface1"><path d="M 0 2 L 0 4 L 24 4 L 24 2 Z M 0 11 L 0 13 L 24 13 L 24 11 Z M 0 20 L 0 22 L 24 22 L 24 20 Z "/></g></svg></span></button></nav><div id="wrapper"><!-- Sidebar --><div id="sidebar-wrapper"><ul class="sidebar-nav"><li class="sidebar-brand"><a href="#"></a></li><a href="#"><li><img class="icone" src="img/icon-dashboard.png" alt="">Dashboard</li></a><!-- <a href="#">
+                    <li>
+                        <img class="icone" src="img/icon-lista.png" alt="">Lista
+                    </li> 
+                </a>
+--></ul></div>><div id="page-content-wrapper"><div class="container-fluid"></div></div><!-- /#page-content-wrapper --></div><!-- /#wrapper --><main role="main" class="col-md-9 col-lg-10 offset-md-1"><section><div class="container-fluid mt-3"><div class="row"><div class="col-md-12 col-lg-6"><h1 class="h4 text-center tituloPaciente">Tracking de Paciente</h1><table class="table"><thead class="topo_tabela"><tr class="a"><th class="borda-topo-left" scope="col">Nome</th><th class="borda-topo-right" scope="col">Local</th></tr></thead><tbody class="conteudo_tabela" id="tabela"></tbody></table></div><div class="col-md-12 col-lg-6 tablet"><h1 class="h4 text-center">Salas</h1><div class="table-responsive-sm"><table class="table"><thead class="topo_tabela"><tr class="a"><th class="borda-topo-left" scope="col">Local</th><th class="borda-topo-right" scope="col">Ocupações</th></tr></thead><tbody class="conteudo_tabela" id="tabela_localizacao"></tbody></table></div></div></div></div></section><u onclick="linkMenu()"style="color:#3366ff;cursor: pointer">Voltar Itech Flow</u></main></body><script src="./componentes/jquery.js"></script><!-- <script src="../dist/js/app.min.js"></script> --><script src="./componentes/bootstrap.min.js"></script><script src="./componentes/ajax.js"></script><script src="./componentes/Chart.min.js"></script><!-- <script src="./js/app.min.js"></script>  --><script src="./js/grafico.js"></script><script src="componentes/lerjson.js"></script><script>if ($(window).width() <= 900) {
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    }
+    else {
+        $("#wrapper").toggleClass("toggled");
+    }
+	
+	
+ function linkMenu() {
+     var UrlAtual =window.location.href;    
+     var n = UrlAtual.indexOf("nipo");
+     var nfinal = n + 4;  
+     var urlDestino = UrlAtual.substring(0, nfinal); 
+    
+    
+    window.location.href =  urlDestino+"/index.php?";  
+
+} 	
+	
+</script></html>

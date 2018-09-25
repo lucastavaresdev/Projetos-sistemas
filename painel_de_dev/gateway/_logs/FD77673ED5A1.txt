@@ -1,0 +1,22 @@
+10/07/2018 14:17:58 - 
+
+Gateway: FD77673ED5A1
+Devices: 0
+Status: 1
+
+
+---------------------------------------------
+Gateway: FD77673ED5A1
+---------------------------------------------
+Devices: 0
+action: update
+status: 1
+maxrssi: -100
+maxacc: 4.00
+stabilizer: 2
+timein: 0
+timeout: 30
+garbage: 10
+id_sala: 
+
+

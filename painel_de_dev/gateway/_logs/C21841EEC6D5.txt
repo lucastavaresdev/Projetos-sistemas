@@ -1,0 +1,279 @@
+26/07/2018 19:47:34 - 
+
+Gateway: C21841EEC6D5
+Devices: 20
+Status: 1
+
+Beacon: D9AB3177C7CA Desconhecido 58 status: 1 | power:-56 rssi:-80 acc:3.98 | major: 22 minor: 58 | temp:  umid:  bat: 
+Beacon: F088AF0692F0 Pulseira 49 status: 1 | power:-56 rssi:-77 acc:3.35 | major: 22 minor: 49 | temp:  umid:  bat: 
+Beacon: D6C70CD141E7 Desconhecido 53 status: 1 | power:-56 rssi:-80 acc:3.98 | major: 22 minor: 53 | temp:  umid:  bat: 
+Beacon: F5CCA8E4DAAD Desconhecido 62 status: 1 | power:-56 rssi:-77 acc:3.35 | major: 22 minor: 62 | temp:  umid:  bat: 
+Beacon: C828F56EEE25 Desconhecido 35 status: 1 | power:-56 rssi:-79 acc:3.76 | major: 22 minor: 35 | temp:  umid:  bat: 
+Beacon: C7D30DE17FCE Pulseira 56 status: 1 | power:-56 rssi:-74 acc:2.82 | major: 22 minor: 56 | temp:  umid:  bat: 
+
+---------------------------------------------
+Gateway: C21841EEC6D5
+---------------------------------------------
+Devices: 20
+action: update
+status: 1
+maxrssi: -70
+maxacc: 4.00
+stabilizer: 2
+timein: 30
+timeout: 240
+garbage: 10
+id_sala: 40
+
+---------------------------------------------
+Beacon: 73947302885E
+---------------------------------------------
+model: Desconhecido
+mac: 73947302885E
+uuid: 08253164-F856-1007-E88D-3E2F12AA1005
+major: 2832
+minor: 47176
+rssi: -67 (real)
+type: 1A1A
+temp: 
+umid: 
+bat: 
+adv: 02011A1AFF4C000C0E08253164F8561007E88D3E2F12AA10050B10B848DD
+---------------------------------------------
+Beacon: D9AB3177C7CA
+---------------------------------------------
+model: Desconhecido
+mac: D9AB3177C7CA
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 58
+rssi: -80 (real)
+type: 061A
+temp: 
+umid: 
+bat: 
+adv: 0201061AFF4C000215EBEFD08370A247C89837E7B5634DF5240016003ACB08084A5052503030370303F0FF
+action: update
+status: 1
+codigo: 58
+id_vinculado: 
+categoria: 
+power: -56
+factor: 4
+rssi_buffer3: -80
+rssi_buffer2: -80
+rssi_buffer1: -80
+---
+rssi: -80 (final)
+acc: 3.98
+
+-- skip --
+id_vinculado: (none)
+
+---------------------------------------------
+Beacon: 73947302885E
+---------------------------------------------
+model: Desconhecido
+mac: 73947302885E
+uuid: 08253164-F856-1007-E88D-3E2F12AA1005
+major: 2832
+minor: 47176
+rssi: -68 (real)
+type: 1A1A
+temp: 
+umid: 
+bat: 
+adv: 02011A1AFF4C000C0E08253164F8561007E88D3E2F12AA10050B10B848DD
+---------------------------------------------
+Beacon: F088AF0692F0
+---------------------------------------------
+model: Pulseira
+mac: F088AF0692F0
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 49
+rssi: -76 (real)
+type: 061A
+temp: 
+umid: 
+bat: 
+adv: 0201061AFF4C000215EBEFD08370A247C89837E7B5634DF52400160031B007086A61616C65650303F0FF
+action: insert
+beacon_default_status: 0
+beacon_default_power: -56
+beacon_default_factor: 4
+status: 1
+codigo: 49
+id_vinculado: 
+categoria: 
+power: -56
+factor: 4
+rssi_buffer3: -79
+rssi_buffer2: -77
+rssi_buffer1: -76
+---
+rssi: -77 (final)
+acc: 3.35
+
+-- skip --
+id_vinculado: (none)
+
+---------------------------------------------
+Beacon: D6C70CD141E7
+---------------------------------------------
+model: Desconhecido
+mac: D6C70CD141E7
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 53
+rssi: -81 (real)
+type: 061A
+temp: 
+umid: 
+bat: 
+adv: 0201061AFF4C000215EBEFD08370A247C89837E7B5634DF52400160035CB
+action: update
+status: 1
+codigo: 53
+id_vinculado: 
+categoria: 
+power: -56
+factor: 4
+rssi_buffer3: -80
+rssi_buffer2: -81
+rssi_buffer1: -81
+---
+rssi: -80 (final)
+acc: 3.98
+
+-- skip --
+id_vinculado: (none)
+
+---------------------------------------------
+Beacon: 73947302885E
+---------------------------------------------
+model: Desconhecido
+mac: 73947302885E
+uuid: 08253164-F856-1007-E88D-3E2F12AA1005
+major: 2832
+minor: 47176
+rssi: -71 (real)
+type: 1A1A
+temp: 
+umid: 
+bat: 
+adv: 02011A1AFF4C000C0E08253164F8561007E88D3E2F12AA10050B10B848DD
+---------------------------------------------
+Beacon: F5CCA8E4DAAD
+---------------------------------------------
+model: Desconhecido
+mac: F5CCA8E4DAAD
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 62
+rssi: -79 (real)
+type: 061A
+temp: 
+umid: 
+bat: 
+adv: 0201061AFF4C000215EBEFD08370A247C89837E7B5634DF5240016003ECB
+action: insert
+beacon_default_status: 0
+beacon_default_power: -56
+beacon_default_factor: 4
+status: 1
+codigo: 62
+id_vinculado: 
+categoria: 
+power: -56
+factor: 4
+rssi_buffer3: -76
+rssi_buffer2: -78
+rssi_buffer1: -79
+---
+rssi: -77 (final)
+acc: 3.35
+
+-- skip --
+id_vinculado: (none)
+
+---------------------------------------------
+Beacon: 73947302885E
+---------------------------------------------
+model: Desconhecido
+mac: 73947302885E
+uuid: 08253164-F856-1007-E88D-3E2F12AA1005
+major: 2832
+minor: 47176
+rssi: -72 (real)
+type: 1A1A
+temp: 
+umid: 
+bat: 
+adv: 02011A1AFF4C000C0E08253164F8561007E88D3E2F12AA10050B10B848DD
+---------------------------------------------
+Beacon: C828F56EEE25
+---------------------------------------------
+model: Desconhecido
+mac: C828F56EEE25
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 35
+rssi: -82 (real)
+type: 061A
+temp: 
+umid: 
+bat: 
+adv: 0201061AFF4C000215EBEFD08370A247C89837E7B5634DF52400160023CB
+action: update
+status: 1
+codigo: 35
+id_vinculado: 
+categoria: 
+power: -56
+factor: 4
+rssi_buffer3: -79
+rssi_buffer2: -78
+rssi_buffer1: -82
+---
+rssi: -79 (final)
+acc: 3.76
+
+-- skip --
+id_vinculado: (none)
+
+---------------------------------------------
+Beacon: C7D30DE17FCE
+---------------------------------------------
+model: Pulseira
+mac: C7D30DE17FCE
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 56
+rssi: -74 (real)
+type: 061A
+temp: 
+umid: 
+bat: 
+adv: 0201061AFF4C000215EBEFD08370A247C89837E7B5634DF52400160038B007086A61616C65650303F0FF
+action: insert
+beacon_default_status: 0
+beacon_default_power: -56
+beacon_default_factor: 4
+status: 1
+codigo: 56
+id_vinculado: 97792
+categoria: Paciente
+power: -56
+factor: 4
+rssi_buffer3: -75
+rssi_buffer2: -75
+rssi_buffer1: -74
+---
+rssi: -74 (final)
+acc: 2.82
+
+-- skip --
+Out of range: -74 < -70
+
+

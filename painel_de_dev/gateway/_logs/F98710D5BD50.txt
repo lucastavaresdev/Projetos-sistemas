@@ -1,0 +1,502 @@
+21/06/2018 20:17:38 - 
+
+Gateway: F98710D5BD50
+Devices: 15
+Status: 1
+
+Beacon: F2302364A2CC Pulseira 69 status: 1 | power:-56 rssi:-70 acc:2.24 | major: 22 minor: 69 | temp:  umid:  bat: 
+Beacon: FF390814E3C6 Desconhecido 50 status: 1 | power:-56 rssi:-50 acc:0.71 | major: 22 minor: 50 | temp:  umid:  bat: 
+Beacon: FF390814E3C6 Desconhecido 50 status: 1 | power:-56 rssi:-52 acc:0.79 | major: 22 minor: 50 | temp:  umid:  bat: 
+Beacon: C11541C46782 Desconhecido 33 status: 1 | power:-56 rssi:-71 acc:2.37 | major: 22 minor: 33 | temp:  umid:  bat: 
+Beacon: CAE82111ADAD Pulseira 71 status: 0 | power:-56 rssi:-78 acc:3.55 | major: 22 minor: 71 | temp:  umid:  bat: 
+Beacon: FB6C74AC8C0B Pulseira 54 status: 1 | power:-56 rssi:-64 acc:1.58 | major: 22 minor: 54 | temp:  umid:  bat: 
+Beacon: F0C1324470EA Pulseira 46 status: 1 | power:-56 rssi:-58 acc:1.12 | major: 22 minor: 46 | temp:  umid:  bat: 
+Beacon: C9CC69B10532 Box 21 status: 1 | power:-56 rssi:-43 acc:0.47 | major: 22 minor: 21 | temp:  umid:  bat: 90
+Beacon: DD6909B0518B Pulseira 45 status: 1 | power:-56 rssi:-60 acc:1.26 | major: 22 minor: 45 | temp:  umid:  bat: 
+Beacon: E74DF3824AC9 Box 27 status: 1 | power:-56 rssi:-46 acc:0.56 | major: 22 minor: 27 | temp:  umid:  bat: 90
+Beacon: F0A5A60EABD7 Pulseira 47 status: 1 | power:-56 rssi:-67 acc:1.88 | major: 22 minor: 47 | temp:  umid:  bat: 
+Beacon: DC3482297963 Box 26 status: 1 | power:-56 rssi:-50 acc:0.71 | major: 22 minor: 26 | temp:  umid:  bat: 89
+Beacon: EC9BAB670B5A Pulseira 37 status: 1 | power:-56 rssi:-62 acc:1.41 | major: 22 minor: 37 | temp:  umid:  bat: 
+Beacon: F48EC9F8A167 Desconhecido 55 status: 1 | power:-56 rssi:-68 acc:2.00 | major: 22 minor: 55 | temp:  umid:  bat: 
+Beacon: F087C96E5BD3 Pulseira 68 status: 1 | power:-56 rssi:-69 acc:2.11 | major: 22 minor: 68 | temp:  umid:  bat: 
+
+---------------------------------------------
+Gateway: F98710D5BD50
+---------------------------------------------
+Devices: 15
+action: update
+status: 1
+maxrssi: -52
+maxacc: 4.00
+stabilizer: 2
+timein: 0
+timeout: 30
+garbage: 10
+id_sala: 
+
+---------------------------------------------
+Beacon: F2302364A2CC
+---------------------------------------------
+model: Pulseira
+mac: F2302364A2CC
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 69
+rssi: -78 (real)
+type: 061A
+temp: 
+umid: 
+bat: 
+adv: 0201061AFF4C000215EBEFD08370A247C89837E7B5634DF52400160045B007086A61616C65650303F0FF
+action: update
+status: 1
+codigo: 69
+id_vinculado: 
+categoria: 
+power: -56
+factor: 4
+rssi_buffer3: -67
+rssi_buffer2: -65
+rssi_buffer1: -78
+---
+rssi: -70 (final)
+acc: 2.24
+
+-- skip --
+id_sala: (none)
+
+---------------------------------------------
+Beacon: FF390814E3C6
+---------------------------------------------
+model: Desconhecido
+mac: FF390814E3C6
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 50
+rssi: -47 (real)
+type: 061A
+temp: 
+umid: 
+bat: 
+adv: 0201061AFF4C000215EBEFD08370A247C89837E7B5634DF52400160032CB08084A5052503030380303F0FF
+action: update
+status: 1
+codigo: 50
+id_vinculado: 
+categoria: 
+power: -56
+factor: 4
+rssi_buffer3: -54
+rssi_buffer2: -50
+rssi_buffer1: -47
+---
+rssi: -50 (final)
+acc: 0.71
+
+-- skip --
+id_sala: (none)
+
+---------------------------------------------
+Beacon: FF390814E3C6
+---------------------------------------------
+model: Desconhecido
+mac: FF390814E3C6
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 50
+rssi: -58 (real)
+type: 061A
+temp: 
+umid: 
+bat: 
+adv: 0201061AFF4C000215EBEFD08370A247C89837E7B5634DF52400160032CB
+action: update
+status: 1
+codigo: 50
+id_vinculado: 
+categoria: 
+power: -56
+factor: 4
+rssi_buffer3: -50
+rssi_buffer2: -50
+rssi_buffer1: -58
+---
+rssi: -52 (final)
+acc: 0.79
+
+-- skip --
+id_sala: (none)
+
+---------------------------------------------
+Beacon: C11541C46782
+---------------------------------------------
+model: Desconhecido
+mac: C11541C46782
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 33
+rssi: -72 (real)
+type: 061A
+temp: 
+umid: 
+bat: 
+adv: 0201061AFF4C000215EBEFD08370A247C89837E7B5634DF52400160021CB08084A5052503030320303F0FF
+action: update
+status: 1
+codigo: 33
+id_vinculado: 
+categoria: 
+power: -56
+factor: 4
+rssi_buffer3: -71
+rssi_buffer2: -71
+rssi_buffer1: -72
+---
+rssi: -71 (final)
+acc: 2.37
+
+-- skip --
+id_sala: (none)
+
+---------------------------------------------
+Beacon: CAE82111ADAD
+---------------------------------------------
+model: Pulseira
+mac: CAE82111ADAD
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 71
+rssi: -76 (real)
+type: 061A
+temp: 
+umid: 
+bat: 
+adv: 0201061AFF4C000215EBEFD08370A247C89837E7B5634DF52400160047B0
+action: update
+status: 0
+codigo: 71
+id_vinculado: 
+categoria: 
+power: -56
+factor: 4
+rssi_buffer3: -80
+rssi_buffer2: -78
+rssi_buffer1: -76
+---
+rssi: -78 (final)
+acc: 3.55
+
+-- skip --
+id_sala: (none)
+
+---------------------------------------------
+Beacon: FB6C74AC8C0B
+---------------------------------------------
+model: Pulseira
+mac: FB6C74AC8C0B
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 54
+rssi: -67 (real)
+type: 061A
+temp: 
+umid: 
+bat: 
+adv: 0201061AFF4C000215EBEFD08370A247C89837E7B5634DF52400160036B007086A61616C65650303F0FF
+action: update
+status: 1
+codigo: 54
+id_vinculado: 
+categoria: 
+power: -56
+factor: 4
+rssi_buffer3: -62
+rssi_buffer2: -63
+rssi_buffer1: -67
+---
+rssi: -64 (final)
+acc: 1.58
+
+-- skip --
+id_sala: (none)
+
+---------------------------------------------
+Beacon: F0C1324470EA
+---------------------------------------------
+model: Pulseira
+mac: F0C1324470EA
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 46
+rssi: -62 (real)
+type: 061A
+temp: 
+umid: 
+bat: 
+adv: 0201061AFF4C000215EBEFD08370A247C89837E7B5634DF5240016002EB007086A61616C65650303F0FF
+action: update
+status: 1
+codigo: 46
+id_vinculado: 
+categoria: 
+power: -56
+factor: 4
+rssi_buffer3: -57
+rssi_buffer2: -56
+rssi_buffer1: -62
+---
+rssi: -58 (final)
+acc: 1.12
+
+-- skip --
+id_sala: (none)
+
+---------------------------------------------
+Beacon: C9CC69B10532
+---------------------------------------------
+model: Box
+mac: C9CC69B10532
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 21
+rssi: -43 (real)
+type: 041B
+temp: 
+umid: 
+bat: 90
+adv: 0201041BFF4C000215EBEFD08370A247C89837E7B5634DF52400160015CB5A
+action: update
+status: 1
+codigo: 21
+id_vinculado: 127
+categoria: Equipamento
+power: -56
+factor: 4
+rssi_buffer3: -43
+rssi_buffer2: -44
+rssi_buffer1: -43
+---
+rssi: -43 (final)
+acc: 0.47
+
+-- skip --
+id_sala: (none)
+
+---------------------------------------------
+Beacon: DD6909B0518B
+---------------------------------------------
+model: Pulseira
+mac: DD6909B0518B
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 45
+rssi: -59 (real)
+type: 061A
+temp: 
+umid: 
+bat: 
+adv: 0201061AFF4C000215EBEFD08370A247C89837E7B5634DF5240016002DB007086A61616C65650303F0FF
+action: update
+status: 1
+codigo: 45
+id_vinculado: 
+categoria: 
+power: -56
+factor: 4
+rssi_buffer3: -61
+rssi_buffer2: -62
+rssi_buffer1: -59
+---
+rssi: -60 (final)
+acc: 1.26
+
+-- skip --
+id_sala: (none)
+
+---------------------------------------------
+Beacon: E74DF3824AC9
+---------------------------------------------
+model: Box
+mac: E74DF3824AC9
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 27
+rssi: -44 (real)
+type: 041B
+temp: 
+umid: 
+bat: 90
+adv: 0201041BFF4C000215EBEFD08370A247C89837E7B5634DF5240016001BCB5A
+action: update
+status: 1
+codigo: 27
+id_vinculado: 133
+categoria: Equipamento
+power: -56
+factor: 4
+rssi_buffer3: -48
+rssi_buffer2: -47
+rssi_buffer1: -44
+---
+rssi: -46 (final)
+acc: 0.56
+
+-- skip --
+id_sala: (none)
+
+---------------------------------------------
+Beacon: F0A5A60EABD7
+---------------------------------------------
+model: Pulseira
+mac: F0A5A60EABD7
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 47
+rssi: -68 (real)
+type: 061A
+temp: 
+umid: 
+bat: 
+adv: 0201061AFF4C000215EBEFD08370A247C89837E7B5634DF5240016002FB007086A61616C65650303F0FF
+action: update
+status: 1
+codigo: 47
+id_vinculado: 
+categoria: 
+power: -56
+factor: 4
+rssi_buffer3: -66
+rssi_buffer2: -67
+rssi_buffer1: -68
+---
+rssi: -67 (final)
+acc: 1.88
+
+-- skip --
+id_sala: (none)
+
+---------------------------------------------
+Beacon: DC3482297963
+---------------------------------------------
+model: Box
+mac: DC3482297963
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 26
+rssi: -51 (real)
+type: 041B
+temp: 
+umid: 
+bat: 89
+adv: 0201041BFF4C000215EBEFD08370A247C89837E7B5634DF5240016001ACB59
+action: update
+status: 1
+codigo: 26
+id_vinculado: 132
+categoria: Equipamento
+power: -56
+factor: 4
+rssi_buffer3: -51
+rssi_buffer2: -50
+rssi_buffer1: -51
+---
+rssi: -50 (final)
+acc: 0.71
+
+-- skip --
+id_sala: (none)
+
+---------------------------------------------
+Beacon: EC9BAB670B5A
+---------------------------------------------
+model: Pulseira
+mac: EC9BAB670B5A
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 37
+rssi: -61 (real)
+type: 061A
+temp: 
+umid: 
+bat: 
+adv: 0201061AFF4C000215EBEFD08370A247C89837E7B5634DF52400160025B007086A61616C65650303F0FF
+action: update
+status: 1
+codigo: 37
+id_vinculado: 
+categoria: 
+power: -56
+factor: 4
+rssi_buffer3: -62
+rssi_buffer2: -64
+rssi_buffer1: -61
+---
+rssi: -62 (final)
+acc: 1.41
+
+-- skip --
+id_sala: (none)
+
+---------------------------------------------
+Beacon: F48EC9F8A167
+---------------------------------------------
+model: Desconhecido
+mac: F48EC9F8A167
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 55
+rssi: -70 (real)
+type: 061A
+temp: 
+umid: 
+bat: 
+adv: 0201061AFF4C000215EBEFD08370A247C89837E7B5634DF52400160037CB08084A5052503030340303F0FF
+action: update
+status: 1
+codigo: 55
+id_vinculado: 
+categoria: 
+power: -56
+factor: 4
+rssi_buffer3: -67
+rssi_buffer2: -67
+rssi_buffer1: -70
+---
+rssi: -68 (final)
+acc: 2.00
+
+-- skip --
+id_sala: (none)
+
+---------------------------------------------
+Beacon: F087C96E5BD3
+---------------------------------------------
+model: Pulseira
+mac: F087C96E5BD3
+uuid: EBEFD083-70A2-47C8-9837-E7B5634DF524
+major: 22
+minor: 68
+rssi: -71 (real)
+type: 061A
+temp: 
+umid: 
+bat: 
+adv: 0201061AFF4C000215EBEFD08370A247C89837E7B5634DF52400160044B007086A61616C65650303F0FF
+action: update
+status: 1
+codigo: 68
+id_vinculado: 
+categoria: 
+power: -56
+factor: 4
+rssi_buffer3: -68
+rssi_buffer2: -69
+rssi_buffer1: -71
+---
+rssi: -69 (final)
+acc: 2.11
+
+-- skip --
+id_sala: (none)
+
+

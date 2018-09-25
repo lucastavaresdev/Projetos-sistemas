@@ -1,0 +1,879 @@
+/* ================================================================================= */
+/*
+/* Triskelion: CSS 30/10/2017
+/*
+/* ================================================================================= */
+
+/* ================================================================================= */
+/* Body
+/* ================================================================================= */
+html, body {
+	height: 100vh;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 13px;
+	color: rgb(0,0,0);
+	font-weight: normal;
+	/* Andoid onTouch Event: Prevent blue color */
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	/* Andoid onTouch Event: Prevent blue color */
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+	body.nocroll {
+		position: fixed;
+		width: 100%;
+		overflow-y: scroll;
+	}
+
+/* Preserve borders inside elements */
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+label {
+	color: inherit;
+	cursor: inherit;
+}
+
+/* ================================================================================= */
+/* Responsive
+/* ================================================================================= */
+
+/* xs: 1140 / lg: 960 / 720: md / sm: 540 */
+ 
+.row {
+	position: relative;
+	top: 0px;
+	font-size: 0px;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-xs, .col-lg, .col-md, .col-sm {
+	display: inline-block;
+	padding: 0.1px;
+	vertical-align: top;
+	text-align: left;
+	max-width: 100%;
+}
+
+/* Width */
+.col-1	{ width: 8.33333333%; margin: auto;}
+.col-2 	{ width: 16.66666667%; }
+.col-3 	{ width: 25%; }
+.col-4 	{ width: 33.33333333%; }
+.col-5 	{ width: 41.66666667%; }
+.col-6 	{ width: 50%; }
+.col-7 	{ width: 58.33333333%; }
+.col-8 	{ width: 66.66666667%; }
+.col-9 	{ width: 75%; }
+.col-10	{ width: 83.33333333%; }
+.col-11	{ width: 91.66666667%; }
+.col-12	{ width: 100%;}
+
+.col-xs { min-width: 1100px; }
+.col-lg { min-width: 920px; }
+.col-md { min-width: 680px; }
+.col-sm { min-width: 500px; }
+
+/* Offset */
+.col-offset-1	{ margin-left: 8.33333333%; }
+.col-offset-2 	{ margin-left: 16.66666667%; }
+.col-offset-3 	{ margin-left: 25%; }
+.col-offset-4 	{ margin-left: 33.33333333%; }
+.col-offset-5 	{ margin-left: 41.66666667%; }
+.col-offset-6 	{ margin-left: 50%; }
+.col-offset-7 	{ margin-left: 58.33333333%; }
+.col-offset-8 	{ margin-left: 66.66666667%; }
+.col-offset-9 	{ margin-left: 75%; }
+.col-offset-10	{ margin-left: 83.33333333%; }
+.col-offset-11	{ margin-left: 91.66666667%; }
+.col-offset-12	{ margin-left: 100%; }
+
+.responsive {
+	display: block !important;
+	min-width: 0px !important;
+	width: 100% !important;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}
+
+.responsive.formlabel {
+	text-align: left !important;
+}
+
+/* ================================================================================= */
+/* Page
+/* ================================================================================= */
+.page-header {
+	min-height: 60px;
+	padding: 4px 0px;
+	font-size: 0px;
+	/* Theme */
+	border-bottom: 1px solid rgb(0,0,0);
+}
+
+	.header-dock {
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0px 10px;
+		height: 52px;
+		line-height: 52px;
+		border: 0px solid black;
+	}
+
+	.header-dock input {
+		margin-top: 11px;
+	}
+
+.page-content {
+	min-height: 100%;
+	padding: 20px;
+	padding-top: 50px;
+}
+
+.page-footer {
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	/* Theme */
+	border-top: 1px solid rgb(0,0,0);
+}
+
+.page-header, .page-content, .page-footer, .modal {
+	min-width: 320px;
+}
+
+.center {
+	text-align: center !important;
+}
+
+.right {
+	float: right;
+}
+
+.border {
+	border: 1px solid black;
+}
+
+.hide {
+	display: none !important;
+}
+
+label {
+	margin: 0px 10px;
+}
+
+.r180 {
+	-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+		-ms-transform: rotate(180deg); /* IE 9 */
+			transform: rotate(180deg);
+}
+
+.font-13 {
+	font-size: 13px;
+}
+
+/* ================================================================================= */
+/* Font Awesome
+/* ================================================================================= */
+.fa {
+	font-size: 20px;
+	vertical-align: top;
+	margin-top: 10px;
+}
+
+.fa.right {
+	float: right;
+}
+
+.fa-chevron-up, .fa-chevron-down, .fa-code, .fa-times {
+	margin-top: 9px;
+	padding-bottom: 3px;
+}
+
+.fa-12 {
+	font-size: 12px;
+	margin-top: 14px;
+}
+
+th .fa-12 {
+	font-size: 12px;
+	margin-top: 0px;
+}
+
+
+.fa-16 {
+	font-size: 16px;
+	margin-top: 11px;
+}
+
+i {
+	min-width: 26px;
+	text-align: center;
+}
+
+/* ================================================================================= */
+/* Menu
+/* ================================================================================= */
+.menu {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 0px;
+	height: 100vh;
+	white-space: nowrap;
+	padding-bottom: 15px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	z-index: 10;
+	/* Theme */
+	background-color: rgb(255,255,255);
+	border-left: 1px solid rgb(0,0,0);
+	-webkit-box-shadow: inset -1px 0px 0px rgb(0,0,0);
+	   -moz-box-shadow: inset -1px 0px 0px rgb(0,0,0);
+			box-shadow: inset -1px 0px 0px rgb(0,0,0);
+}
+
+/* ================================================================================= */
+/* Menu Close
+/* ================================================================================= */
+.menuclose {
+	width: calc(100% - 22px);
+	min-width: 200px;
+	height: 40px;
+	line-height: 40px;
+	margin: 9px 11px;
+	padding: 0px 7px;
+	/* Theme */
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+	.menuclose:hover {
+		color: rgb(255,255,255);
+		background-color: rgb(0,0,0);
+		cursor: pointer;
+	}
+
+/* ================================================================================= */
+/* Menu Group
+/* ================================================================================= */
+.menugroup {
+	width: calc(100% - 10px);
+	min-width: 280px;
+	height: 40px;
+	line-height: 40px;
+	margin: 0px 5px;
+	padding: 0px 10px;
+	/* Theme */
+	color: rgb(255,255,255);
+	background-color: rgb(0,0,0);
+}
+
+	.menugroup i {
+
+	}
+
+	.menugroup label {
+
+	}
+
+	.menugroup.top {
+		border-radius: 5px 5px 0px 0px;
+	}
+
+/* ================================================================================= */
+/* Menu Link
+/* ================================================================================= */
+.menulinks {
+	width: calc(100% - 10px);
+	min-width: 280px;
+	margin: 0px 5px;
+	border: 1px solid rgb(0,0,0);
+}
+
+.menulink {
+	height: 40px;
+	line-height: 40px;
+	padding: 0px 10px;
+	cursor: pointer;
+	/* Theme */
+	background-color: rgb(255,255,255);
+}
+
+.menulink:hover {
+	color: rgb(255,255,255);
+	background-color: rgb(0,0,0);
+}
+
+	.menulink i {
+		margin-left: 15px;
+	}
+
+	.menulink label {
+		cursor: pointer;
+	}
+	
+/* ================================================================================= */
+/* Menu Scroll Bars
+/* ================================================================================= */
+/* Width */
+.menu::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+/* Background */
+.menu::-webkit-scrollbar-track {
+	background-color: rgb(255,255,255);
+}
+ 
+/* Foreground */
+.menu::-webkit-scrollbar-thumb {
+	background-color: rgb(0,0,0);
+}
+
+/* Inactive */
+.menu::-webkit-scrollbar-thumb:window-inactive {
+	background-color: rgb(220,220,220);
+}
+
+/* ================================================================================= */
+/* Button
+/* ================================================================================= */
+.button {
+	display: inline-block;
+	min-width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	margin: 5px 2px;
+	padding: 0px 7px;
+	vertical-align: top;
+}
+
+.button, .button-td {
+	background-color: rgb(255,255,255);
+	border: 1px solid rgb(0,0,0);
+	border-radius: 5px;
+}
+
+	.button:hover {
+		color: rgb(255,255,255);
+		background-color: rgb(0,0,0);
+		cursor: pointer;
+	}
+
+	.button i, .button label  {
+		pointer-events: none;
+	}
+
+.button.td {
+	border: 1px solid black;
+	min-width: 30px;
+	height: 30px;
+	line-height: 30px;
+	margin: 0px;
+	padding: 0px 7px;
+}
+
+	.button.td i {
+		margin-top: 4px;
+		padding: 0px;
+	}
+
+	.button.td i.fa-chevron-up, .button.td i.fa-chevron-up i.i.fa-chevron-down {
+		margin-top: 3px;
+	}
+
+	.button.td i.fa-plus, .button.td i.fa-minus {
+		margin-top: 4px;
+	}
+
+/* ================================================================================= */
+/* Box
+/* ================================================================================= */
+.box {
+	display: block;
+	margin: 2px;
+	border-radius: 5px;
+	overflow-y: hidden;
+}
+
+	.box.minimized {
+		border-radius: 5px 5px 0px 0px !important;
+		height: 40px;
+	}
+
+/* ================================================================================= */
+/* Box Header
+/* ================================================================================= */
+.box-header {
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	text-align: left;
+	/* Theme */
+	background-color: rgb(255,255,255);
+	border: 1px solid rgb(0,0,0);
+	border-radius: 5px 5px 0px 0px;
+}
+
+	.box-header i {
+
+	}
+
+	.box-header label {
+		font-size: 12px;
+		font-weight: bold;
+	}
+	
+/* ================================================================================= */
+/* Box Header Button
+/* ================================================================================= */
+.box-headerbutton {
+	display: inline-block;
+	min-width: 40px;
+	height: 40px;
+	line-height: 40px;
+	margin-top: -1px;
+	margin-left: -1px;
+	text-align: center;
+	padding: 0px 7px;
+	/* Theme */
+	background-color: rgb(255,255,255);
+	border: 1px solid rgb(0,0,0);
+}
+
+	.box-headerbutton i, .box-headerbutton label {
+		pointer-events: none;
+	}
+
+	.box-headerbutton:hover {
+		color: rgb(255,255,255);
+		background-color: rgb(0,0,0);
+		cursor: pointer;
+	}
+
+	.box-headerbutton.right {
+		float: right;
+		margin-right: -1px;
+	}
+
+	.box-headerbutton.right.corner {
+		border-top-right-radius: 5px;
+	}
+
+/* ================================================================================= */
+/* Box Content
+/* ================================================================================= */
+.box-content {
+	display: block;
+	padding: 20px 10px;
+	font-size: 13px;
+	/* Theme */
+	background-color: rgb(255,255,255);
+	border-left: 1px solid rgb(0,0,0);
+	border-right: 1px solid rgb(0,0,0);
+}
+
+/* ================================================================================= */
+/* Box Footer
+/* ================================================================================= */
+.box-footer {
+	display: block;
+	min-height: 60px;
+	padding: 5px 15px;
+	font-size: 0px;
+	text-align: right;
+	/* Theme */
+	background-color: rgb(255,255,255);
+	border: 1px solid rgb(0,0,0);
+	border-radius: 0px 0px 5px 5px;
+}
+
+	.box-status {
+		display: inline-block;
+		font-size: 13px;
+		min-width: 200px;
+		height: 40px;
+		line-height:40px;
+		margin: 5px 2px;
+		padding: 0px 15px;
+		text-align: center;
+		vertical-align: top;	
+		border: 1px solid rgb(0,0,0);
+		border-radius: 5px;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+/* ================================================================================= */
+/* Form
+/* ================================================================================= */
+
+form {
+	margin: 0px;
+	padding: 0px;
+}
+
+.formcontrol, .formlabel {
+	min-height: 30px;
+	line-height: 30px;
+	margin-bottom: 5px;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+	.formcontrol {
+		position: relative;
+		top: 0px;
+		left: 0px;
+		text-align: left;
+	}
+
+	.formcontrol div {
+		display: block;
+		height: 30px;
+		vertical-align: top;
+	}
+
+	.formcontrol div.inline {
+		display: inline-block;
+	}
+
+	.formcontrol label {
+		padding-left: 5px;
+		padding-right: 15px;
+	}
+
+.formlabel {
+	text-align: right;
+	padding-right: 15px !important;
+	margin-bottom: 0px;
+	white-space: nowrap;
+}
+
+/* ================================================================================= */
+/* Input
+/* ================================================================================= */
+input, select {
+	width: 100%;
+	height: 30px;
+	padding-left: 15px;
+	/* Theme */
+	background-color: rgb(255,255,255);
+	border: 1px solid rgb(0,0,0);
+	border-radius: 5px;
+}
+
+select {
+	padding-left: 10px;
+}
+
+input[type='checkbox'], input[type='radio'] {
+	width: 22px;
+	height: 22px;
+	line-height: 22px;
+	margin-top: 4px;
+	padding: 0px;
+	vertical-align: top;
+	border: none;
+	outline: none;
+}
+
+.input-tip {
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	right: -10px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	padding: 0px 10px !important;
+	border-radius: 0px 5px 5px 0px;
+	/* Theme */
+	color: rgb(255,255,255);
+	background-color: rgb(0,0,0);
+}
+
+	.input-tip i {
+		margin-top: 5px;
+		padding: 0px;
+	}
+	
+input[type="date"]::-webkit-clear-button,
+input[type="datetime-local"]::-webkit-clear-button {
+    display: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="datetime-local"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type="date"], input[type="datetime-local"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: inline-block !important;
+    visibility: visible !important;
+	padding-right: 5px;
+}
+
+input[type="date"]:focus, input[type="datetime-local"]:focus {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+/* ================================================================================= */
+/* Table
+/* ================================================================================= */
+.table-responsive {
+	color: rgb(80,80,80);
+	min-height: .01%;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.table-stripped {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+	.table-stripped th, .table-stripped td {
+		font-size: 12px;
+		height: 40px;
+		text-align: left;
+		padding: 5px 10px;
+		white-space: nowrap;
+	}
+
+	.table-stripped th:first-child {
+		width: 25px;
+	}
+	
+	.table-stripped td:first-child {
+		color: rgb(180,180,180);
+	}
+
+	.table-stripped td:nth-child(2) {
+		font-weight: bold;
+	}
+
+	.table-stripped th.center {
+		text-align: center;
+		width: 86px;
+	}
+	
+	.table-stripped tbody tr:nth-child(odd) {
+		background-color: rgb(245,245,245);
+	}
+
+	.table-stripped tbody tr:nth-child(even) {
+
+	}
+
+.table-hover tbody tr:hover {
+	background-color: rgb(240,240,240);
+	cursor: pointer;
+}
+
+.danger {
+	background-color: #f6d4d4;
+	border: 1px solid rgb(255, 227, 227);
+	font-weight: bold;
+}
+
+tr:hover .danger {
+	color: rgb(80,80,80);
+}
+
+/* ================================================================================= */
+/* Modal
+/* ================================================================================= */
+.modal {
+	display: none;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+	z-index: 20;
+}
+
+.modal-container {
+	display: inline-block;
+	width: 690px;
+}
+
+.modal td {
+	padding: 0px 2px;
+	text-align: center;
+	height: 100px;
+	overflow-y: auto;
+}
+
+/* ================================================================================= */
+/* Dashboard
+/* ================================================================================= */
+
+.pie {
+	max-width: 75%;
+	max-height: auto;
+	margin: auto;
+}
+
+/* ================================================================================= */
+/* Controle Box
+/* ================================================================================= */
+
+.controle-box {
+	font-size: 13px;
+	width: calc(100% - 40px);
+	height: 100%;
+	border: 1px solid rgb(240,240,240);
+	border-radius: 5px;
+	text-align: center;
+	margin: 5px 20px;
+	padding: 0px 15px;
+}
+
+	.controle-title, .controle-subtitle, .controle-datetime {
+		display: block;
+		font-size: 20px;
+		font-weight: bold;
+		margin: 15px 0px;
+	}
+	
+	.controle-datetime {
+		font-size: 15px;
+		color: rgb(110,110,110);
+	}
+	
+	.controle-button {
+		font-weight: bold;
+		padding: 0px 35px;
+		margin-bottom: 25px;
+	}
+
+/* ================================================================================= */
+/* Table Login Container
+/* ================================================================================= */
+.login-container {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+/* ================================================================================= */
+/* Dashboards
+/* ================================================================================= */
+
+.box-percent {
+	display: inline-block;
+	width: 220px;
+	height: 270px;
+	margin: 5px;
+	text-align: center;
+	/* Theme */
+	background-color: rgb(255,255,255);
+	border: 1px solid rgb(0,0,0);
+	border-radius: 5px;
+}
+
+	.box-percent-title {
+		display: block;
+		font-size: 24px;
+		font-weight: bold;
+		margin: 15px 0px;
+		/* Theme */
+		color: rgb(0,0,0);
+	}
+
+	.box-percent-circle {
+		display: block;
+		width: 150px;
+		height: 150px;
+		border-radius: 75px;
+		margin: auto;
+		/* Theme */
+		border: 2px solid rgb(0,0,0);
+	}
+
+	.box-percent-value {
+		display: block;
+		font-size: 45px;
+		font-weight: bold;
+		margin-top: 40px;
+		/* Theme */
+		color: rgb(0,0,0);
+	}
+	
+	.box-percent-subtitle {
+		display: block;
+		font-size: 17px;
+		margin-top: 5px;
+		/* Theme */
+		color: rgb(0,0,0);
+	}
+
+
+/* ================================================================================= */
+/* Uploads
+/* ================================================================================= */
+	
+	
+.upload-bar {
+	width: 0px;
+	font-size: 0px;
+	height: 4px !important;
+	border-radius: 2px;
+	margin-top: 5px;
+	/* Theme */
+	background-color: rgb(0,0,0);
+}
+
+.upload-open {
+	height: 42px;
+	overflow-y: hidden
+}
+
+.upload-close {
+	height: 32px;
+	overflow-y: hidden
+}
+
+.filename:hover {
+	cursor: pointer;
+	color: white;
+	background-color: rgb(0,0,0);
+}
+
+.uploads {
+    position: relative;
+    top: -12px;
+    right: 10px;
+    background-color: #646464;
+    color: #f8f8f8;
+    padding: 2px 5px;
+    font-family: tahoma, arial, 'sans-serif';
+    font-size: 10px;
+    font-weight: bold;
+    margin-right: -20px;
+    -moz-border-radius: 9px;
+    -webkit-border-radius: 9px;
+    border-radius: 9px;
+}

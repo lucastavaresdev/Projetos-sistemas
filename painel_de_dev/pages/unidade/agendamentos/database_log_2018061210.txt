@@ -1,0 +1,7 @@
+12/06/2018 10:28:33 Unknown column 'dt_agendamento' in 'field list'
+12/06/2018 10:28:48 Unknown column 'dt_agendamento' in 'field list'
+12/06/2018 10:28:50 Unknown column 'dt_agendamento' in 'field list'
+12/06/2018 10:30:45 Table 'nipo.agendamento_3' doesn't exist
+12/06/2018 10:31:24 Table 'nipo.agendamento_3' doesn't exist
+12/06/2018 10:44:00 Table 'nipo.agendamento_3' doesn't exist
+12/06/2018 10:44:02 Table 'nipo.agendamento_3' doesn't exist

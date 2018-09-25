@@ -1,0 +1,3 @@
+01/08/2018 14:33:15 Table 'hcor.tracking' doesn't exist
+01/08/2018 14:33:17 Table 'hcor.tracking' doesn't exist
+01/08/2018 14:33:25 Table 'hcor.tracking' doesn't exist

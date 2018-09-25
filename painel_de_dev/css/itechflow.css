@@ -1,0 +1,1091 @@
+/* ============================================================================== */
+/*
+/* Default CSS (All Pages) - Start
+/*
+/* ============================================================================== */
+
+html, body {
+	height: 100%;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto_regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto Medium';
+    src: url('../fonts/roboto_medium.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('../fonts/roboto_bold.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto Light';
+    src: url('../fonts/roboto_light.ttf');
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	/* Theme */
+	background-color: rgb(57,71,87);
+	background: linear-gradient(-35deg, rgb(57,71,87), rgb(57,71,87), rgb(121,143,168)) no-repeat fixed center;
+}
+
+div {
+			box-sizing: border-box;
+	   -moz-box-sizing: border-box; /* Firefox */
+	-webkit-box-sizing: border-box; /* Safari */
+}
+
+* {
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 11px;
+	color: rgb(255,255,255);
+	letter-spacing: 0.05em;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.tab {
+	width: 100%;
+	height: 100%;
+}
+
+.tab-padding {
+	padding: 3px;
+}
+
+.table {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.tr {
+	display: table-row;
+}
+
+.td {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/* ============================================================================== */
+/*
+/* Default CSS (All Pages) - End
+/*
+/* ============================================================================== */
+
+/* ============================================================================== */
+/*
+/* Page - Start
+/*
+/* ============================================================================== */
+
+.page {
+	width: 100%;
+	height: 100%;
+	padding-top: 55px;
+}
+
+	.page-open {
+		transform: scale(1,1);
+		opacity: 1;
+	}
+
+	.page-close {
+		transform: scale(.5,.5);
+		opacity: 0;
+	}
+
+	.page-in {
+		transform: scale(1,1);
+		opacity: 1;
+		transition: transform 300ms, opacity 300ms;
+	}
+
+	.page-out {
+		transform: scale(.5,.5);
+		opacity: 0;
+		transition: transform 300ms, opacity 300ms;
+	}
+
+	.no-header {
+		padding: 0px;
+	}
+
+/* ============================================================================== */
+/*
+/* Page - End
+/*
+/* ============================================================================== */
+
+/* ============================================================================== */
+/*
+/* Header - Start
+/*
+/* ============================================================================== */
+
+.header {
+	display: inline-block;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 55px;
+	/* Theme */
+	background-color: rgba(0,0,0,.5);
+	z-index: 1;
+}
+
+	.header-sides {
+		width: 1px;
+		height: 100%;
+		font-size: 0px;
+		white-space: nowrap;
+		vertical-align: middle;
+	}
+
+	.header-center {
+		height: 100%;
+		text-align: left;
+		vertical-align: middle;
+		/* Theme */
+		font-family: 'Roboto Medium';
+		font-size: 14px;
+		color: rgb(255,255,255);
+	}
+
+	.header-open {
+		transform: translate(0,0);
+	}
+
+	.header-close {
+		transform: translate(0,-55px);
+	}
+	
+	.header-in {
+		transform: translate(0,0);
+		transition: transform 300ms;
+	}
+
+	.header-out {
+		transform: translate(0,-55px);
+		transition: transform 300ms;
+	}
+
+.header-icon {
+	display: inline-block;
+	padding: 10px;
+	margin: 0px 6px;
+	cursor: pointer;
+	font-size: 0px;
+	vertical-align: middle;
+	transform: rotate(0deg);
+	transition: transform 300ms;
+
+}
+
+	.header-icon img {
+		pointer-events: none;
+	}
+	
+	.rotate360 {
+		transform: rotate(360deg);
+	}
+	
+	.rotate180 {
+		transform: rotate(180deg);
+	}
+
+	.arrow-left {
+		width: 16px;
+		height: 16px;
+	}
+
+	.search {
+		width: 18px;
+		height: 18px;
+	}
+
+	.menu-dot {
+		width: 4px;
+		height: 16px;
+	}
+
+/* ============================================================================== */
+/*
+/* Header - End
+/*
+/* ============================================================================== */
+
+/* ============================================================================== */
+/*
+/* Search Bar - Start
+/*
+/* ============================================================================== */
+
+.search-bar {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: rgb(255,255,255);
+	border-bottom: 1px solid rgb(158,158,158);
+	color: rgb(50,50,50);
+	transform: translate(0px,-55px);
+	transition: transform 200ms;
+}
+
+	.search-bar-in {
+		transform: translate(0px,0px);
+	}
+
+	.search-bar-out {
+		transform: translate(0,-55px);
+	}
+
+	.search-bar-text, .search-bar-date {
+		height: 30px;
+		margin-left: 0px;
+		outline: none;
+		border: none;
+		border-radius: 3px;
+		font-size: 15px;
+		color: rgb(50,50,50);
+		/*background-color: rgb(235,235,235);*/
+	}
+
+	.search-bar-text {
+		width: 100%;
+	}
+
+	.search-bar-date {
+		width: 100px;
+	}
+
+	.search-bar-text::-ms-clear,
+	.search-bar-date::-ms-clear {
+		display: none;
+	}
+
+	.search-bar-date::placeholder,
+	.search-bar-text::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+		color: rgb(158,158,158);
+		opacity: 1; /* Firefox */
+	}
+
+	.search-bar-date:-ms-input-placeholder
+	.search-bar-text:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		color: rgb(158,158,158);
+	}
+
+	.search-bar-date::-ms-input-placeholder
+	.search-bar-text::-ms-input-placeholder { /* Microsoft Edge */
+		color: rgb(158,158,158);
+	}
+
+	.search-date,
+	.search-text {
+		width: 20px;
+		height: 20px;
+	}
+	
+	.search-close {
+		width: 16px;
+		height: 16px;
+	}
+
+/* ============================================================================== */
+/*
+/* Search Bar - End
+/*
+/* ============================================================================== */
+
+/* ============================================================================== */
+/*
+/* Popup-Menu - Start
+/*
+/* ============================================================================== */
+
+.popup-menu {
+	display: inline-block;
+	position: fixed;
+	top: 4px;
+	right: 4px;
+	width: 196px;
+	background-color: rgb(255,255,255);
+	border-radius: 3px;
+	box-shadow: 2px 2px 12px rgba(0,0,0,.5);
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+	.popup-menu-bg {
+		display: inline-block;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+	}
+
+	.popup-menu-font {
+		font-family: 'Roboto Medium';
+		font-size: 14px;
+		padding: 17px;
+		margin: 5px;
+		cursor: pointer;
+		/* Theme */
+		color: rgb(50,50,50);
+		background-color: rgb(255,255,255);
+		transition: background-color 200ms;
+	}
+
+	.popup-menu-font:hover {
+		background-color: rgb(235,235,235);
+	}
+
+/* ============================================================================== */
+/*
+/* Popup-Menu - End
+/*
+/* ============================================================================== */
+
+
+/* ============================================================================== */
+/*
+/* Ajax - Start
+/*
+/* ============================================================================== */
+
+.ajax-msg {
+	height: 30px;
+	line-height: 30px;
+	font-size: 11px;
+	color: rgb(255,255,255);
+}
+
+	.ajax-msg.red {
+		font-family: 'Roboto Medium';
+		color: rgb(255,84,84);
+	}
+
+/* ============================================================================== */
+/*
+/* Ajax - End
+/*
+/* ============================================================================== */
+
+/* ============================================================================== */
+/*
+/* Loading - Start
+/*
+/* ============================================================================== */
+
+.loading {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.loading-icon-40 {
+	width: 40px;
+	height: 40px;
+}
+
+.loading-icon-16 {
+	width: 16px;
+	height: 16px;
+}
+
+.spin {
+	animation-name: spin;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear; 
+}
+
+	@keyframes spin {
+		from	{ transform:rotate(0deg); }
+		to		{ transform:rotate(360deg); }
+	}
+
+/* ============================================================================== */
+/*
+/* Loading - End
+/*
+/* ============================================================================== */
+
+/* ============================================================================== */
+/*
+/* Login Page - Start
+/*
+/* ============================================================================== */
+
+.input-login,
+.input-login-button {
+	width: 260px;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 11px;
+	outline: none;
+}
+
+.input-login {
+	height: 28px;
+	margin: 3px 0px;
+	border: 1px solid rgba(255,255,255,.3);
+	background: none;
+	color: rgb(255,255,255);
+			transition: border 300ms;
+		 -o-transition: border 300ms; /* Opera */
+	   -moz-transition: border 300ms; /* Firefox */
+	-webkit-transition: border 300ms; /* Safari */
+}
+
+.input-login:hover,
+.input-login:focus {
+	border: 1px solid rgb(255,255,255);
+}
+
+.input-login-button {
+	height: 30px;
+	margin: 10px 0px;
+	font-family: 'Roboto Medium';
+	border: none;
+	background-color: rgb(255,255,255);
+	color: rgb(57,71,87);
+	cursor: pointer;
+}
+
+.input-login-button:disabled {
+	background-color: rgba(255,255,255,.3);
+}
+
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+
+.input-login::placeholder {
+	color: rgb(255,255,255);
+	opacity: 1;
+}
+
+.input-login:hover::placeholder,
+.input-login:focus::placeholder {
+	color: rgba(255,255,255, 0.5);
+	opacity: 0.5;
+}
+
+/* IE */
+
+.input-login:-ms-input-placeholder {
+	color: rgb(255,255,255);
+}
+
+.input-login:hover:-ms-input-placeholder,
+.input-login:focus:-ms-input-placeholder {
+	color: rgba(255,255,255,0.5);
+}
+
+/* Edge */
+
+.input-login::-ms-input-placeholder {
+	color: rgb(255,255,255);
+}
+
+/* Edge */
+ 
+.input-login::hover:-ms-input-placeholder,
+.input-login:focus:-ms-input-placeholder {
+	color: rgba(255,255,255,0.5);
+}
+
+.login-vspacing {
+	height:5%;
+}
+
+.login-logo {
+	height: 35px;
+	margin: 5px 0px;
+	transition: transform 300ms;
+}
+
+.login-unidade {
+	font-size: 13px;
+	margin: 5px 0px;
+	color: rgb(255,255,255);
+}
+
+.login-form {
+	height: 180px;
+}
+
+.login-footer {
+	height: 24px;
+	font-size: 10px;
+	color: rgba(255,255,255,0.25);
+}
+
+/* ============================================================================== */
+/*
+/* Login Page - End
+/*
+/* ============================================================================== */
+
+/* ============================================================================== */
+/*
+/* Menu - Start
+/*
+/* ============================================================================== */
+
+.menu {
+
+	margin: auto;
+	min-width: 320px;
+	max-width: 360px;
+	min-height: 513px;
+	max-height: 575px;
+	padding: 16px;
+}
+
+.table.menu .td {
+	height: 25%;
+}
+
+.menu-icon {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	font-size: 0px;
+	margin-bottom: 10px;
+	border-radius: 15px;
+	background-color: rgba(0,0,0,.3);
+	cursor: pointer;
+}
+
+.menu-icon:hover {
+	background-color: rgba(0,0,0,.6);
+}
+
+	.menu-icon-label {
+		font-size: 10px;
+	}
+
+	.menu-icon img{
+		display: inline-block;
+		width: 42px;
+		height: 42px;
+		vertical-align: middle;
+		pointer-events: none;
+	}
+
+	.menu-icon.jump img {
+		animation-name: jump;
+		animation-duration: 300ms;
+	}
+
+	@keyframes jump {
+		0%   {transform: translateY(0px);}
+		25%   {transform: translateY(-15px);}
+		75%   {transform: translateY(5px);}
+		100%   {transform: translateY(0px);}
+	}
+
+/* ============================================================================== */
+/*
+/* Menu - End
+/*
+/* ============================================================================== */
+
+/* ============================================================================== */
+/*
+/* Options Menu - Start
+/*
+/* ============================================================================== */
+
+.options-menu-bg {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 3;
+	background-color: rgba(0,0,0,.55);
+}
+
+.options-menu {
+	display: inline-block;
+	width: 310px;
+	padding: 26px;
+	background-color: rgb(255,255,255);
+	border-radius: 3px;
+}
+
+.options-title {
+	font-family: 'Roboto Medium';
+	font-size: 14px;
+	text-align: left;
+	color: rgb(50,50,50);
+}
+
+.options-subtitle {
+	font-size: 12px;
+	text-align: left;
+	color: rgb(50,50,50);
+	padding-bottom: 26px;
+}
+
+.options-link {
+	font-size: 13px;
+	font-family: 'Roboto Medium';
+	color: rgb(50,50,50);
+	padding: 13px 0px;
+	cursor: pointer;
+}
+
+.options-link:hover {
+	background-color: rgb(235,235,235);
+}
+
+/* ============================================================================== */
+/*
+/* Options Menu - Start
+/*
+/* ============================================================================== */
+
+/* ============================================================================== */
+/*
+/* Ajax Modal - Start
+/*
+/* ============================================================================== */
+
+.ajax-modal-bg {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 999;
+	background-color: rgba(0,0,0,.55);
+}
+
+.ajax-modal {
+	display: inline-block;
+	width: 310px;
+	padding: 26px 0px;
+	background-color: rgb(255,255,255);
+	border-radius: 3px;
+	font-size: 0px;
+}
+
+.ajax-loading-icon {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+}
+
+.ajax-loading-msg {
+	display: inline-block;
+	width: 218px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 16px;
+	font-size: 12px;
+	text-align: left;
+	color: rgb(100,100,100);
+	vertical-align: middle;
+}
+
+.ajax-error-msg {
+	display: inline-block;
+	width: 258px;
+	font-family: 'Roboto Medium';
+	font-size: 12px;
+	text-align: left;
+	color: rgb(255,84,84);
+	white-space: pre-wrap;      /* CSS3 */   
+   white-space: -moz-pre-wrap; /* Firefox */    
+   white-space: -pre-wrap;     /* Opera <7 */   
+   white-space: -o-pre-wrap;   /* Opera 7 */    
+   word-wrap: break-word;      /* IE */
+}
+
+/* ============================================================================== */
+/*
+/* Ajax Modal - End
+/*
+/* ============================================================================== */
+
+/* ============================================================================== */
+/*
+/* Cardboard - Start
+/*
+/* ============================================================================== */
+
+.cardboard {
+	display: inline-block;
+	width: 100%;
+	margin: 2px 0px;
+	color: rgb(50,50,50);
+	background-color: rgb(255,255,255);
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+	.cardboard:hover {
+		background-color: rgb(245,245,245);
+	}
+
+.cardboard .table {
+	height: auto;
+}
+
+.cardboard-left {
+	width: 60px;
+	vertical-align: top;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.cardboard-center {
+	width: auto;
+	text-align: left;
+	padding: 20px 11px;
+}
+
+.cardboard-right {
+	width: 15px;
+	border-radius: 0px 5px 5px 0px;
+	background-color: rgb(220,220,220);
+}
+
+.cardboard-icon-bg {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-color: rgb(200,200,200);
+	border-radius: 10px;
+	padding-top: 5px;
+	margin-top: 5px;
+}
+
+.cardboard-icon-bg img {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+}
+
+.cardboard-empty {
+	display: inline-block;
+	width: 100%;
+	margin-top: 20px;
+	padding: 16px;
+	text-align: center;
+	font-size: 13px;
+	color: rgb(255,255,255);
+	border: 1px solid rgba(255,255,255,.4);
+	border-radius: 5px;
+}
+
+/* ============================================================================== */
+/*
+/* Cardboard - End
+/*
+/* ============================================================================== */
+
+/* ============================================================================== */
+/*
+/* Form - Start
+/*
+/* ============================================================================== */
+
+.form-title {
+	padding: 16px;
+	font-family: 'Roboto Medium';
+	font-size: 12px;
+	color: rgb(150,150,150);
+	background-color: rgb(235,235,235);
+}
+
+.form-row {
+	padding: 16px;
+	border-bottom: 1px solid rgb(230,230,230);
+	background-color: rgb(255,255,255);
+}
+
+.form-input {
+	width: 100%;
+	text-indent: 10px;
+	padding: 4px 0px;
+	font-family: 'Roboto Medium';
+	font-size: 14px;
+	color: rgb(40,40,40);
+	outline: none;
+	border: none;
+	background-color: rgb(255,255,255) !important;
+}
+
+	.form-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+		font-family: 'Roboto';
+		color: rgb(200,200,200);
+		opacity: 1; /* Firefox */
+	}
+
+	.form-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		color: rgb(50,50,50);
+	}
+
+	.form-input::-ms-input-placeholder { /* Microsoft Edge */
+		color: rgb(50,50,50);
+	}
+
+	.form-input option {
+		font-family: 'Roboto Medium';
+		font-size: 14px;
+		color: rgb(40,40,40);
+	}
+
+.form-button {
+	width: 125px;
+	height: 35px;
+	line-height: 30px;
+	margin: 0px 5px;
+	text-align: center;
+	font-family: 'Roboto Medium';
+	font-size: 12px;
+	color: rgb(50,50,50);
+	background-color: rgb(255,255,255);
+	outline: none;
+	border: 1px solid rgb(220,220,220);
+	border-radius: 3px;
+	box-shadow: 0px 2px 2px rgba(0,0,0,.15);
+	cursor: pointer;
+}
+
+/* ============================================================================== */
+/*
+/* Form - End
+/*
+/* ============================================================================== */
+
+.config-row {
+	padding: 16px;
+	border-bottom: 1px solid rgb(230,230,230);
+	background-color: rgb(255,255,255);
+}
+
+.config-row.card {
+	border-radius: 3px;
+	margin: 5px 0px;
+	cursor: pointer;
+}
+
+.config-row.card:hover {
+	background-color: rgb(245,245,245);
+}
+
+.config-row-group {
+	padding: 10px 16px;
+	background-color: rgb(72,91,111);
+	background-color: rgb(235,235,235);
+}
+
+.config-row-group-title {
+	font-family: 'Roboto Medium';
+	padding: 4px 0px;
+	font-size: 12px;
+	color: rgb(150,150,150);
+}
+
+.config-row-big {
+	font-family: 'Roboto Medium';
+	padding: 4px 0px;
+	font-size: 14px;
+	color: rgb(50,50,50);
+}
+
+.config-row-small {
+	font-family: 'Roboto Medium';
+	padding: 4px 0px;
+	font-size: 12px;
+	color: rgb(150,150,150);
+}
+
+
+
+.button:hover {
+	background-color: rgb(245,245,245);
+}
+
+.button.excluir {
+	color: rgb(255,84,84);
+}
+
+.link {
+	color: rgb(255,255,255);
+	cursor: pointer;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+hr {
+	height:1px;
+	border:none;
+	color:rgb(235,235,235);
+	background-color: rgb(235,235,235);
+	font-size: 0px;
+	margin: 4px 0px;
+}
+
+/* ============================================================================== */
+/*
+/* Replace Default - Start
+/*
+/* ============================================================================== */
+.hidden {
+	display: none;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.round-left {
+	border-radius: 3px 0px 0px 3px;
+}
+
+.round-right {
+	border-radius: 0px 3px 3px 0px;
+}
+
+.round-top {
+	border-radius: 3px 3px 0px 0px;
+}
+
+.round-bottom {
+	border-radius: 0px 0px 3px 3px;
+}
+
+.pl16 {
+	padding-left: 16px;
+}
+
+.font1 {
+	font-family: 'Roboto';
+	font-size: 11px;
+	color: rgb(100,100,100);
+	padding: 4px 0px;
+	letter-spacing: 0px;
+}
+
+.font2 {
+	font-family: 'Roboto';
+	font-size: 12px;
+	color: rgb(100,100,100);
+	padding: 4px 0px;
+	letter-spacing: 0px;
+}
+
+.font3 {
+	font-family: 'Roboto Medium';
+	font-size: 13px;
+	color: rgb(40,40,40);
+	padding: 4px 0px;
+	letter-spacing: 0px;
+}
+
+.font4 {
+	font-family: 'Roboto Medium';
+	font-size: 14px;
+	color: rgb(40,40,40);
+	padding: 4px 0px;
+	letter-spacing: 0px;
+}
+
+.font5 {
+	font-family: 'Roboto Medium';
+	font-size: 12px;
+	color: rgb(150,150,150);
+	padding: 4px 0px;
+	letter-spacing: 0px;
+}
+
+b {
+	font-family: 'Roboto Medium';
+	color: rgb(100,100,100);
+}
+
+/* ============================================================================== */
+/*
+/* Replace Default - End
+/*
+/* ============================================================================== */
+
+/* ============================================================================== */
+/*
+/* Icons - Start
+/*
+/* ============================================================================== */
+
+.icon {
+	display: inline-block;
+	text-align: center;
+	font-size: 0px;
+	padding: 0px 11px;
+	/*border: 1px solid rgb(0,255,0);*/
+	vertical-align: middle;
+}
+
+.icon img {
+	font-size: 0px;
+	cursor: pointer;
+	padding: 5px;
+}
+
+.icon-ml-16 {
+	margin-left: 11px;
+}
+
+.icon-ml-20 {
+	margin-left: 15px;
+}
+
+.icon-ml-25 {
+	margin-left: 20px;
+}
+
+.icon-mr-20 {
+	margin-right: 15px;
+}
+
+.icon-mr-30 {
+	margin-right: 25px;
+}
+
+/* ============================================================================== */
+/*
+/* Icons - End
+/*
+/* ============================================================================== */
