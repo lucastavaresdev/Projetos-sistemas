@@ -85,7 +85,7 @@ function lista_de_pacientes(data) {
 function status(vinculado, desvinculado, inicio_do_exame, final_do_exame, status_cancelado_vindo_do_banco) {
     nstatus = '';
     status_cancelado_vindo_do_banco = parseInt(status_cancelado_vindo_do_banco);
-    if (status_cancelado_vindo_do_banco === 5) {
+    if (status_cancelado_vindo_do_banco === 5 && desvinculado === null) {
         console.log('cancelado')
         nstatus = 3;
         return nstatus
