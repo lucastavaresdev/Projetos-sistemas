@@ -65,61 +65,64 @@ if (isset($_GET['data'])) {
  */
  
     $lista_do_setor = "SELECT 
-                                    a.id_agendamento,
-                                    a.nome_paciente as paciente,
-                                    left(a.hora_servico_selecionado, 5) as hora, 
-                                    a.codigo_agenda as atividade,
-                                    a.ih_paciente as IH,
-                                    a.codigo_exame,
-                                    es.codigo_servico,
-                                    s.servico,
-                                    a.descricao_exame,
-                                    a.anotacao,
-                                    sexo_paciente as sexo,
-                                    data_nascimento,
-                                    nome_medico,
-                                    crm_medico as crm,
-                                    ch.checkin as checkin_unidade,
-                                    ch.checkout as checkout_unidade,
-                                    if( ch.checkout is null, timediff(now(), ch.checkin), null) as tempo_vinculado,
-                                    cl_min_c.checkin as checkin_exame,
-                                    cl_max_c.checkout as checkout_exame,
-                                    timediff(cl_max_c.checkout, cl_min_c.checkin) as tempo_exame,
-                                    if(cl_max_c.checkout, null, timediff(now(), cl_min_c.checkin)) as tempo_decorrido_do_exame,
-                                    cl_max_c.status,
-                                    st.descricao as desc_status,
-                                    if( ch.checkout is null, timediff(now(), cl_last.checkout), null) as tempo_espera,
-                                    se.nome as localizacao
-                                    FROM agendamento as a 
-                                    left join exame_servico es 
-                                    on es.codigo_exame = a.codigo_exame
-                                    left join servicos s 
-                                    on s.id = es.codigo_servico	
-                                    left join (select max(id) as id, agendamento from checkin group by agendamento) ch2
-                                    on ch2.agendamento = a.id_agendamento
-                                    left join checkin ch 
-                                    on ch.id = ch2.id
-                                    left join (select min(id) as id, agendamento, etapa from checklist where (date(hora_agendamento) = '$data') group by agendamento, etapa) cl_min
-                                    on cl_min.agendamento = a.id_agendamento and cl_min.etapa = a.codigo_exame
-                                    left join checklist cl_min_c
-                                    on cl_min_c.id = cl_min.id
-                                    left join (select max(id) as id, agendamento, etapa from checklist where (date(hora_agendamento) = '$data') group by agendamento, etapa) cl_max
-                                    on cl_max.agendamento = a.id_agendamento and cl_max.etapa = a.codigo_exame
-                                    left join checklist cl_max_c
-                                    on cl_max_c.id = cl_max.id
-                                    left join (select max(checkout) as checkout, agendamento, etapa from checklist where (date(hora_agendamento) = '$data') group by agendamento) cl_last
-                                    on cl_last.agendamento = a.id_agendamento
-                                    LEFT JOIN (SELECT max(checkout) as checkout, id_vinculado from tracking_pacientes where fechado is null group by id_vinculado) tp1 
-                                    on tp1.id_vinculado = a.id_agendamento
-                                    LEFT JOIN tracking_pacientes tp 
-                                    on tp.checkout = tp1.checkout and tp.id_vinculado = tp1.id_vinculado
-                                    LEFT JOIN setores se
-                                    on se.id = tp.id_sala
-                                    LEFT JOIN status st 
-                                    on st.id = cl_max_c.status
-                                    where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = '$data' and
-                                    es.codigo_servico = $setor
-                                    order by hora";
+                                a.id_agendamento,
+                                a.nome_paciente as paciente,
+                                left(a.hora_servico_selecionado, 5) as hora, 
+                                a.codigo_agenda as atividade,
+                                a.ih_paciente as IH,
+                                a.codigo_exame,
+                                es.codigo_servico,
+                                s.servico,
+                                a.descricao_exame,
+                                a.anotacao,
+                                sexo_paciente as sexo,
+                                data_nascimento,
+                                nome_medico,
+                                crm_medico as crm,
+                                ch.checkin as checkin_unidade,
+                                ch.checkout as checkout_unidade,
+                                if( ch.checkout is null, timediff(now(), ch.checkin), null) as tempo_vinculado,
+                                cl_min_c.checkin as checkin_exame,
+                                cl_max_c.checkout as checkout_exame,
+                                timediff(cl_max_c.checkout, cl_min_c.checkin) as tempo_exame,
+                                if(cl_max_c.checkout, null, timediff(now(), cl_min_c.checkin)) as tempo_decorrido_do_exame,
+                                cl_max_c.status,
+                                st.descricao as desc_status,
+                                if( ch.checkout is null, timediff(now(), cl_last.checkout), null) as tempo_espera,
+                                se.nome as localizacao,
+                                o.descricao as observacao
+                                FROM agendamento as a 
+                                left join exame_servico es 
+                                on es.codigo_exame = a.codigo_exame
+                                left join servicos s 
+                                on s.id = es.codigo_servico	
+                                left join (select max(id) as id, agendamento from checkin group by agendamento) ch2
+                                on ch2.agendamento = a.id_agendamento
+                                left join checkin ch 
+                                on ch.id = ch2.id
+                                left join (select min(id) as id, agendamento, etapa from checklist where (date(hora_agendamento) = '$data') group by agendamento, etapa) cl_min
+                                on cl_min.agendamento = a.id_agendamento and cl_min.etapa = a.codigo_exame
+                                left join checklist cl_min_c
+                                on cl_min_c.id = cl_min.id
+                                left join (select max(id) as id, agendamento, etapa from checklist where (date(hora_agendamento) = '$data') group by agendamento, etapa) cl_max
+                                on cl_max.agendamento = a.id_agendamento and cl_max.etapa = a.codigo_exame
+                                left join checklist cl_max_c
+                                on cl_max_c.id = cl_max.id
+                                left join (select max(checkout) as checkout, agendamento, etapa from checklist where (date(hora_agendamento) = '$data') group by agendamento) cl_last
+                                on cl_last.agendamento = a.id_agendamento
+                                LEFT JOIN (SELECT max(checkout) as checkout, id_vinculado from tracking_pacientes where fechado is null group by id_vinculado) tp1 
+                                on tp1.id_vinculado = a.id_agendamento
+                                LEFT JOIN tracking_pacientes tp 
+                                on tp.checkout = tp1.checkout and tp.id_vinculado = tp1.id_vinculado
+                                LEFT JOIN setores se
+                                on se.id = tp.id_sala
+                                LEFT JOIN status st 
+                                on st.id = cl_max_c.status
+                                LEFT JOIN observacoes o 
+                                on o.id = cl_min_c.observacao
+                                where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = '$data' and
+                                es.codigo_servico = $setor
+                                order by hora";
 
 /*
  *---------------------Procedimentos---------------------------
