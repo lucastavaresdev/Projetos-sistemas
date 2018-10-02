@@ -1,5 +1,5 @@
 <?php
-    header("Refresh:300");
+    header("Refresh:180");
     include "./templates/header.php";
     $setor = $_GET['setor'];
 ?>
