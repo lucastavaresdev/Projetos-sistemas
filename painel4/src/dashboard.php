@@ -106,6 +106,7 @@
                                 <th class="ocultar">tempo_decorrido_do_exame</th>
                                 <th class="ocultar">desc_status</th>
                                 <th class="ocultar">tempo_espera</th>
+                                <th class="ocultar">observacao</th>
                             </tr>
                         </thead>
                         <tbody id="listadePacientes"></tbody>

@@ -90,7 +90,7 @@ if (isset($_GET['data'])) {
                                 st.descricao as desc_status,
                                 if( ch.checkout is null, timediff(now(), cl_last.checkout), null) as tempo_espera,
                                 se.nome as localizacao,
-                                o.descricao as observacao
+                                o.descricao as observacao 
                                 FROM agendamento as a 
                                 left join exame_servico es 
                                 on es.codigo_exame = a.codigo_exame
@@ -119,7 +119,7 @@ if (isset($_GET['data'])) {
                                 LEFT JOIN status st 
                                 on st.id = cl_max_c.status
                                 LEFT JOIN observacoes o 
-                                on o.id = cl_min_c.observacao
+                                on o.id = cl_min_c.observacao 
                                 where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = '$data' and
                                 es.codigo_servico = $setor
                                 order by hora";

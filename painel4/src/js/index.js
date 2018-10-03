@@ -1,7 +1,6 @@
 
 (function () {
     var url_atual = window.location.href;
-    console.log(url_atual)
 
 
     var parametrosDaUrl = url_atual.split("?")[1];
@@ -28,7 +27,6 @@ function dados(data) {
 function media_de_tempo(data) {
     var elem = document.getElementById('tempo_medio_de_sala');
     if (data[0].tempo_medio !== null && data[0].tempo_medio !== undefined) {
-        debugger
         let hora = data[0].tempo_medio.substr(0, 5);
         elem.innerHTML = hora;
     }
@@ -131,16 +129,17 @@ function c_localizacao(campo_do_banco, vinculado) {
 
 
 function modal(data) {
+
     modal = "";
     for (i = 0; i < data.length; i++) {
         var IDdoModal = data[i].IH + data[i].atividade + "modal";
         var ID = data[i].IH + data[i].atividade;
         let obs;
 
-        if (data[i].anotacao === null) {
+        if (data[i].observacao === null) {
             obs = "Não há observação"
         } else {
-            obs = data[i].anotacao;
+            obs = data[i].observacao;
             ID = ID + "botao"
             document.getElementById(ID).style.color = "#FF6347 "
         }
@@ -185,7 +184,6 @@ function abrirModal() {
 }
 
 function format(d) {
-    console.log(d);
     const resultadoSexo = MasculinoouFeminino(d.sexo);
     data_de_nascimento = d.data_nascimento;
     const divindodataeHora = quebraURL(data_de_nascimento, "T");
@@ -302,7 +300,6 @@ function data_table(d) {
                 { 'data': "servico" },
                 { 'data': "setor" },//localizacao
                 { 'data': "status" },
-                { 'data': "anotacao" },
                 { 'data': "codigo_exame" },
                 { 'data': "codigo_servico" },
                 { 'data': "descricao_exame" },
@@ -319,6 +316,7 @@ function data_table(d) {
                 { 'data': "tempo_decorrido_do_exame" },
                 { 'data': "desc_status" },
                 { 'data': "tempo_espera" },
+                { 'data': "observacao" },
             ],
             "order": [[1, 'asc']],
             "columnDefs": [
@@ -470,7 +468,6 @@ function menuclicado() {
 
     for (let i = 0; i < linhas.length; i++) {
         linhas[i].addEventListener('click', function () {
-            console.log(i)
         })
     }
 }
