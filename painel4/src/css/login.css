@@ -39,6 +39,9 @@ body {
 .sem_negrito-informacoes {
   font-weight: 400; }
 
+.sidenav li > a {
+  padding: 0 25px; }
+
 body {
   background-image: url("../img/bg_login.jpg");
   height: 100%;
