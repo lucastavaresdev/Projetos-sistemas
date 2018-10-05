@@ -8,4 +8,8 @@
   font-size: 24px;
   font-weight: 400; }
 
+table.dataTable tbody th,
+table.dataTable tbody td {
+  padding: 11px 21px !important; }
+
 /*# sourceMappingURL=ativos.css.map */

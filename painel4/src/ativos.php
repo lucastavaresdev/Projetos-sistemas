@@ -23,17 +23,17 @@
                     <table id="tabela_ativos"  class="responsive-table tabela-cor " style="width:100%" >
                         <thead>
                             <tr>
-                                <th class='ocultar'> </th>
+                                <th class="ocultar"> </th>
                                 <th>Paciente</th>
-                                <th>Atendimento</th>
+                                <th class="ocultar">Atendimento</th>
                                 <th>IH Paciente</th>
-                                <th>Codigo Agenda</th>
+                                <th class="ocultar">Codigo Agenda</th>
                                 <th>Sexo</th>
                                 <th>Médico</th>
                                 <th>Exame</th>
-                                <th>Data Agendamento</th>
-                                <th>Checkout</th>
-                                <th>Checkin</th>
+                                <th class="ocultar">Data Agendamento</th>
+                                <th>Visto por Ultimo</th>
+                                <th>Vinculado</th>
                                 <th>Tempo</th>
                             </tr>
                         </thead>

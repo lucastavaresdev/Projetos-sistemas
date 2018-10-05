@@ -16,19 +16,18 @@ function lista_de_pacientes(data) {
     if (tbody) {
         for (i = 0; i < data.length; i++) {
             var tr = document.createElement('tr');
-
             var cols = '<td class="ocultar">' + ' ' + '</td>' +
                 '<td>' + data[i].paciente + '</td>' +
-                '<td>' + data[i].atendimento + '</td>' +
+                '<td class="ocultar">' + data[i].atendimento + '</td>' +
                 '<td>' + data[i].ih_paciente + '</td>' +
-                '<td>' + data[i].codigo_agenda + '</td>' +
+                '<td class="ocultar">' + data[i].codigo_agenda + '</td>' +
                 '<td>' + data[i].sexo + '</td>' +
                 '<td>' + data[i].nome_medico + '</td>' +
                 '<td>' + data[i].exame + '</td>' +
-                '<td>' + data[i].data_agendamento + '</td>' +
-                '<td>' + data[i].checkout + '</td>' +
-                '<td>' + data[i].checkin + '</td>' +
-                '<td>' + data[i].tempo + '</td>';
+                '<td class="ocultar">' + data[i].data_agendamento + '</td>' +
+                '<td>' + arredonandarString(data[i].checkout, 11, 16) + '</td>' +
+                '<td>' + arredonandarString(data[i].checkin, 11, 16) + '</td>' +
+                '<td>' + arredonandarString(data[i].tempo, 0, 5) + '</td>';
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
@@ -44,7 +43,7 @@ function data_table(d) {
             //responsive: true,
             "language": {
                 "lengthMenu": " Quantidade por Pagina _MENU_  ",
-                "zeroRecords": "Não encontrado pacientes",
+                "zeroRecords": "Nenhum paciente ativo no momento",
                 "info": "Total de Pagina _PAGE_ de _PAGES_",
                 "infoEmpty": " ",
                 "infoFiltered": "",
@@ -79,7 +78,7 @@ function data_table(d) {
             "columnDefs": [
                 {
                     "targets": [11],
-                    "visible": false,
+                    "visible": true,
                     //         "searchable": false
                 }
             ],
@@ -89,6 +88,19 @@ function data_table(d) {
 
 
 
-/*------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
 
+function arredonandarString(data, inicio, fim) {
+    data = data.substring(inicio, fim);
+    return data;
+}
 
+/*--------------------------------------------------------------------------------------------------*/
+
+function MasculinoouFeminino(sexo) {
+    if (sexo === "F") {
+        return sexo = "Feminino"
+    } else {
+        return sexo = "Masculino"
+    }
+}
