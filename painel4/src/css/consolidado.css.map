@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,QAAS;EACL,OAAO,EAAE,IAAI;;AAGjB,gBAAiB;EACb,OAAO,EAAE,IAAI",
+"mappings": "AAAA,QAAS;EACL,OAAO,EAAE,IAAI",
 "sources": ["../sass/consolidado.scss"],
 "names": [],
 "file": "consolidado.css"

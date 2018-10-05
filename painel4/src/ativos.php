@@ -1,14 +1,16 @@
-<link rel="stylesheet" href="./css/consolidado.css">
 
 <?php
     include('./templates/header.php');
     include('./templates/menu.php');
+    
+    ?>
 
-?>
+<link rel="stylesheet" href="./css/ativos.css">
 
     <div class="row">
         <div class="  col s12 dados_consolidados">
             <div class="col s12 conteudo bg-consolidado espacamento">
+                <h1 class='subtitulospaginas'>Pacientes Ativos no Momento</h1>
             </div>
         </div>
     </div>
@@ -17,11 +19,6 @@
         <div class="row">
             <div class="col s12">
             
-                <ul class="tabs">
-                    <li class="tab col s12 l3">
-                        <a id="aba_nome_setor" class="active" href="#test1"> - </a>
-                    </li>
-                </ul>
                 <div id="test1" class="col s12 tabela_bg">
                     <table id="tabela_ativos"  class="responsive-table tabela-cor " style="width:100%" >
                         <thead>
@@ -45,8 +42,7 @@
                 </div>
             </div>
         </div>
-        <div class="row"><?php include './templates/status.html'; ?></div>
-    </div>
+    </di    v>
 
 
 <!-- The Modal -->
@@ -61,6 +57,8 @@
 ?>
 <script src="./js/ativos.js"></script>
 
+
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125496401-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -71,11 +69,6 @@
 </script>
 
 
-<script>
- $(document).ready(function(){
-    $('.modal').modal();
-  });
-</script>
 
 <script>
     $(document).ready(function () {
