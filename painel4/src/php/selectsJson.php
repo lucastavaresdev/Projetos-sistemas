@@ -360,7 +360,7 @@ left join setores s
 on s.id = tp.id_sala
 inner join beacons b
 on b.id_vinculado = a.id_agendamento
-where date(a.data_agendamento)  = curdate()     and s.nome is not null and 
+where date(a.data_agendamento)  = curdate()   and s.nome is not null and 
 a.nome_paciente like "%%"
 order by a.nome_paciente asc';
  
