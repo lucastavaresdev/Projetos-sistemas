@@ -1,10 +1,9 @@
 <?php
-    // header("Refresh:180");
-     include "./templates/header.php";
-    // $setor = $_GET['setor'];
+    include('./templates/header.php');
+    include('./templates/menu.php');
 ?>
+<link rel="stylesheet" href="./css/consolidado.css">
 
-<?php include "./templates/menu.php"; ?>
     <div class="row">
         <div class="  col s12 dados_consolidados">
             <div class="col s12 conteudo bg-consolidado espacamento">
