@@ -24,17 +24,17 @@
                         <thead>
                             <tr>
                                 <th class='ocultar'> </th>
-                                <th>atendimento</th>
-                                <th>ih_paciente</th>
-                                <th>paciente</th>
-                                <th>codigo_agenda</th>
-                                <th>sexo</th>
-                                <th>nome_medico</th>
-                                <th>exame</th>
-                                <th>data_agendamento</th>
-                                <th>checkout</th>
-                                <th>checkin</th>
-                                <th>tempo</th>
+                                <th>Paciente</th>
+                                <th>Atendimento</th>
+                                <th>IH Paciente</th>
+                                <th>Codigo Agenda</th>
+                                <th>Sexo</th>
+                                <th>Médico</th>
+                                <th>Exame</th>
+                                <th>Data Agendamento</th>
+                                <th>Checkout</th>
+                                <th>Checkin</th>
+                                <th>Tempo</th>
                             </tr>
                         </thead>
                         <tbody id="listadePacientes"></tbody>

@@ -18,9 +18,9 @@ function lista_de_pacientes(data) {
             var tr = document.createElement('tr');
 
             var cols = '<td class="ocultar">' + ' ' + '</td>' +
+                '<td>' + data[i].paciente + '</td>' +
                 '<td>' + data[i].atendimento + '</td>' +
                 '<td>' + data[i].ih_paciente + '</td>' +
-                '<td>' + data[i].paciente + '</td>' +
                 '<td>' + data[i].codigo_agenda + '</td>' +
                 '<td>' + data[i].sexo + '</td>' +
                 '<td>' + data[i].nome_medico + '</td>' +
@@ -62,9 +62,9 @@ function data_table(d) {
                     "data": null,
                     "defaultContent": ''
                 },
+                { 'data': "paciente" },
                 { 'data': "atendimento" },
                 { 'data': "ih_paciente" },
-                { 'data': "paciente" },
                 { 'data': "codigo_agenda" },
                 { 'data': "sexo" },
                 { 'data': "nome_medico" },
@@ -76,13 +76,13 @@ function data_table(d) {
 
             ],
             // "order": [[1, 'asc']],
-            // "columnDefs": [
-            //     {
-            //         "targets": [14],
-            //         "visible": true,
-            //         "searchable": false
-            //     }
-            // ],
+            "columnDefs": [
+                {
+                    "targets": [11],
+                    "visible": false,
+                    //         "searchable": false
+                }
+            ],
         });
     });
 }
