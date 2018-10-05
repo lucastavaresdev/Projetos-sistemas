@@ -1,8 +1,10 @@
+<link rel="stylesheet" href="./css/consolidado.css">
+
 <?php
     include('./templates/header.php');
     include('./templates/menu.php');
+
 ?>
-<link rel="stylesheet" href="./css/consolidado.css">
 
     <div class="row">
         <div class="  col s12 dados_consolidados">
