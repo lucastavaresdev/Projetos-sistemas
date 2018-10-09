@@ -1,9 +1,9 @@
 
 <?php
+    header("Refresh:180");
     include('./templates/header.php');
     include('./templates/menu.php');
-    
-    ?>
+?>
 
 <link rel="stylesheet" href="./css/ativos.css">
 
@@ -27,13 +27,14 @@
                                 <th>Paciente</th>
                                 <th class="ocultar">Atendimento</th>
                                 <th>IH Paciente</th>
-                                <th class="ocultar">Codigo Agenda</th>
+                                <th class="ocultar">Cod Exame</th>
                                 <th>Sexo</th>
                                 <th>Médico</th>
                                 <th>Exame</th>
                                 <th class="ocultar">Data Agendamento</th>
                                 <th>Visto por Ultimo</th>
                                 <th>Vinculado</th>
+                                <th>Status</th>
                                 <th>Tempo</th>
                             </tr>
                         </thead>
@@ -42,8 +43,9 @@
                 </div>
             </div>
         </div>
-    </di    v>
+    </div>
 
+ 
 
 <!-- The Modal -->
 <div id="elempai">

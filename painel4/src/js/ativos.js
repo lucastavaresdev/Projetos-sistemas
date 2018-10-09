@@ -1,10 +1,10 @@
 
+
 (function () {
     var url_atual = window.location.href;
     var parametrosDaUrl = url_atual.split("?")[1];
-    chamadaAjax(`php/selectsJson.php?parametro=relatorio_de_paciente_ativos`, lista_de_pacientes);
+    chamadaAjax(`php/selectsJson.php?parametro=relatorio_de_paciente_ativos`, lista_de_pacientes)
 })();
-
 
 
 /*
@@ -14,19 +14,25 @@ function lista_de_pacientes(data) {
 
     var tbody = document.getElementById("listadePacientes");
     if (tbody) {
+
+
         for (i = 0; i < data.length; i++) {
+
+            var nstatus = status(data[i].status_final)
+
             var tr = document.createElement('tr');
             var cols = '<td class="ocultar">' + ' ' + '</td>' +
                 '<td>' + data[i].paciente + '</td>' +
                 '<td class="ocultar">' + data[i].atendimento + '</td>' +
                 '<td>' + data[i].ih_paciente + '</td>' +
-                '<td class="ocultar">' + data[i].codigo_agenda + '</td>' +
+                '<td class="ocultar">' + data[i].cod_exame + '</td>' +
                 '<td>' + data[i].sexo + '</td>' +
                 '<td>' + data[i].nome_medico + '</td>' +
                 '<td>' + data[i].exame + '</td>' +
                 '<td class="ocultar">' + data[i].data_agendamento + '</td>' +
                 '<td>' + arredonandarString(data[i].checkout, 11, 16) + '</td>' +
                 '<td>' + arredonandarString(data[i].checkin, 11, 16) + '</td>' +
+                '<td><div class="status-' + nstatus + ' center-status">' + nstatus + '</div></td>' +
                 '<td>' + arredonandarString(data[i].tempo, 0, 5) + '</td>';
 
             var linha = tr.innerHTML = cols;
@@ -64,15 +70,15 @@ function data_table(d) {
                 { 'data': "paciente" },
                 { 'data': "atendimento" },
                 { 'data': "ih_paciente" },
-                { 'data': "codigo_agenda" },
+                { 'data': "cod_exame" },
                 { 'data': "sexo" },
                 { 'data': "nome_medico" },
                 { 'data': "exame" },
                 { 'data': "data_agendamento" },
                 { 'data': "checkout" },
                 { 'data': "checkin" },
+                { 'data': "status_final" },
                 { 'data': "tempo" }
-
             ],
             // "order": [[1, 'asc']],
             "columnDefs": [
@@ -97,10 +103,20 @@ function arredonandarString(data, inicio, fim) {
 
 /*--------------------------------------------------------------------------------------------------*/
 
-function MasculinoouFeminino(sexo) {
-    if (sexo === "F") {
-        return sexo = "Feminino"
-    } else {
-        return sexo = "Masculino"
+function status(dados) {
+    nstatus = '';
+    dados = parseInt(dados);
+    if (dados === 5) {
+        console.log('cancelado')
+        nstatus = 3;
+        return nstatus
+    } else if (dados === 1 || dados === 3) {
+        console.log('Aguardando')
+        nstatus = 1
+        return nstatus
+    } else if (dados = 2) {
+        console.log('Em antedimentos')
+        nstatus = 2
+        return nstatus
     }
 }

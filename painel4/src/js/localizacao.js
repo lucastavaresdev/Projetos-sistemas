@@ -1,3 +1,5 @@
+
+
 (function () {
     var url_atual = window.location.href;
 
