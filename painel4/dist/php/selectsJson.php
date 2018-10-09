@@ -334,35 +334,37 @@ $qtd_por_horario_de_pacientes = "SELECT  CONCAT(HOUR(a.hora_servico_selecionado)
 
 
 $relatorio_de_paciente_ativos = 'SELECT
-distinct(a.id_agendamento) as atendimento,
-a.ih_paciente ,
-a.nome_paciente as paciente,
-a.codigo_agenda,
-a.sexo_paciente as sexo,
-a.nome_medico ,
-a.descricao_exame as exame,
-a.data_agendamento,
-tp.checkout,
-tp.checkin,
-timediff(tp.checkout, tp.checkin) as tempo
-FROM agendamento a
-left join checklist c
-on c.agendamento = a.id_agendamento
-left join agendamento agt
-on agt.id_agendamento = c.tipo_checkup
-left join checkin ch
-on ch.agendamento = a.id_agendamento
-left join (select max(checkin) as checkin, id, id_vinculado, categoria from tracking_pacientes group by id_vinculado) tp2
-on tp2.id_vinculado = a.id_agendamento and tp2.categoria = "Paciente"
-left join tracking_pacientes tp
-on tp.checkin = tp2.checkin and tp.id_vinculado = tp2.id_vinculado
-left join setores s 
-on s.id = tp.id_sala
-inner join beacons b
-on b.id_vinculado = a.id_agendamento
-where date(a.data_agendamento)  = curdate()   and s.nome is not null and 
-a.nome_paciente like "%%"
-order by a.nome_paciente asc';
+                                                    distinct(a.id_agendamento) as atendimento,
+                                                    a.ih_paciente ,
+                                                    a.nome_paciente as paciente,
+                                                    a.sexo_paciente as sexo,
+                                                    a.nome_medico ,
+                                                    a.data_agendamento,
+                                                    tp.checkout,
+                                                    tp.checkin,
+                                                    (SELECT ds_etapa FROM  checklist where  agendamento = atendimento order by checkin desc limit 1) as exame,
+                                                    (SELECT abrev_etapa FROM  checklist where   agendamento = atendimento order by checkin desc limit 1) as cod_exame,
+                                                    (SELECT status FROM  checklist where agendamento = atendimento  order by checkin desc limit 1) as status_final,
+                                                    timediff(tp.checkout, tp.checkin) as tempo
+                                                    FROM agendamento a
+                                                    left join checklist c
+                                                    on c.agendamento = a.id_agendamento
+                                                    left join agendamento cu
+                                                    on cu.id_agendamento = c.tipo_checkup
+                                                    left join checkin ch
+                                                    on ch.agendamento = a.id_agendamento
+                                                    left join (select max(checkin) as checkin, id, id_vinculado, categoria from tracking_pacientes group by id_vinculado) tp2
+                                                    on tp2.id_vinculado = a.id_agendamento and tp2.categoria = "Paciente"
+                                                    left join tracking_pacientes tp
+                                                    on tp.checkin = tp2.checkin and tp.id_vinculado = tp2.id_vinculado
+                                                    left join setores s 
+                                                    on s.id = tp.id_sala
+                                                    inner join beacons b
+                                                    on b.id_vinculado = a.id_agendamento
+                                                    where date(a.data_agendamento)  = curdate()  and  s.nome is not null and  
+                                                    a.nome_paciente like "%%"
+                                                    group by a.id_agendamento
+                                                    order by a.nome_paciente asc';
  
 
 
