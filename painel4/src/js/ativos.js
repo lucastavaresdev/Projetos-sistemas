@@ -19,6 +19,7 @@ function lista_de_pacientes(data) {
         for (i = 0; i < data.length; i++) {
 
             var nstatus = status(data[i].status_final)
+            var exame = ocultaDados(data[i].exame, data[i].status_final)
 
             var tr = document.createElement('tr');
             var cols = '<td class="ocultar">' + ' ' + '</td>' +
@@ -28,7 +29,7 @@ function lista_de_pacientes(data) {
                 '<td class="ocultar">' + data[i].cod_exame + '</td>' +
                 '<td>' + data[i].sexo + '</td>' +
                 '<td>' + data[i].nome_medico + '</td>' +
-                '<td>' + data[i].exame + '</td>' +
+                '<td>' + exame + '</td>' +
                 '<td class="ocultar">' + data[i].data_agendamento + '</td>' +
                 '<td>' + arredonandarString(data[i].checkout, 11, 16) + '</td>' +
                 '<td>' + arredonandarString(data[i].checkin, 11, 16) + '</td>' +
@@ -118,5 +119,17 @@ function status(dados) {
         console.log('Em antedimentos')
         nstatus = 2
         return nstatus
+    }
+}
+
+/*--------------------------------------------------------------------------------------------------*/
+
+
+function ocultaDados(dado, status) {
+    status = parseInt(status);
+    if (status === 2) {
+        return dado
+    } else {
+        return " "
     }
 }
