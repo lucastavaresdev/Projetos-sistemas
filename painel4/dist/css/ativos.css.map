@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,QAAS;EACL,OAAO,EAAE,IAAI;;AAGjB,gBAAiB;EACb,OAAO,EAAE,IAAI;;AAGjB,kBAAmB;EACf,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;;AAGpB;wBACyB;EACrB,OAAO,EAAE,oBAAoB",
+"sources": ["../sass/_partials/_ativos/_base.scss"],
+"names": [],
+"file": "ativos.css"
+}

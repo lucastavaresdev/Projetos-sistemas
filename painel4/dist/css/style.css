@@ -1,1 +1,927 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700);@import url(https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i);@import url(https://fonts.googleapis.com/css?family=Cousine);.modal-index,nav{position:fixed;z-index:1}a,div,h1,h2,h3,h4,h5,h6,p{font-family:Montserrat,sans-serif}body{background:#F8FAFC}.borda-topo-left{border-top-left-radius:25px}.borda-topo-right{border-top-right-radius:25px}.icone{margin-right:10px}@media (max-device-width:767px){main{margin-top:13%}}.cor-aviso{color:#E82C0C}.ocultar{display:none!important}.datepicker-select,.modal-index{display:none}.negrito-informacoes{font-weight:500}.sem_negrito-informacoes{font-weight:400}nav #titulo_do_setor,nav .logo{font-weight:300;font-family:Montserrat,sans-serif;font-size:26px;color:#fff}nav{box-shadow:none;background:#007DCC;height:50px;border-bottom:solid 2px #005e99}nav #titulo_do_setor{line-height:2}nav .logo{margin-left:4%;line-height:53px}nav .logo b{font-family:Montserrat,sans-serif;font-size:26px;font-weight:600;color:#fff}nav ul a{font-family:Montserrat,sans-serif;font-size:26px;font-weight:300;color:#fff;padding:0;line-height:1.9}nav .drop_topo i{line-height:53px}.setor_espacamento{padding-right:0!important}.icon_mobile_menu{padding-right:10px}@media (max-width:920px){#titulo_do_setor{font-family:Montserrat,sans-serif;font-size:13px!important;font-weight:300;color:#fff;line-height:53px!important;margin-left:-50px}.drop_topo,.logo{font-family:Montserrat,sans-serif;font-size:13px!important;font-weight:300;color:#fff;line-height:53px}.logo{margin-left:4%}.logo b{font-family:Montserrat,sans-serif;font-size:13px!important;font-weight:300;color:#fff}}.datepicker-modal{overflow-x:hidden;max-width:670px}.datepicker-date-display{background-color:#007DCC}.modal-content.datepicker-container{height:30%!important}.datepicker-container{width:670px!important}.datepicker-controls .select-month input{width:95px!important}.dropdown-content{min-width:137px!important}.modal-index{left:0;top:0;width:100%;height:100%;overflow:hidden;background-color:#000;background-color:rgba(0,0,0,.4);max-height:100%}.modal-index-content{background-color:#fefefe;margin:15% auto;padding:19px;border:1px solid #888;width:80%}.close,.tamanho-barra{width:22px;position:fixed;display:flex;background:#fff;box-shadow:2px 5px 14px rgba(0,0,0,.082);cursor:pointer}.fecharModal{color:#aaa;float:right;font-size:28px;font-weight:700}.dados_consolidados h4,.dados_consolidados p,.fluxo-1 li,.fluxo-1 span,.p-msg{font-family:Montserrat,sans-serif;font-weight:400}.fecharModal:focus,.fecharModal:hover{color:#000;text-decoration:none;cursor:pointer}.close .material-icons,.tamanho-barra .material-icons{padding-left:4px;color:#007DCC}.botao_modal{cursor:pointer;z-index:2000}.tamanho-barra{z-index:0;height:100%;justify-content:center;align-items:center;top:51px}.close{height:88.2%;justify-content:center;align-items:center;right:0}.open-a{transform:translateX(0);transition:.4s}.open-b{transform:translateX(-105%);transition:.4s}.datepicker-container{height:500px}.sidenav{width:250px;top:51px}.sidenav-overlay{background:0 0}.conteudo_side{width:90.333333%!important;padding:0!important}.conteudo_side .bg_nav{width:100%;height:100%}.logo-sidenav{width:109%}.dados_consolidados .dash_btn_superior,.dash_btn_superior_sem_hover{width:60%;height:18%;border-radius:7px;text-align:center}.sair{position:absolute!important;bottom:112px!important}.dados_consolidados{background:#fff;border-bottom:2px solid #f1f1f1;z-index:5000px}.dados_consolidados .bg-consolidado{padding-top:1.5%;padding-button:1.5%}.dados_consolidados p{font-size:15px;color:#7a7a7a}.dados_consolidados h4{line-height:.4;font-size:39px;color:#007DCC}.dados_consolidados .dash_btn_superior{cursor:pointer;transition:all .7s ease}.dados_consolidados .dash_btn_superior:hover{background:#007DCC}.dados_consolidados .dash_btn_superior:hover .p-msg,.dados_consolidados .dash_btn_superior:hover h4,.dados_consolidados .dash_btn_superior:hover li,.dados_consolidados .dash_btn_superior:hover p,.dados_consolidados .dash_btn_superior:hover span{color:#fff}.m-fluxo p{padding-top:7px}.tamanho_da_linha_titulo_fluxo{line-height:.7}.fluxo-1 li{line-height:1;font-size:22px;color:#007DCC;cursor:pointer}.fluxo-1 span{white-space:nowrap;line-height:.8;font-size:17px;color:#868686}.p-msg{font-size:19px;color:#007DCC;cursor:pointer;line-height:1.1}.p-msg:hover{color:#fff}@media (max-width:920px){.bg-consolidado p{font-family:Montserrat,sans-serif;font-size:9px;font-weight:400;color:#7a7a7a}.bg-consolidado h4,.fluxo-1 li{color:#007DCC;font-family:Montserrat,sans-serif;font-weight:400}.bg-consolidado h4{line-height:.4;font-size:23px}.fluxo-1 li{line-height:1;font-size:17px;cursor:pointer}.fluxo-1 span{white-space:nowrap;line-height:.8;font-family:Montserrat,sans-serif;font-size:12px;font-weight:400;color:#868686}.tamanho_da_linha_titulo_fluxo{line-height:.7}}.tabs .tab,.tabs .tab a.active{font-family:Montserrat,sans-serif;font-size:14px;font-weight:500}.fade-in{opacity:1;animation:fadein 2s;-webkit-animation:fadein 2s}@keyframes fadein{from{opacity:0}to{opacity:1}}.conteudo{padding:1% 4%!important}.espacamento{margin-top:1.5%}@media (max-width:920px){.espacamento{margin-top:8%;text-align:center}}@media (max-width:600px){.conteudo{padding:1% 4% 1% 11%!important}.espacamento{margin-top:17%}}@media (min-width:900px) and (max-width:1700px){.conteudo{padding-top:40px!important}}@media only screen and (min-device-width:1024px) and (max-device-width:1366px) and (orientation:portrait){.espacamento{margin-top:3.5%}}.tabela_bg{background:#fff}.tabs{color:#7a7a7a;position:inherit}.tabs .tab{color:#007DCC}.tabs .tab a{color:#7a7a7a}.tabs .tab a.active{color:#007DCC}.tabs .tab a:hover{color:#005e99}.tabs .tab a:focus.active{background-color:rgba(0,125,204,.2)}.tabs .indicator{background:#007DCC}.indicator{display:none}select{display:block}select .titulo_do_setor_mobile{display:none}drop_topo .mobile{display:block}.obs{z-index:0}@media (max-width:920px){.mobile{display:none}.mobile2{display:block}.mobile2 a{color:red!important}.qtd_pag{display:none}html{font-size:13px}.dataTables_paginate paging_simple_numbers{margin-bottom:11px}table.dataTable thead td,table.dataTable thead th{border-bottom:none!important}table.responsive-table td{min-height:1.8em}.drop_topo{font-family:Montserrat,sans-serif;font-size:10px;font-weight:300;color:#fff}}#setores .icon,div.add_info{display:none}.c_titulo,.c_titulo span{font-family:Montserrat,sans-serif;font-weight:400}.status-1,.status-2,.status-3,.status-4,.status-5,.status-6,.status-null{width:25px;height:25px;color:transparent}td.details-control{background:url(../img/circle-down.svg) center center no-repeat;cursor:pointer}tr.shown td.details-control{background:url(../img/circle-up.svg) center center no-repeat}table.dataTable tbody td.no-padding{padding:0}.titulo_status{line-height:0;margin:11px 11px 11px 9px}.center-status{margin-left:15%!important}.status-1{background:#FF0!important}.status-2{background:#0F0!important}.status-3{background:red!important}.status-4{background:indigo!important}.status-5{background:#F0F!important}.status-6,.status-null{background:#c6c6c6!important}.input-field label{color:#007DCC}.input-field input[type=text]:focus+label{color:#006db3}.c_titulo,.c_total_card,.input-field .prefix.active{color:#007DCC}.input-field input[type=text].invalid,.input-field input[type=text].valid,.input-field input[type=text]:focus{border-bottom:1px solid #007DCC;box-shadow:0 1px 0 0 #007DCC}#setores ul{position:relative;z-index:1055;width:239px!important;height:100%}.c_titulo{font-size:25px}.c_titulo span{font-size:18px;color:#007DCC}@media (max-width:920px){#setores .icon{display:block}.c_centralizando{display:flex;justify-content:center}.c_centralizando .c_agendamento{font-family:Montserrat,sans-serif;font-size:20px;font-weight:600;color:#007DCC}.c_titulo,.c_titulo span{font-family:Montserrat,sans-serif;font-size:14px;font-weight:400;color:#007DCC}.c_titulo{margin-top:20px;margin-bottom:10px;text-align:center!important}}.c_total_card,.c_total_card b{font-family:Montserrat,sans-serif;font-size:30px}.c_total_card{font-weight:300;letter-spacing:4px}.c_total_card b{font-weight:600;color:#007DCC}.c_total_card_inferior,.c_total_card_inferior b{font-size:20px;color:#007DCC;font-family:Montserrat,sans-serif}.c_total_card_inferior{font-weight:300;letter-spacing:2px}.c_total_card_inferior b{font-weight:600}.c_linha_card_superior{margin-bottom:0}@media (max-width:920px){.c_total_card,.c_total_card b{font-family:Montserrat,sans-serif;font-size:20px;color:#007DCC}.c_total_card{letter-spacing:0;font-weight:300}.c_total_card b{font-weight:600}}@media (min-width:1300px) and (max-width:1700px){.c_total_card,.c_total_card b{font-family:Montserrat,sans-serif;font-size:20px}.c_total_card{letter-spacing:0;font-weight:300;color:#007DCC}.c_total_card b{font-weight:600;color:#007DCC}.c_total_card_inferior,.c_total_card_inferior b{font-family:Montserrat,sans-serif;font-size:12px;color:#007DCC}.c_total_card_inferior{font-weight:300;letter-spacing:2px}.c_total_card_inferior b{font-weight:600}}@media (min-width:900px) and (max-width:1300px){.c_total_card,.c_total_card b,.c_total_card_inferior,.c_total_card_inferior b{font-family:Montserrat,sans-serif;color:#007DCC}.c_total_card{letter-spacing:0;font-size:17px;font-weight:300}.c_total_card b{font-size:17px;font-weight:600}.c_total_card_inferior{font-size:20px;font-weight:300;letter-spacing:2px}.c_total_card_inferior b{font-size:9px;font-weight:600;padding-top:4px}}@media (min-width:991px) and (max-width:1800px){.c_titulo{font-size:15px}}.con_padding{padding:17px!important}.cards{background:#fff;border-radius:2px;padding-left:0!important;position:relative;height:280px;width:100%;margin-bottom:40px}.cards .imagem-img225,.cards .imagem-img226,.cards .imagem-img227,.cards .imagem-img228,.cards .imagem-img229,.cards .imagem-img230,.cards .imagem-img231,.cards .imagem-img232,.cards .imagem-img235,.cards .imagem-img239,.cards .imagem-img275,.cards .imagem-img276,.cards .imagem-img298,.cards .imagem-img322,.cards .imagem-img335,.cards .imagem-img391{position:absolute;height:100%}.cards .imagem-img225{background:url(../img/ergometria.jpg) center center no-repeat;background-size:cover}.cards .imagem-img226{background:url(../img/cardiopumonar.jpg) center center no-repeat;background-size:cover}.cards .imagem-img227{background:url(../img/mapa.jpg) center center no-repeat;background-size:cover}.cards .imagem-img228{background:url(../img/medicina_nuclear.jpg) center center no-repeat;background-size:cover}.cards .imagem-img229{background:url(../img/tomografia.jpg) center center no-repeat;background-size:cover}.cards .imagem-img230{background:url(../img/tomografia2.jpg) center center no-repeat;background-size:cover}.cards .imagem-img231{background:url(../img/ultrassom.jpg) center center no-repeat;background-size:cover}.cards .imagem-img232{background:url(../img/laboratorio.jpg) center center no-repeat;background-size:cover}.cards .imagem-img234{background:url(../img/radiologia.jpg) center center no-repeat;background-size:cover;position:absolute;height:100%}.cards .imagem-img235{background:url(../img/mamografia.jpg) center center no-repeat;background-size:cover}.cards .imagem-img275{background:url(../img/endoscopia.jpg) center center no-repeat;background-size:cover}.cards .imagem-img276{background:url(../img/setor_aritimias.jpg) center center no-repeat;background-size:cover}.cards .imagem-img298{background:url(../img/eletro.jpg) center center no-repeat;background-size:cover}.cards .imagem-img239{background:url(../img/checkup.jpg) center center no-repeat;background-size:cover}.cards .imagem-img322{background:url(../img/banco_de_sangue.jpg) center center no-repeat;background-size:cover}.cards .imagem-img335{background:url(../img/colonoscopia.jpg) center center no-repeat;background-size:cover}.cards .imagem-img391{background:url(../img/ecocardiograma.jpg) center center no-repeat;background-size:cover}.agendamento,body,html{position:relative}.cards .c_conteudo_card{position:relative;left:26%!important}.cards .c_conteudo_card .c_card-title{margin-top:12px}.cards .c_conteudo_card p{line-height:.7;font-size:17px;text-align:left!important}.cards .c_conteudo_card .c_status{line-height:3}.cards a{color:#4a4a4a!important}@media (max-width:920px){.cards{height:260px}.cards .c_conteudo_card{left:34%!important}.cards .c_conteudo_card p{font-size:13px}}.agendamento .espacamento{margin-top:2.5%}.agendamento .bordas{border-radius:7px}@media (max-width:600px){.agendamento .espacamento{margin-top:17.5%}.agendamento .info{margin-top:15px}}@media (min-width:601px) and (max-width:920px){.agendamento .espacamento{margin-top:8.5%}.agendamento .info{margin-top:15px}}.open{z-index:1}.agendamento .tabela_bg{padding:21px!important}.agendamento .tabela-cor{border-radius:7px!important;box-shadow:0 0 40px 0 rgba(0,0,0,.15);background:#007DCC}.agendamento .tabela-cor thead{color:#fff}.agendamento .tabela-cor thead th{font-family:Montserrat,sans-serif;font-size:15px;font-weight:500;color:#fff}.agendamento .dataTables_length{margin-bottom:30px}.agendamento table.dataTable thead th{padding:10px 20px;border-bottom:none}.agendamento td,.agendamento th{border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;-ms-border-radius:0;-o-border-radius:0}.agendamento table.striped>tbody>tr:nth-child(odd){background:#f8fafc}.agendamento table.dataTable.no-footer{border-bottom:none}@media (max-width:620px){.agendamento .tabela_bg{padding:0!important}}body,html{height:100%}.agendamento #agendamemento_card_notificacao{box-sizing:border-box;overflow-x:hidden;overflow-y:scroll;top:0;transition:background .3s ease-out .1s;height:700px}.agendamento #agendamemento_card_notificacao .titulo{font-size:15px}.agendamento #agendamemento_card_notificacao .card .card-content{padding:12px}.agendamento ::-webkit-scrollbar{width:10px}.agendamento ::-webkit-scrollbar-button{display:none}.agendamento ::-webkit-scrollbar-track{border-radius:20px}.agendamento ::-webkit-scrollbar-track-piece{border-radius:20px;background:0 0}.agendamento ::-webkit-scrollbar-thumb{background:#ececec;border-radius:20px;-webkit-border-radius:20px;-moz-border-radius:20px;-ms-border-radius:20px;-o-border-radius:20px}.agendamento ::-webkit-scrollbar-corner{background:#f0f}.agendamento ::-webkit-resizer{background:#00ff7f}#listadePacienteslocalizacao tr td,#qtd_por_horario_de_pacientes td,#qtd_por_horario_de_procedimento td{background:#fff}.agendamento .paging_simple_numbers{font-size:11px}.agendamento .dataTables_wrapper .dataTables_filter input{margin-left:0}.titulo_agendamento{font-size:21px;padding-top:10px}.status_agendamento{margin-top:4%}.hora_agendamento{padding-top:50%}.com_agendamento{padding-top:10px}.pacientes .topo{margin-top:60px}.pacientes .titulo{font-family:Montserrat,sans-serif;font-size:30px;font-weight:500;color:#007DCC;text-align:center;line-height:21px!important}#qtd_por_horario_de_pacientes b,#qtd_por_horario_de_procedimento b{color:#006db3;font-weight:600}.maior_fluxo_subtitulo{font-family:Montserrat,sans-serif;font-size:18px;font-weight:400;color:#007DCC;padding-bottom:25px}.maior_fluxo_titulo{font-family:Montserrat,sans-serif;font-size:20px;font-weight:500;color:#474747}@media (max-width:620px){.datepicker-container{width:300px!important}.datepicker-date-display{background-color:#007DCC;padding-left:355px}.datepicker-date-display .date-text,.datepicker-date-display .year-text{margin-left:-410px}.ocutarmobile{display:none!important}table.responsive-table thead th{display:none}.agendamento ::-webkit-scrollbar{width:4px;background:#f6f6f6}.agendamento ::-webkit-scrollbar-button{display:none}.agendamento ::-webkit-scrollbar-track{border-radius:5px}.agendamento ::-webkit-scrollbar-track-piece{border-radius:20px;background:0 0}.agendamento ::-webkit-scrollbar-thumb{width:4px;background:#ececec;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px}.agendamento ::-webkit-scrollbar-corner{background:#f0f}.agendamento ::-webkit-resizer{background:#00ff7f}.titulo_mobile_estrutura{width:50%!important}.setor_mobile_estrutura{width:1px!important;margin-left:13%!important}.dash_btn_superior .p-msg{font-size:10px}.dados_consolidados .dash_btn_superior,.dados_consolidados .dash_btn_superior_sem_hover{width:80%!important}.input-calendario input{border:none;border-bottom:none!important}.input-calendario .figuras{display:inline-block;padding-left:24px;line-height:16px;background-position:2px center;background-repeat:no-repeat;background-image:url(../img/icon-calendario.jpg)}.input-calendario ::-webkit-input-placeholder{color:transparent}.input-calendario :-moz-placeholder{color:transparent}.input-calendario ::-moz-placeholder{color:transparent}.input-calendario :-ms-input-placeholder{color:transparent}}@media (min-width:621px) and (max-width:920px){.datepicker-container{width:300px!important}.datepicker-date-display{background-color:#007DCC;padding-left:245px}.datepicker-date-display .date-text,.datepicker-date-display .year-text{margin-left:-220px}.ocutarmobile{display:none!important}.agendamento ::-webkit-scrollbar{width:4px;background:#f6f6f6}.agendamento ::-webkit-scrollbar-button{display:none}.agendamento ::-webkit-scrollbar-track{border-radius:5px}.agendamento ::-webkit-scrollbar-track-piece{border-radius:20px;background:0 0}.agendamento ::-webkit-scrollbar-thumb{width:4px;background:#ececec;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px}.agendamento ::-webkit-scrollbar-corner{background:#f0f}.agendamento ::-webkit-resizer{background:#00ff7f}.titulo_mobile_estrutura{width:50%!important}.setor_mobile_estrutura{width:1px!important;margin-left:13%!important}.dash_btn_superior .p-msg{font-size:10px}.dados_consolidados .dash_btn_superior,.dados_consolidados .dash_btn_superior_sem_hover{width:80%!important}}
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Cousine");
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+div {
+  font-family: "Montserrat", sans-serif; }
+
+body {
+  background: #F8FAFC; }
+
+.borda-topo-left {
+  border-top-left-radius: 25px; }
+
+.borda-topo-right {
+  border-top-right-radius: 25px; }
+
+.icone {
+  margin-right: 10px; }
+
+@media (max-device-width: 767px) {
+  main {
+    margin-top: 13%; } }
+.cor-aviso {
+  color: #E82C0C; }
+
+.ocultar {
+  display: none !important; }
+
+.negrito-informacoes {
+  font-weight: 500; }
+
+.sem_negrito-informacoes {
+  font-weight: 400; }
+
+.sidenav li > a {
+  padding: 0 25px; }
+
+nav {
+  box-shadow: none;
+  background: #007DCC;
+  height: 50px;
+  border-bottom: solid 2px #005e99;
+  position: fixed;
+  z-index: 1; }
+  nav #titulo_do_setor {
+    font-family: Montserrat, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 2; }
+  nav .logo {
+    font-family: Montserrat, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    color: #ffffff;
+    margin-left: 4%;
+    line-height: 53px; }
+    nav .logo b {
+      font-family: Montserrat, sans-serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: #ffffff; }
+  nav ul a {
+    font-family: Montserrat, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 0;
+    line-height: 1.9; }
+  nav .drop_topo i {
+    line-height: 53px; }
+
+.setor_espacamento {
+  padding-right: 0 !important; }
+
+.icon_mobile_menu {
+  padding-right: 10px; }
+
+@media (max-width: 920px) {
+  #titulo_do_setor {
+    font-family: Montserrat, sans-serif;
+    font-size: 13px !important;
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 53px !important;
+    margin-left: -50px; }
+
+  .logo {
+    font-family: Montserrat, sans-serif;
+    font-size: 13px !important;
+    font-weight: 300;
+    color: #ffffff;
+    margin-left: 4%;
+    line-height: 53px; }
+    .logo b {
+      font-family: Montserrat, sans-serif;
+      font-size: 13px !important;
+      font-weight: 300;
+      color: #ffffff; }
+
+  .drop_topo {
+    font-family: Montserrat, sans-serif;
+    font-size: 13px !important;
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 53px; } }
+.datepicker-modal {
+  overflow-x: hidden; }
+
+.datepicker-select {
+  display: none; }
+
+.datepicker-date-display {
+  background-color: #007DCC; }
+
+.modal-content.datepicker-container {
+  height: 30% !important; }
+
+.datepicker-modal {
+  max-width: 670px; }
+
+.datepicker-container {
+  width: 670px !important; }
+
+.datepicker-controls .select-month input {
+  width: 95px !important; }
+
+.dropdown-content {
+  min-width: 137px !important; }
+
+/* The Modal (background) */
+.modal-index {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+  max-height: 100%; }
+
+/* Modal Content/Box */
+.modal-index-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 19px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */ }
+
+/* The Close Button */
+.fecharModal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold; }
+
+.fecharModal:hover,
+.fecharModal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer; }
+
+.botao_modal {
+  cursor: pointer;
+  z-index: 2000; }
+
+.tamanho-barra {
+  z-index: 0;
+  height: 100%;
+  width: 22px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: #ffffff;
+  box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.082);
+  top: 51px; }
+  .tamanho-barra .material-icons {
+    padding-left: 4px;
+    color: #007DCC; }
+
+.close {
+  height: 88.2%;
+  width: 22px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  cursor: pointer;
+  background: #ffffff;
+  box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.082); }
+  .close .material-icons {
+    padding-left: 4px;
+    color: #007DCC; }
+
+.open-a {
+  transform: translateX(0);
+  transition: 400ms; }
+
+.open-b {
+  transform: translateX(-105%);
+  transition: 400ms; }
+
+.datepicker-container {
+  width: 500px;
+  height: 500px; }
+
+.sidenav {
+  width: 250px;
+  top: 51px; }
+  .sidenav-overlay {
+    background: none; }
+
+.conteudo_side {
+  width: 90.333333% !important;
+  padding: 0 !important; }
+  .conteudo_side .bg_nav {
+    width: 100%;
+    height: 100%; }
+
+.logo-sidenav {
+  width: 109%; }
+
+.sair {
+  position: absolute !important;
+  bottom: 112px !important; }
+
+.dados_consolidados {
+  background: #ffffff;
+  border-bottom: 2px solid #f1f1f1;
+  z-index: 5000px; }
+  .dados_consolidados .bg-consolidado {
+    padding-top: 1.5%;
+    padding-button: 1.5%; }
+  .dados_consolidados p {
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #7a7a7a; }
+  .dados_consolidados h4 {
+    line-height: 0.4;
+    font-family: Montserrat, sans-serif;
+    font-size: 39px;
+    font-weight: 400;
+    color: #007DCC; }
+  .dados_consolidados .dash_btn_superior {
+    width: 60%;
+    height: 18%;
+    border-radius: 7px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.7s ease; }
+    .dados_consolidados .dash_btn_superior:hover {
+      background: #007DCC; }
+      .dados_consolidados .dash_btn_superior:hover p,
+      .dados_consolidados .dash_btn_superior:hover h4,
+      .dados_consolidados .dash_btn_superior:hover li,
+      .dados_consolidados .dash_btn_superior:hover .p-msg,
+      .dados_consolidados .dash_btn_superior:hover span {
+        color: #ffffff; }
+
+.m-fluxo p {
+  padding-top: 7px; }
+
+.tamanho_da_linha_titulo_fluxo {
+  line-height: 0.7; }
+
+.fluxo-1 li {
+  line-height: 1;
+  font-family: Montserrat, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #007DCC;
+  cursor: pointer; }
+.fluxo-1 span {
+  white-space: nowrap;
+  line-height: 0.8;
+  font-family: Montserrat, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #868686; }
+
+.p-msg {
+  font-family: Montserrat, sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  color: #007DCC;
+  cursor: pointer;
+  line-height: 1.1; }
+  .p-msg:hover {
+    color: #ffffff; }
+
+@media (max-width: 920px) {
+  .bg-consolidado p {
+    font-family: Montserrat, sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    color: #7a7a7a; }
+  .bg-consolidado h4 {
+    line-height: 0.4;
+    font-family: Montserrat, sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: #007DCC; }
+
+  .fluxo-1 li {
+    line-height: 1;
+    font-family: Montserrat, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #007DCC;
+    cursor: pointer; }
+  .fluxo-1 span {
+    white-space: nowrap;
+    line-height: 0.8;
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #868686; }
+
+  .tamanho_da_linha_titulo_fluxo {
+    line-height: 0.7; } }
+.fade-in {
+  opacity: 1;
+  animation: fadein 2s;
+  -webkit-animation: fadein 2s; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.dash_btn_superior_sem_hover {
+  width: 60%;
+  height: 18%;
+  border-radius: 7px;
+  text-align: center; }
+
+.conteudo {
+  padding: 1% 4% !important; }
+
+.espacamento {
+  margin-top: 1.5%; }
+
+@media (max-width: 920px) {
+  .espacamento {
+    margin-top: 8%;
+    text-align: center; } }
+@media (max-width: 600px) {
+  .conteudo {
+    padding: 1% 4% 1% 11% !important; }
+
+  .espacamento {
+    margin-top: 17%; } }
+@media (min-width: 900px) and (max-width: 1700px) {
+  .conteudo {
+    padding-top: 40px !important; } }
+/* Ipad Pro */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
+  .espacamento {
+    margin-top: 3.5%; } }
+.tabela_bg {
+  background: #ffffff; }
+
+.tabs {
+  color: #7a7a7a;
+  position: inherit; }
+  .tabs .tab {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #007DCC; }
+    .tabs .tab a {
+      color: #7a7a7a; }
+      .tabs .tab a.active {
+        font-family: Montserrat, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #007DCC; }
+      .tabs .tab a:hover {
+        color: #005e99; }
+      .tabs .tab a:focus.active {
+        background-color: rgba(0, 125, 204, 0.2); }
+  .tabs .indicator {
+    background: #007DCC; }
+
+.indicator {
+  display: none; }
+
+select {
+  display: block; }
+  select .titulo_do_setor_mobile {
+    display: none; }
+
+drop_topo .mobile {
+  display: block; }
+
+.obs {
+  z-index: 0; }
+
+@media (max-width: 920px) {
+  .mobile {
+    display: none; }
+
+  .mobile2 {
+    display: block; }
+    .mobile2 a {
+      color: red !important; }
+
+  .qtd_pag {
+    display: none; }
+
+  html {
+    font-size: 13px; }
+
+  .dataTables_paginate paging_simple_numbers {
+    margin-bottom: 11px; }
+
+  table.dataTable thead th,
+  table.dataTable thead td {
+    border-bottom: none !important; }
+
+  table.responsive-table td {
+    min-height: 1.8em; }
+
+  .drop_topo {
+    font-family: Montserrat, sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    color: #ffffff; } }
+td.details-control {
+  background: url("../img/circle-down.svg") no-repeat center center;
+  cursor: pointer; }
+
+tr.shown td.details-control {
+  background: url("../img/circle-up.svg") no-repeat center center; }
+
+div.add_info {
+  display: none; }
+
+table.dataTable tbody td.no-padding {
+  padding: 0; }
+
+.titulo_status {
+  line-height: 0;
+  margin: 11px;
+  margin-left: 9px; }
+
+.center-status {
+  margin-left: 15% !important; }
+
+.status-1 {
+  background: #FFFF00 !important;
+  width: 25px;
+  height: 25px;
+  color: transparent; }
+
+.status-2 {
+  background: #00FF00 !important;
+  width: 25px;
+  height: 25px;
+  color: transparent; }
+
+.status-3 {
+  background: red !important;
+  width: 25px;
+  height: 25px;
+  color: transparent; }
+
+.status-4 {
+  background: #4b0082 !important;
+  width: 25px;
+  height: 25px;
+  color: transparent; }
+
+.status-5 {
+  background: #FF00FF !important;
+  width: 25px;
+  height: 25px;
+  color: transparent; }
+
+.status-6,
+.status-null {
+  background: #c6c6c6 !important;
+  width: 25px;
+  height: 25px;
+  color: transparent; }
+
+.input-field label {
+  color: #007DCC; }
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #006db3; }
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #007DCC;
+  box-shadow: 0 1px 0 0 #007DCC; }
+
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #007DCC;
+  box-shadow: 0 1px 0 0 #007DCC; }
+
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #007DCC;
+  box-shadow: 0 1px 0 0 #007DCC; }
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #007DCC; }
+
+#setores ul {
+  position: relative;
+  z-index: 1055;
+  width: 239px !important;
+  height: 100%; }
+#setores .icon {
+  display: none; }
+
+@media (max-width: 920px) {
+  #setores .icon {
+    display: block; } }
+.c_titulo {
+  font-family: Montserrat, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: #007DCC; }
+  .c_titulo span {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #007DCC; }
+
+@media (max-width: 920px) {
+  .c_centralizando {
+    display: flex;
+    justify-content: center; }
+    .c_centralizando .c_agendamento {
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #007DCC; }
+
+  .c_titulo {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #007DCC;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center !important; }
+    .c_titulo span {
+      font-family: Montserrat, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #007DCC; } }
+.c_total_card {
+  font-family: Montserrat, sans-serif;
+  font-size: 30px ;
+  font-weight: 300;
+  color: #007DCC;
+  letter-spacing: 4px; }
+  .c_total_card b {
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #007DCC; }
+
+.c_total_card_inferior {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px ;
+  font-weight: 300;
+  color: #007DCC;
+  letter-spacing: 2px; }
+  .c_total_card_inferior b {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #007DCC; }
+
+.c_linha_card_superior {
+  margin-bottom: 0; }
+
+@media (max-width: 920px) {
+  .c_total_card {
+    letter-spacing: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #007DCC; }
+    .c_total_card b {
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #007DCC; } }
+@media (min-width: 1300px) and (max-width: 1700px) {
+  .c_total_card {
+    letter-spacing: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #007DCC; }
+    .c_total_card b {
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #007DCC; }
+
+  .c_total_card_inferior {
+    font-family: Montserrat, sans-serif;
+    font-size: 12px ;
+    font-weight: 300;
+    color: #007DCC;
+    letter-spacing: 2px; }
+    .c_total_card_inferior b {
+      font-family: Montserrat, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      color: #007DCC; } }
+@media (min-width: 900px) and (max-width: 1300px) {
+  .c_total_card {
+    letter-spacing: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: #007DCC; }
+    .c_total_card b {
+      font-family: Montserrat, sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: #007DCC; }
+
+  .c_total_card_inferior {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px ;
+    font-weight: 300;
+    color: #007DCC;
+    letter-spacing: 2px; }
+    .c_total_card_inferior b {
+      font-family: Montserrat, sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+      color: #007DCC;
+      padding-top: 4px; } }
+@media (min-width: 991px) and (max-width: 1800px) {
+  .c_titulo {
+    font-size: 15px; } }
+.con_padding {
+  padding: 17px !important; }
+
+.cards {
+  background: #ffffff;
+  border-radius: 2px;
+  padding-left: 0 !important;
+  position: relative;
+  height: 280px;
+  width: 100%;
+  margin-bottom: 40px; }
+  .cards .imagem-img225 {
+    background: url(../img/ergometria.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img226 {
+    background: url(../img/cardiopumonar.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img227 {
+    background: url(../img/mapa.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img228 {
+    background: url(../img/medicina_nuclear.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img229 {
+    background: url(../img/tomografia.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img230 {
+    background: url(../img/tomografia2.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img231 {
+    background: url(../img/ultrassom.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img232 {
+    background: url(../img/laboratorio.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img234 {
+    background: url(../img/radiologia.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img235 {
+    background: url(../img/mamografia.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img275 {
+    background: url(../img/endoscopia.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img276 {
+    background: url(../img/setor_aritimias.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img298 {
+    background: url(../img/eletro.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img239 {
+    background: url(../img/checkup.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img322 {
+    background: url(../img/banco_de_sangue.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img335 {
+    background: url(../img/colonoscopia.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img391 {
+    background: url(../img/ecocardiograma.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .c_conteudo_card {
+    position: relative;
+    left: 26% !important; }
+    .cards .c_conteudo_card .c_card-title {
+      margin-top: 12px; }
+    .cards .c_conteudo_card p {
+      line-height: 0.7;
+      font-size: 17px;
+      text-align: left !important; }
+    .cards .c_conteudo_card .c_status {
+      line-height: 3; }
+  .cards a {
+    color: #4a4a4a !important; }
+
+@media (max-width: 920px) {
+  .cards {
+    height: 260px; }
+    .cards .c_conteudo_card {
+      left: 34% !important; }
+    .cards .c_conteudo_card p {
+      font-size: 13px; } }
+.agendamento .espacamento {
+  margin-top: 2.5%; }
+.agendamento .bordas {
+  border-radius: 7px; }
+
+@media (max-width: 600px) {
+  .agendamento .espacamento {
+    margin-top: 17.5%; }
+  .agendamento .info {
+    margin-top: 15px; } }
+@media (min-width: 601px) and (max-width: 920px) {
+  .agendamento .espacamento {
+    margin-top: 8.5%; }
+  .agendamento .info {
+    margin-top: 15px; } }
+.open {
+  z-index: 1; }
+
+.agendamento .tabela_bg {
+  padding: 21px !important; }
+.agendamento .tabela-cor {
+  border-radius: 7px !important;
+  box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  background: #007DCC; }
+  .agendamento .tabela-cor thead {
+    color: #ffffff; }
+    .agendamento .tabela-cor thead th {
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: #ffffff; }
+.agendamento .dataTables_length {
+  margin-bottom: 30px; }
+.agendamento table.dataTable thead th {
+  padding: 10px 20px;
+  border-bottom: none; }
+.agendamento td,
+.agendamento th {
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px; }
+.agendamento table.striped > tbody > tr:nth-child(odd) {
+  background: #f8fafc; }
+.agendamento table.dataTable.no-footer {
+  border-bottom: none; }
+
+@media (max-width: 620px) {
+  .agendamento .tabela_bg {
+    padding: 0px !important; } }
+html,
+body {
+  position: relative;
+  height: 100%; }
+
+.agendamento {
+  position: relative; }
+  .agendamento #agendamemento_card_notificacao {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    top: 0;
+    transition: background .3s ease-out .1s;
+    height: 700px; }
+    .agendamento #agendamemento_card_notificacao .titulo {
+      font-size: 15px; }
+    .agendamento #agendamemento_card_notificacao .card .card-content {
+      padding: 12px; }
+  .agendamento ::-webkit-scrollbar {
+    width: 10px; }
+  .agendamento ::-webkit-scrollbar-button {
+    display: none; }
+  .agendamento ::-webkit-scrollbar-track {
+    border-radius: 20px;
+    /* 3 */ }
+  .agendamento ::-webkit-scrollbar-track-piece {
+    border-radius: 20px;
+    background: none;
+    /* 4 */ }
+  .agendamento ::-webkit-scrollbar-thumb {
+    background: #ececec;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px; }
+  .agendamento ::-webkit-scrollbar-corner {
+    /* 6 */
+    background: fuchsia; }
+  .agendamento ::-webkit-resizer {
+    /* 7 */
+    background: springgreen; }
+  .agendamento .paging_simple_numbers {
+    font-size: 11px; }
+  .agendamento .dataTables_wrapper .dataTables_filter input {
+    margin-left: 0em; }
+
+.titulo_agendamento {
+  font-size: 21px;
+  padding-top: 10px; }
+
+.status_agendamento {
+  margin-top: 4%; }
+
+.hora_agendamento {
+  padding-top: 50%; }
+
+.com_agendamento {
+  padding-top: 10px; }
+
+.pacientes .topo {
+  margin-top: 60px; }
+.pacientes .titulo {
+  font-family: Montserrat, sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: #007DCC;
+  text-align: center;
+  line-height: 21px !important; }
+
+#qtd_por_horario_de_procedimento td,
+#qtd_por_horario_de_pacientes td {
+  background: #ffffff; }
+#qtd_por_horario_de_procedimento b,
+#qtd_por_horario_de_pacientes b {
+  color: #006db3;
+  font-weight: 600; }
+
+.maior_fluxo_subtitulo {
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #007DCC;
+  padding-bottom: 25px; }
+
+.maior_fluxo_titulo {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #474747; }
+
+#listadePacienteslocalizacao tr td {
+  background: #ffffff; }
+
+/*# sourceMappingURL=style.css.map */

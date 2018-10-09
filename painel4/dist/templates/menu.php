@@ -62,6 +62,10 @@
                     <a href="consolidado.php">
                         <i class="material-icons">grid_on</i>Consolidado</a>
                 </li>
+                <li>
+                    <a href="ativos.php">
+                       <i class="material-icons">blur_linear</i>Pacientes Ativos</a>
+                </li>
                 <!-- <li>
                     <a href="localizacao.php">
                         <i class="material-icons">blur_on</i>Localizacao</a>
@@ -70,15 +74,11 @@
                     <a href="painel_pacientes.php">
                         <i class="material-icons">clear_all</i>Paciente</a>
                 </li> -->
-                <li>
-                    <div class="divider"></div>
-                </li>
+             
                 <!-- <li>
                     <a class="subheader">Relatórios</a>
                 </li>
-                <li>
-                    <a class="waves-effect" href="#!">Tempos</a>
-                </li>
+              
                 <li>
                     <a class="waves-effect" href="#!">Fluxo de Paciente</a>
                 </li> -->

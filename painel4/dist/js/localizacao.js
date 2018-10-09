@@ -1,1 +1,69 @@
-function cards_notificação(a){console.log(a);var t="",e=document.getElementById("agendamemento_card_notificacao");for(let e=0;2>e;e++)t+='<div class="card"> <div class="card-content"><span class="card-title titulo ">'+a[e].paciente+'</span><p class="cor-aviso">Paciente sem vinculo</p></div></div>';e.innerHTML=t}function lista_de_pacientes(a){var t=document.getElementById("listadePacientesagendamento");if(t){for(i=0;i<a.length;i++){var e=document.createElement("tr"),n="<td>"+a[i].hora+"</td><td>"+a[i].atividade+"</td><td>"+a[i].IH+"</td><td>"+a[i].paciente+'</td><td class="ocutar">-</td>'+`<td><div  class=" status-${a[i].cod_cor_status} center-status">${a[i].cod_cor_status}</div></td>`+'<td class="ocutar"> - </td>',o=e.innerHTML=n;t.innerHTML+=o}data_table()}}function data_table(){$(document).ready(function(){$("#tabela_pacientes").DataTable({language:{lengthMenu:" Quantidade por Pagina _MENU_  ",zeroRecords:"Não encontrado pacientes",info:"Total de Pagina _PAGE_ de _PAGES_",infoEmpty:" ",infoFiltered:"(filtered from _MAX_ total records)",search:"Filtrar:",paginate:{first:" ",next:"Proxima",previous:"Anterior",last:" "}}})})}!function(){var a=window.location.href.split("?")[1];chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${a}`,lista_de_pacientes),chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${a}`,cards_notificação)}();
+(function () {
+    var url_atual = window.location.href;
+
+    var parametrosDaUrl = url_atual.split("?")[1];
+
+    chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, lista_de_pacientes);
+
+    chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, cards_notificação);
+})();
+
+
+function cards_notificação(data) {
+    console.log(data);
+    var html = ""
+    var elem = document.getElementById('agendamemento_card_notificacao');
+    for (let i = 0; i < 2; i++) {
+        html += '<div class="card"> '
+            + '<div class="card-content">'
+            + '<span class="card-title titulo ">' + data[i].paciente + '</span>'
+            + '<p class="cor-aviso">Paciente sem vinculo</p>'
+            + '</div>'
+            + '</div>';
+    }
+    elem.innerHTML = html;
+}
+
+
+function lista_de_pacientes(data) {
+    var tbody = document.getElementById("listadePacientesagendamento");
+    if (tbody) {
+        for (i = 0; i < data.length; i++) {
+            var tr = document.createElement('tr');
+
+            var cols =
+                '<td>' + data[i].hora + '</td>' +
+                '<td>' + data[i].atividade + '</td>' +
+                '<td>' + data[i].IH + '</td>' +
+                '<td>' + data[i].paciente + '</td>' +
+                '<td class="ocutar">' + '-' + '</td>' +
+                `<td><div  class=" status-${data[i].cod_cor_status} center-status">${data[i].cod_cor_status}</div></td>` +
+                '<td class="ocutar">' + ' - ' + '</td>';
+            var linha = tr.innerHTML = cols;
+            tbody.innerHTML += linha;
+        }
+        data_table()
+    }
+}
+
+
+function data_table() {
+    $(document).ready(function () {
+        $('#tabela_pacientes').DataTable({
+            language: {
+                "lengthMenu": " Quantidade por Pagina _MENU_  ",
+                "zeroRecords": "Não encontrado pacientes",
+                "info": "Total de Pagina _PAGE_ de _PAGES_",
+                "infoEmpty": " ",
+                "infoFiltered": "(filtered from _MAX_ total records)",
+                "search": "Filtrar:",
+                "paginate": {
+                    "first": " ",
+                    "next": "Proxima",
+                    "previous": "Anterior",
+                    "last": " "
+                }
+            }
+        });
+    });
+}
