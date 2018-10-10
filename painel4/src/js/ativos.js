@@ -127,7 +127,7 @@ function status(dados) {
 
 function ocultaDados(dado, status) {
     status = parseInt(status);
-    if (status === 2) {
+    if (status === 2 || status === 5) {
         return dado
     } else {
         return " "
