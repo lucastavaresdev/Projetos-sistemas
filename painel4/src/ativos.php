@@ -32,10 +32,8 @@
                                 <th>Médico</th>
                                 <th>Exame</th>
                                 <th class="ocultar">Data Agendamento</th>
-                                <th>Visto por Ultimo</th>
-                                <th>Vinculado</th>
+                                <th>Setor</th>
                                 <th>Status</th>
-                                <th>Tempo</th>
                             </tr>
                         </thead>
                         <tbody id="listadePacientes"></tbody>
