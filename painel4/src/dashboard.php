@@ -79,34 +79,35 @@
                     <table id="tabela_pacientes"  class="responsive-table tabela-cor " style="width:100%" >
                         <thead>
                             <tr>
-                                <th  class="ocutarmobile"></th>
-                                <th class="ocultar">id_agendamento</th>
-                                <th>Hora</th>
-                                <th>Atividade</th>
-                                <th>IH</th>
-                                <th>Paciente</th>
-                                <th>Servico</th>
-                                <th>Localização</th>
-                                <th>Status</th>
-                                <th>Obs</th>
-                                <th class="ocultar">codigo_exame</th>
-                                <th class="ocultar">codigo_servico</th>
-                                <th class="ocultar">descricao_exame</th>
-                                <th class="ocultar">anotacao</th>
-                                <th class="ocultar">sexo</th>
-                                <th class="ocultar">data_nascimento</th>
-                                <th class="ocultar">nome_medico</th>
-                                <th class="ocultar">crm</th>
-                                <th class="ocultar">checkin_unidade</th>
-                                <th class="ocultar">checkout_unidade</th>
-                                <th class="ocultar">tempo_vinculado</th>
-                                <th class="ocultar">checkin_exame</th>
-                                <th class="ocultar">checkout_exame</th>
-                                <th class="ocultar">tempo_exame</th>
-                                <th class="ocultar">tempo_decorrido_do_exame</th>
-                                <th class="ocultar">desc_status</th>
-                                <th class="ocultar">tempo_espera</th>
-                                <th class="ocultar">observacao</th>
+                                    <th></th>
+                                    <th class="ocultar">id_agendamento</th>
+                                    <th>paciente</th>
+                                    <th>hora</th>
+                                    <th>atividade</th>
+                                    <th>IH</th>
+                                    <th class="ocultar">codigo_exame</th>
+                                    <th class="ocultar">codigo_servico</th>
+                                    <th class="ocultar">servico</th>
+                                    <th class="ocultar">descricao_exame</th>
+                                    <th class="ocultar">anotacao</th>
+                                    <th class="ocultar">sexo</th>
+                                    <th class="ocultar">data_nascimento</th>
+                                    <th class="ocultar">nome_medico</th>
+                                    <th class="ocultar">crm</th>
+                                    <th class="ocultar">checkin_unidade</th>
+                                    <th class="ocultar">checkout_unidade</th>
+                                    <th class="ocultar">tempo_vinculado</th>
+                                    <th class="ocultar">checkin_exame</th>
+                                    <th class="ocultar">checkout_exame</th>
+                                    <th class="ocultar">tempo_exame</th>
+                                    <th class="ocultar">tempo_decorrido_do_exame<</th>
+                                    <th class="ocultar">status</th>
+                                    <th class="ocultar">desc_status</th>
+                                    <th class="ocultar">tempo_espera</th>
+                                    <th class="ocultar">localizacao</th>
+                                    <th class="ocultar">observacao</th>
+                                    <th class="ocultar">hora_agendamento</th>
+                                    <th class="ocultar">proximo_exame</th>
                             </tr>
                         </thead>
                         <tbody id="listadePacientes"></tbody>

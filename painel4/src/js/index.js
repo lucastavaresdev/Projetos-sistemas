@@ -44,32 +44,62 @@ function lista_de_pacientes(data) {
 
             var nstatus = status(data[i].checkin_unidade, data[i].checkout_unidade, data[i].checkin_exame, data[i].checkout_exame, data[i].status)
 
+            // var cols = '<td  class="ocutarmobile"></td>' +
+            //     '<td class="ocultar">' + se_null(data[i].id_agendamento) + '</td>' +
+            //     '<td>' + se_null(data[i].hora) + '</td>' +
+            //     '<td>' + se_null(data[i].atividade) + '</td>' +
+            //     '<td>' + se_null(data[i].IH) + '</td>' +
+            //     '<td>' + se_null(data[i].paciente) + '</td>' +
+            //     '<td>' + se_null(data[i].servico) + '</td>' +
+            //     '<td>' + se_null(data[i].proximo_exame) + '</td>' +
+            //     '<td>' + c_localizacao(data[i].localizacao) + '</td>' +
+            //     '<td><div class="status-' + nstatus + ' center-status">' + nstatus + '</div></td>' +
+            //     `<td id="${data[i].IH + data[i].atividade}" class='center' ><a><i id="${data[i].IH + data[i].atividade}botao" class="material-icons botao_modal">info_outline</i></a></td>` +
+            //     '<td class="ocultar">' + se_null(data[i].codigo_servico) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].descricao_exame) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].sexo) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].data_nascimento) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].nome_medico) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].crm) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].checkin_unidade) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].checkout_unidade) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].tempo_vinculado) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].checkin_exame) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].checkout_exame) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].tempo_exame) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].tempo_decorrido_do_exame) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].desc_status) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].tempo_espera) + '</td>';
+
             var cols = '<td  class="ocutarmobile"></td>' +
-                '<td class="ocultar">' + se_null(data[i].id_agendamento) + '</td>' +
-                '<td>' + se_null(data[i].hora) + '</td>' +
-                '<td>' + se_null(data[i].atividade) + '</td>' +
-                '<td>' + se_null(data[i].IH) + '</td>' +
-                '<td>' + se_null(data[i].paciente) + '</td>' +
-                '<td>' + se_null(data[i].servico) + '</td>' +
-                '<td>' + c_localizacao(data[i].localizacao) + '</td>' +
-                '<td><div class="status-' + nstatus + ' center-status">' + nstatus + '</div></td>' +
-                `<td id="${data[i].IH + data[i].atividade}" class='center' ><a><i id="${data[i].IH + data[i].atividade}botao" class="material-icons botao_modal">info_outline</i></a></td>` +
-                '<td class="ocultar">' + se_null(data[i].codigo_exame) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].codigo_servico) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].descricao_exame) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].sexo) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].data_nascimento) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].nome_medico) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].crm) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].checkin_unidade) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].checkout_unidade) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].tempo_vinculado) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].checkin_exame) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].checkout_exame) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].tempo_exame) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].tempo_decorrido_do_exame) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].desc_status) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].tempo_espera) + '</td>';
+                '<td class="ocultar">' + data[i].id_agendamento + '</td>' +
+                '<td>' + data[i].paciente + '</td>' +
+                '<td>' + data[i].hora + '</td>' +
+                '<td>' + data[i].atividade + '</td>' +
+                '<td>' + data[i].IH + '</td>' +
+                '<td class="ocultar">' + data[i].codigo_exame + '</td>' +
+                '<td class="ocultar">' + data[i].codigo_servico + '</td>' +
+                '<td class="ocultar">' + data[i].servico + '</td>' +
+                '<td class="ocultar">' + data[i].descricao_exame + '</td>' +
+                '<td class="ocultar">' + data[i].anotacao + '</td>' +
+                '<td class="ocultar">' + data[i].sexo + '</td>' +
+                '<td class="ocultar">' + data[i].data_nascimento + '</td>' +
+                '<td class="ocultar">' + data[i].nome_medico + '</td>' +
+                '<td class="ocultar">' + data[i].crm + '</td>' +
+                '<td class="ocultar">' + data[i].checkin_unidade + '</td>' +
+                '<td class="ocultar">' + data[i].checkout_unidade + '</td>' +
+                '<td class="ocultar">' + data[i].tempo_vinculado + '</td>' +
+                '<td class="ocultar">' + data[i].checkin_exame + '</td>' +
+                '<td class="ocultar">' + data[i].checkout_exame + '</td>' +
+                '<td class="ocultar">' + data[i].tempo_exame + '</td>' +
+                '<td class="ocultar">' + data[i].tempo_decorrido_do_exame + '</td>' +
+                '<td class="ocultar">' + data[i].status + '</td>' +
+                '<td class="ocultar">' + data[i].desc_status + '</td>' +
+                '<td class="ocultar">' + data[i].tempo_espera + '</td>' +
+                '<td class="ocultar">' + data[i].localizacao + '</td>' +
+                '<td class="ocultar">' + data[i].observacao + '</td>' +
+                '<td class="ocultar">' + data[i].hora_agendamento + '</td>' +
+                '<td class="ocultar">' + data[i].proximo_exame + '</td>';
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
@@ -293,16 +323,15 @@ function data_table(d) {
                     "defaultContent": ''
                 },
                 { 'data': "id_agendamento" },
+                { 'data': "paciente" },
                 { 'data': "hora" },
                 { 'data': "atividade" },
                 { 'data': "IH" },
-                { 'data': "paciente" },
-                { 'data': "servico" },
-                { 'data': "setor" },//localizacao
-                { 'data': "status" },
                 { 'data': "codigo_exame" },
                 { 'data': "codigo_servico" },
+                { 'data': "servico" },
                 { 'data': "descricao_exame" },
+                { 'data': "anotacao" },
                 { 'data': "sexo" },
                 { 'data': "data_nascimento" },
                 { 'data': "nome_medico" },
@@ -314,9 +343,15 @@ function data_table(d) {
                 { 'data': "checkout_exame" },
                 { 'data': "tempo_exame" },
                 { 'data': "tempo_decorrido_do_exame" },
+                { 'data': "status" },
                 { 'data': "desc_status" },
                 { 'data': "tempo_espera" },
+                { 'data': "localizacao" },
                 { 'data': "observacao" },
+                { 'data': "hora_agendamento" },
+                { 'data': "proximo_exame" },
+
+
             ],
             "order": [[1, 'asc']],
             "columnDefs": [
@@ -327,6 +362,7 @@ function data_table(d) {
                 }
             ],
         });
+
 
         // Add event listener for opening and closing details
         $('#tabela_pacientes tbody').on('click', 'td.details-control', function () {
