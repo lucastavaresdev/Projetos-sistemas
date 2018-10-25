@@ -31,9 +31,9 @@ function lista_de_pacientes(data) {
                 '<td>' + data[i].nome_medico + '</td>' +
                 '<td>' + exame + '</td>' +
                 '<td class="ocultar">' + data[i].data_agendamento + '</td>' +
-                '<td>' + data[i].nome_setor  + '</td>' +
-                '<td><div class="status-' + nstatus + ' center-status">' + nstatus + '</div></td>' ;
-                '<td>' + data[i].status + '</td>';
+                '<td>' + data[i].nome_setor + '</td>' +
+                '<td><div class="status-' + nstatus + ' center-status">' + nstatus + '</div></td>';
+            '<td>' + data[i].status + '</td>';
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
@@ -77,12 +77,12 @@ function data_table(d) {
                 { 'data': "data_agendamento" },
                 { 'data': "nome_setor" },
                 { 'data': "status_final" },
-   
+
             ],
             // "order": [[1, 'asc']],
             "columnDefs": [
                 {
-                    "targets": [11],
+                    "targets": [10],
                     "visible": true,
                     //         "searchable": false
                 }
