@@ -92,7 +92,7 @@ if (isset($_GET['data'])) {
                                     se.nome as localizacao,
                                     o.descricao as observacao,
                                     cl_min_c.hora_agendamento,
-                                    (SELECT checklist.abrev_etapa FROM checklist where agendamento = a.id_agendamento and checkin is null order by hora_agendamento asc limit 1) as proximo_exame
+                                    (SELECT servicos.servico FROM checklist INNER JOIN servicos on checklist.servico = servicos.id  where agendamento = a.id_agendamento  order by hora_agendamento asc limit 1) as proximo_exame
                                     FROM agendamento as a 
                                     left join exame_servico es 
                                     on es.codigo_exame = a.codigo_exame
