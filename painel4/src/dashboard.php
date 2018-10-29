@@ -81,15 +81,15 @@
                             <tr>
                                     <th></th>
                                     <th class="ocultar">id_agendamento</th>
-                                    <th>hora</th>
-                                    <th>atividade</th>
+                                    <th>Hora</th>
+                                    <th>Atividade</th>
                                     <th>IH</th>
-                                    <th>paciente</th>
-                                    <th>servico</th>
-                                    <th >proximo_exame</th>
-                                    <th >localizacao</th>
-                                    <th>status</th>
-                                    <th >observacao</th>
+                                    <th>Paciente</th>
+                                    <th>Servico</th>
+                                    <th >Proximo Serviço</th>
+                                    <th >Localizacao</th>
+                                    <th>Status</th>
+                                    <th >Observacao</th>
                                     <th class="ocultar">codigo_exame</th>
                                     <th class="ocultar">codigo_servico</th>
                                     <th class="ocultar">descricao_exame</th>

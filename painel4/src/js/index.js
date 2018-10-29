@@ -52,7 +52,7 @@ function lista_de_pacientes(data) {
                 '<td>' + se_null(data[i].IH) + '</td>' +
                 '<td>' + se_null(data[i].paciente) + '</td>' +
                 '<td>' + se_null(data[i].servico) + '</td>' +
-                '<td >' + se_null(data[i].proximo_exame) + '</td>' +
+                '<td >' + ProximoSetorigual(data[i].servico, data[i].proximo_exame) + '</td>' +
                 '<td >' + c_localizacao(data[i].localizacao) + '</td>' +
                 '<td><div class="status-' + nstatus + ' center-status">' + nstatus + '</div></td>' +
                 `<td id="${data[i].IH + data[i].atividade}" class='center' ><a><i id="${data[i].IH + data[i].atividade}botao" class="material-icons botao_modal">info_outline</i></a></td>` +
@@ -81,6 +81,14 @@ function lista_de_pacientes(data) {
         data_table(data);
         modal(data);
         pacientes_finalizados_e_atuais(data);
+    }
+}
+
+function ProximoSetorigual(SetorAtual, ProximoSetor) {
+    if (SetorAtual === ProximoSetor || ProximoSetor === null) {
+        return " "
+    } else {
+        return ProximoSetor
     }
 }
 
