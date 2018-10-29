@@ -44,19 +44,22 @@ function lista_de_pacientes(data) {
 
             var nstatus = status(data[i].checkin_unidade, data[i].checkout_unidade, data[i].checkin_exame, data[i].checkout_exame, data[i].status)
 
+
             var cols = '<td  class="ocutarmobile"></td>' +
-                '<td class="ocultar">' + se_null(data[i].id_agendamento) + '</td>' +
+                '<td class="ocultar">' + data[i].id_agendamento + '</td>' +
                 '<td>' + se_null(data[i].hora) + '</td>' +
                 '<td>' + se_null(data[i].atividade) + '</td>' +
                 '<td>' + se_null(data[i].IH) + '</td>' +
                 '<td>' + se_null(data[i].paciente) + '</td>' +
                 '<td>' + se_null(data[i].servico) + '</td>' +
-                '<td>' + c_localizacao(data[i].localizacao) + '</td>' +
+                '<td >' + ProximoSetorigual(data[i].servico, data[i].proximo_exame) + '</td>' +
+                '<td >' + c_localizacao(data[i].localizacao) + '</td>' +
                 '<td><div class="status-' + nstatus + ' center-status">' + nstatus + '</div></td>' +
                 `<td id="${data[i].IH + data[i].atividade}" class='center' ><a><i id="${data[i].IH + data[i].atividade}botao" class="material-icons botao_modal">info_outline</i></a></td>` +
-                '<td class="ocultar">' + se_null(data[i].codigo_exame) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].codigo_servico) + '</td>' +
+                '<td class="ocultar">' + data[i].codigo_exame + '</td>' +
+                '<td class="ocultar">' + data[i].codigo_servico + '</td>' +
                 '<td class="ocultar">' + se_null(data[i].descricao_exame) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].anotacao) + '</td>' +
                 '<td class="ocultar">' + se_null(data[i].sexo) + '</td>' +
                 '<td class="ocultar">' + se_null(data[i].data_nascimento) + '</td>' +
                 '<td class="ocultar">' + se_null(data[i].nome_medico) + '</td>' +
@@ -69,7 +72,8 @@ function lista_de_pacientes(data) {
                 '<td class="ocultar">' + se_null(data[i].tempo_exame) + '</td>' +
                 '<td class="ocultar">' + se_null(data[i].tempo_decorrido_do_exame) + '</td>' +
                 '<td class="ocultar">' + se_null(data[i].desc_status) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].tempo_espera) + '</td>';
+                '<td class="ocultar">' + se_null(data[i].tempo_espera) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].hora_agendamento) + '</td>';
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
@@ -77,6 +81,14 @@ function lista_de_pacientes(data) {
         data_table(data);
         modal(data);
         pacientes_finalizados_e_atuais(data);
+    }
+}
+
+function ProximoSetorigual(SetorAtual, ProximoSetor) {
+    if (SetorAtual === ProximoSetor || ProximoSetor === null) {
+        return " "
+    } else {
+        return ProximoSetor
     }
 }
 
@@ -298,11 +310,14 @@ function data_table(d) {
                 { 'data': "IH" },
                 { 'data': "paciente" },
                 { 'data': "servico" },
-                { 'data': "setor" },//localizacao
+                { 'data': "proximo_exame" },
+                { 'data': "localizacao" },
                 { 'data': "status" },
+                { 'data': "observacao" },
                 { 'data': "codigo_exame" },
                 { 'data': "codigo_servico" },
                 { 'data': "descricao_exame" },
+                { 'data': "anotacao" },
                 { 'data': "sexo" },
                 { 'data': "data_nascimento" },
                 { 'data': "nome_medico" },
@@ -316,7 +331,9 @@ function data_table(d) {
                 { 'data': "tempo_decorrido_do_exame" },
                 { 'data': "desc_status" },
                 { 'data': "tempo_espera" },
-                { 'data': "observacao" },
+                { 'data': "hora_agendamento" },
+
+
             ],
             "order": [[1, 'asc']],
             "columnDefs": [
@@ -327,6 +344,7 @@ function data_table(d) {
                 }
             ],
         });
+
 
         // Add event listener for opening and closing details
         $('#tabela_pacientes tbody').on('click', 'td.details-control', function () {
