@@ -52,7 +52,7 @@ function lista_de_pacientes(data) {
                 '<td>' + se_null(data[i].IH) + '</td>' +
                 '<td>' + se_null(data[i].paciente) + '</td>' +
                 '<td>' + se_null(data[i].servico) + '</td>' +
-                '<td >' + ProximoSetorigual(data[i].servico, data[i].proximo_exame) + '</td>' +
+                '<td >' + liberarPaciente(data[i].proximo_exame, data[i].checkin_unidade) + '</td>' +
                 '<td >' + c_localizacao(data[i].localizacao) + '</td>' +
                 '<td><div class="status-' + nstatus + ' center-status">' + nstatus + '</div></td>' +
                 `<td id="${data[i].IH + data[i].atividade}" class='center' ><a><i id="${data[i].IH + data[i].atividade}botao" class="material-icons botao_modal">info_outline</i></a></td>` +
@@ -81,6 +81,16 @@ function lista_de_pacientes(data) {
         data_table(data);
         modal(data);
         pacientes_finalizados_e_atuais(data);
+    }
+}
+
+function liberarPaciente(proximo_exame, tempo_de_vinculado ){
+    if(proximo_exame == null && tempo_de_vinculado){
+        return msg = '<div class="negrito-informacoes" >Liberar Paciente</div>'
+    }else if(proximo_exame == null){
+        return  ''
+    }else{
+        return proximo_exame
     }
 }
 
