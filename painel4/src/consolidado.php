@@ -73,7 +73,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col s12 l3">
+        <!-- <div class="col s12 l3">
             <div class="row">
                 <div class="col s12 m12">
                     <div class="card-panel center con_padding">
@@ -82,9 +82,9 @@
                         </span>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
-        <div class="col s12 l2">
+        <div class="col s12 l3">
             <div class="row">
                 <div class="col s12 m12">
                     <div class="card-panel center con_padding">
@@ -95,7 +95,7 @@
                 </div>
             </div>
         </div>
-        <div class="col s12 l2">
+        <div class="col s12 l3">
             <div class="row">
                 <div class="col s12 m12 ">
                     <div class="card-panel center con_padding">
@@ -107,7 +107,7 @@
             </div>
         </div>
 
-        <div class="col s12 l2">
+        <div class="col s12 l3">
             <div class="row">
                 <div class="col s12 m12">
                     <div class="card-panel center con_padding">
