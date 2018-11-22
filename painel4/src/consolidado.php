@@ -131,9 +131,9 @@
             </div>
         </div>
 
-    </div>
-
     <div class="row" id="con_card_setores"></div>
+
+    </div>
 </div></div>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125496401-1"></script>
     <script>

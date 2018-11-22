@@ -1,79 +1,17 @@
 
-                    SET SQL_SAFE_UPDATES = 0;
-                    CREATE TEMPORARY TABLE selectGrid1_temp18875
-                    SELECT agendamento as id_agendamento,etapa as id_exame FROM hcor.checklist group by agendamento,etapa;
-                    
-                    ALTER TABLE selectGrid1_temp18875
-                    ADD statusUltimoExame varchar(30);
 
-                    CREATE TEMPORARY TABLE tableStatusExame_temp18875
-                    select agendamento,etapa,status,checkin   FROM hcor.checklist 
-                    order by checkin desc
-                    limit 1 ;
-
-                    UPDATE selectGrid1_temp18875
-                    INNER JOIN tableStatusExame_temp18875 
-                    ON tableStatusExame_temp18875.agendamento = selectGrid1_temp18875.id_agendamento and selectGrid1_temp18875.id_exame = tableStatusExame_temp18875.etapa
-                    SET selectGrid1_temp18875.statusUltimoExame = tableStatusExame_temp18875.status;
-
-
-                    CREATE TEMPORARY TABLE selectGrid2_temp18875
-                    select distinct  selectGrid1_temp18875.id_agendamento as agendamentoFinal,
-                        servico_chamada_itech as servico
-                    from selectGrid1_temp18875
-                    inner join agendamento on selectGrid1_temp18875.id_agendamento = agendamento.id_agendamento;
-                    
-                    ALTER TABLE selectGrid2_temp18875
-                    ADD aguardando varchar(30);
-
-                    ALTER TABLE selectGrid2_temp18875
-                    ADD cancelado varchar(30);
-                    
-                    ALTER TABLE selectGrid2_temp18875
-                    ADD finalizado varchar(30);
-                    
-                    ALTER TABLE selectGrid2_temp18875
-                    ADD atendimento varchar(30); 
-                    
-                    
-                    CREATE TEMPORARY TABLE aguardando_temp18875
-                    select count(statusUltimoExame) as qtAguardando,id_agendamento from selectGrid1_temp18875 where statusUltimoExame=1;
-
-                    CREATE TEMPORARY TABLE cancelado_temp18875
-                    select count(statusUltimoExame) as qtCancelado,id_agendamento from selectGrid1_temp18875 where statusUltimoExame=3;
-
-                    CREATE TEMPORARY TABLE finalizado_temp18875
-                    select count(statusUltimoExame) as qtfinalizado,id_agendamento from selectGrid1_temp18875 where statusUltimoExame=4;
-
-                    CREATE TEMPORARY TABLE atendimento_temp18875
-                    select count(statusUltimoExame) as qtAtendimento,id_agendamento from selectGrid1_temp18875 where statusUltimoExame=2;
-
-
-                    UPDATE selectGrid2_temp18875
-                    INNER JOIN aguardando_temp18875 ON aguardando_temp18875.id_agendamento = selectGrid2_temp18875.agendamentoFinal
-                    SET selectGrid2_temp18875.aguardando = aguardando_temp18875.qtAguardando;
-
-                    UPDATE selectGrid2_temp18875
-                    INNER JOIN finalizado_temp18875 ON finalizado_temp18875.id_agendamento = selectGrid2_temp18875.agendamentoFinal
-                    SET selectGrid2_temp18875.cancelado = finalizado_temp18875.qtfinalizado;
-
-
-                    UPDATE selectGrid2_temp18875
-                    INNER JOIN cancelado_temp18875 ON cancelado_temp18875.id_agendamento = selectGrid2_temp18875.agendamentoFinal
-                    SET selectGrid2_temp18875.cancelado = cancelado_temp18875.qtCancelado;
-
-
-                    UPDATE selectGrid2_temp18875
-                    INNER JOIN atendimento_temp18875 ON atendimento_temp18875.id_agendamento = selectGrid2_temp18875.agendamentoFinal
-                    SET selectGrid2_temp18875.atendimento = atendimento_temp18875.qtAtendimento;
-
-
-                    select sum(aguardando)as somatorio_aguardando,
-                        sum(cancelado)as somatorio_cancelamento,
-                        sum(finalizado)as somatorio_finalizado,
-                        sum(atendimento)as somatorio_atendimento,
-                        servicos.servico as setor,
-                        servicos.id as id_setor
-                    from selectGrid2_temp18875
-                    right join servicos on servicos.id = selectGrid2_temp18875.servico
-                    group by servicos.id 
+                              + "<p>Procedimentos:"
+            + "<b class='right'  id=procedimentos" + se_null(data[i].id_setor) + ">" + '0' + "</b>"
+            + "</p>"
+            + "<p>Aguardando:"
+            + "<b class='right con_card_aguardando'>" + se_null(data[i].somatorio_aguardando) + "</b>"
+            + "</p>"
+            + "<p>Em atendimento:"
+            + "<b class='right'>" + se_null(data[i].somatorio_aguardando) + "</b>"
+            + "</p>"
+            + "<p>Cancelados:"
+            + "<b class='right'>" + se_null(data[i].somatorio_cancelamento) + "</b>"
+            + "</p>"
+            + "<p>Finalizados:"
+            + "<b class='right'>" + se_null(data[i].somatorio_finalizado) + "</b>"
+            + "</p>"

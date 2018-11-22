@@ -350,6 +350,9 @@ nav {
   border-radius: 7px;
   text-align: center; }
 
+@media (min-width: 990) and (max-width: 1420px) {
+  .dash_btn_superior {
+    width: 100% !important; } }
 .conteudo {
   padding: 1% 4% !important; }
 

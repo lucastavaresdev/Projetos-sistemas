@@ -63,18 +63,18 @@ function status_consolidado(data) {
 
 
 
-async function naoIniciado(aguardando, andamento, cancelado, finalizado) {
-    var id_con_naoIniciado = pergarId("con_naoIniciado");
-    var id_con_agendados = pergarId("con_agendados").textContent;
-    if (id_con_agendados !== undefined) {
-        todos_os_pacientes_agendados = parseInt(id_con_agendados)
-        resultado_soma_de_todos_os_Status = parseInt(aguardando) + parseInt(andamento) + parseInt(cancelado) + parseInt(finalizado)
-        resultado_soma_de_todos_os_Status = todos_os_pacientes_agendados - resultado_soma_de_todos_os_Status
-        id_con_naoIniciado.innerHTML = resultado_soma_de_todos_os_Status
-    } else {
-        window.location.reload(true);
-    }
-}
+// async function naoIniciado(aguardando, andamento, cancelado, finalizado) {
+//     var id_con_naoIniciado = pergarId("con_naoIniciado");
+//     var id_con_agendados = pergarId("con_agendados").textContent;
+//     if (id_con_agendados !== undefined) {
+//         todos_os_pacientes_agendados = parseInt(id_con_agendados)
+//         resultado_soma_de_todos_os_Status = parseInt(aguardando) + parseInt(andamento) + parseInt(cancelado) + parseInt(finalizado)
+//         resultado_soma_de_todos_os_Status = todos_os_pacientes_agendados - resultado_soma_de_todos_os_Status
+//         id_con_naoIniciado.innerHTML = resultado_soma_de_todos_os_Status
+//     } else {
+//         window.location.reload(true);
+//     }
+//}
 
 /*
  *---------Cards Inferiores com informações dos setores----------------
@@ -87,30 +87,30 @@ function card_com_informacoes_do_setores(data) {
     var html = " ";
     for (i = 0; i < data.length; i++) {
         html += " <div class='col s12 l4' >"
-            + `<div class='cards z-depth-3'><a href="./dashboard.php?setor=${data[i].id_setor}">`
-            + `<div class='col s4  l3 imagem-img${data[i].id_setor}'></div>`
-            + "<div class='col s8 l9 c_conteudo_card'>"
-            + "<h1 class='c_titulo c_card-title'>" + data[i].setor + "</h1>"
-            + "<p>Paciente:"
-            + "<b class='right' id=pacientes" + se_null(data[i].id_setor) + ">" + '0' + "</b>"
-            + "</p>"
-            + "<p>Procedimentos:"
-            + "<b class='right'  id=procedimentos" + se_null(data[i].id_setor) + ">" + '0' + "</b>"
-            + "</p>"
-            + "<p>Aguardando:"
-            + "<b class='right con_card_aguardando'>" + se_null(data[i].somatorio_aguardando) + "</b>"
-            + "</p>"
-            + "<p>Em atendimento:"
-            + "<b class='right'>" + se_null(data[i].somatorio_aguardando) + "</b>"
-            + "</p>"
-            + "<p>Cancelados:"
-            + "<b class='right'>" + se_null(data[i].somatorio_cancelamento) + "</b>"
-            + "</p>"
-            + "<p>Finalizados:"
-            + "<b class='right'>" + se_null(data[i].somatorio_finalizado) + "</b>"
-            + "</p>"
-            + "</div>"
-            + "</div></a>"
+                    + `<div class='cards z-depth-3'><a href="./dashboard.php?setor=${data[i].id_servico}">`
+                    + `<div class='col s4  l3 imagem-img${data[i].id_servico}'></div>`
+                    + "<div class='col s8 l9 c_conteudo_card'>"
+                    + "<h1 class='c_titulo c_card-title'>" + data[i].servico_nome + "</h1>"
+                    + "<p>Paciente:"
+                    + "<b class='right' id=pacientes" + se_null(data[i].id_servico) + ">" + '0' + "</b>"
+                    + "</p>"
+                    + "<p>Procedimentos:"
+                    + "<b class='right'  id=procedimentos" + se_null(data[i].id_servico) + ">" + '0' + "</b>"
+                    + "</p>"
+                    + "<p>Aguardando:"
+                    + "<b class='right con_card_aguardando'>" + se_null(data[i].aguardando) + "</b>"
+                    + "</p>"
+                    + "<p>Em atendimento:"
+                    + "<b class='right'>" + se_null(data[i].atendimento) + "</b>"
+                    + "</p>"
+                    + "<p>Cancelados:"
+                    + "<b class='right'>" + se_null(data[i].cancelado) + "</b>"
+                    + "</p>"
+                    + "<p>Finalizados:"
+                    + "<b class='right'>" + se_null(data[i].finalizado) + "</b>"
+                    + "</p>"
+                    + "</div>"
+                    + "</div></a>"
             + "</div>";
 
         chamadaAjax('php/selectsJson.php?parametro=card_com_informacoes_do_setores', populaCardcomQtdPacienteQtdProcedimentos);

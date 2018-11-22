@@ -1,8 +1,14 @@
 <?php
 
-require('./conexao.php');// REQUSIÇÃO DO BANCO
+  try{
 
-$parametro =$_GET['parametro'];//PARAMETRO
+	
+    $conexao = new PDO("mysql:host=itechbd.mysql.database.azure.com;dbname=hcor", "itechflow@itechbd", "Itechm@ster_2018"); 
+    }catch(PDOException $e){
+        echo "Erro gerado " . $e->getMessage(); 
+    }
+
+//$parametro =$_GET['parametro'];//PARAMETRO
 
 
 if (isset($_GET['setor'])) {
@@ -22,116 +28,108 @@ if (isset($_GET['data'])) {
  * ----------------------Setores----------------------
  */
 
-
 $nomeTabela = '_temp'.rand();
 
 
 $query = "
-                    SET SQL_SAFE_UPDATES = 0;
-                    CREATE TEMPORARY TABLE selectGrid1$nomeTabela
-                    SELECT agendamento as id_agendamento,etapa as id_exame FROM hcor.checklist group by agendamento,etapa;
-                    
-                    ALTER TABLE selectGrid1$nomeTabela
-                    ADD statusUltimoExame varchar(30);
+                SET SQL_SAFE_UPDATES = 0;
+                CREATE  TEMPORARY TABLE  Temp$nomeTabela
+                SELECT count(checklist.id) as Qt_exames,
+                status,
+                servicos.servico ,
+                servicos.id ,
+                CASE 
+                    WHEN status = 1 or status = 3 THEN 'Aguardando'
+                    WHEN status = 2 THEN 'Em Atendimento'
+                    WHEN status = 4 THEN 'Finalizado'
+                    WHEN status = 5 THEN 'Cancelado'
+                    ELSE '' END AS 'Status_nome'
+                FROM hcor.checklist 
+                inner join servicos on servicos.id = checklist.servico
+                where  date(hora_agendamento) = curdate()
+                group by servico,status;
 
-                    CREATE TEMPORARY TABLE tableStatusExame$nomeTabela
-                    select agendamento,etapa,status,checkin   FROM hcor.checklist 
-                    order by checkin desc
-                    limit 1 ;
 
-                    UPDATE selectGrid1$nomeTabela
-                    INNER JOIN tableStatusExame$nomeTabela 
-                    ON tableStatusExame$nomeTabela.agendamento = selectGrid1$nomeTabela.id_agendamento and selectGrid1$nomeTabela.id_exame = tableStatusExame$nomeTabela.etapa
-                    SET selectGrid1$nomeTabela.statusUltimoExame = tableStatusExame$nomeTabela.status;
+                CREATE  TEMPORARY TABLE  tempFinal$nomeTabela
+                select servico as servico_nome,id as id_servico from Temp$nomeTabela ;
 
 
-                    CREATE TEMPORARY TABLE selectGrid2$nomeTabela
-                    select distinct  selectGrid1$nomeTabela.id_agendamento as agendamentoFinal,
-                        servico_chamada_itech as servico
-                    from selectGrid1$nomeTabela
-                    inner join agendamento on selectGrid1$nomeTabela.id_agendamento = agendamento.id_agendamento;
-                    
-                    ALTER TABLE selectGrid2$nomeTabela
+                CREATE  TEMPORARY TABLE  TempAguardando$nomeTabela
+                select qt_exames as qt_Aguardando,servico,id from Temp$nomeTabela where status_nome='Aguardando';
+
+                CREATE  TEMPORARY TABLE  TempAtendimento$nomeTabela
+                select qt_exames as qt_Atendimento,servico,id from Temp$nomeTabela where status_nome='Em Atendimento';
+
+
+
+                CREATE  TEMPORARY TABLE  TempFinalizado$nomeTabela
+                select qt_exames as qt_Finalizados,servico,id from Temp$nomeTabela where status_nome='Finalizado';
+
+                CREATE  TEMPORARY TABLE  TempCancelado$nomeTabela
+                select qt_exames as qt_Cancelado,servico,id from Temp$nomeTabela where status_nome='Cancelado';
+
+
+
+
+
+                ALTER TABLE tempFinal$nomeTabela
                     ADD aguardando varchar(30);
 
-                    ALTER TABLE selectGrid2$nomeTabela
-                    ADD cancelado varchar(30);
+                ALTER TABLE tempFinal$nomeTabela
+                    ADD atendimento varchar(30);
                     
-                    ALTER TABLE selectGrid2$nomeTabela
-                    ADD finalizado varchar(30);
+
+                ALTER TABLE tempFinal$nomeTabela
+                    ADD cancelado varchar(30);      
+                
+                ALTER TABLE tempFinal$nomeTabela
+                    ADD finalizado varchar(30);   
                     
-                    ALTER TABLE selectGrid2$nomeTabela
-                    ADD atendimento varchar(30); 
                     
-                    
-                    CREATE TEMPORARY TABLE aguardando$nomeTabela
-                    select count(statusUltimoExame) as qtAguardando,id_agendamento from selectGrid1$nomeTabela where statusUltimoExame=1;
-
-                    CREATE TEMPORARY TABLE cancelado$nomeTabela
-                    select count(statusUltimoExame) as qtCancelado,id_agendamento from selectGrid1$nomeTabela where statusUltimoExame=3;
-
-                    CREATE TEMPORARY TABLE finalizado$nomeTabela
-                    select count(statusUltimoExame) as qtfinalizado,id_agendamento from selectGrid1$nomeTabela where statusUltimoExame=4;
-
-                    CREATE TEMPORARY TABLE atendimento$nomeTabela
-                    select count(statusUltimoExame) as qtAtendimento,id_agendamento from selectGrid1$nomeTabela where statusUltimoExame=2;
 
 
-                    UPDATE selectGrid2$nomeTabela
-                    INNER JOIN aguardando$nomeTabela ON aguardando$nomeTabela.id_agendamento = selectGrid2$nomeTabela.agendamentoFinal
-                    SET selectGrid2$nomeTabela.aguardando = aguardando$nomeTabela.qtAguardando;
 
-                    UPDATE selectGrid2$nomeTabela
-                    INNER JOIN finalizado$nomeTabela ON finalizado$nomeTabela.id_agendamento = selectGrid2$nomeTabela.agendamentoFinal
-                    SET selectGrid2$nomeTabela.cancelado = finalizado$nomeTabela.qtfinalizado;
+                update tempFinal$nomeTabela
+                inner join TempFinalizado$nomeTabela on TempFinalizado$nomeTabela.id = tempFinal$nomeTabela.id_servico
+                set tempFinal$nomeTabela.finalizado = TempFinalizado$nomeTabela.qt_Finalizados;
 
 
-                    UPDATE selectGrid2$nomeTabela
-                    INNER JOIN cancelado$nomeTabela ON cancelado$nomeTabela.id_agendamento = selectGrid2$nomeTabela.agendamentoFinal
-                    SET selectGrid2$nomeTabela.cancelado = cancelado$nomeTabela.qtCancelado;
+
+                update tempFinal$nomeTabela
+                inner join TempCancelado$nomeTabela on TempCancelado$nomeTabela.id = tempFinal$nomeTabela.id_servico
+                set tempFinal$nomeTabela.cancelado = TempCancelado$nomeTabela.qt_Cancelado;
 
 
-                    UPDATE selectGrid2$nomeTabela
-                    INNER JOIN atendimento$nomeTabela ON atendimento$nomeTabela.id_agendamento = selectGrid2$nomeTabela.agendamentoFinal
-                    SET selectGrid2$nomeTabela.atendimento = atendimento$nomeTabela.qtAtendimento;
-                    ";
+
+                update tempFinal$nomeTabela
+                inner join TempAguardando$nomeTabela on TempAguardando$nomeTabela.id = tempFinal$nomeTabela.id_servico
+                set tempFinal$nomeTabela.aguardando = TempAguardando$nomeTabela.qt_Aguardando;
+
+
+                update tempFinal$nomeTabela
+                inner join TempAtendimento$nomeTabela on TempAtendimento$nomeTabela.id = tempFinal$nomeTabela.id_servico
+                set tempFinal$nomeTabela.atendimento = TempAtendimento$nomeTabela.qt_Atendimento;
+
+
+                INSERT INTO tempFinal$nomeTabela (servico_nome,id_servico)
+                SELECT servicos.servico,id from servicos 
+ ";
 
                     $conexao->query($query);
                     
-                   "select sum(aguardando)as somatorio_aguardando,
-                        sum(cancelado)as somatorio_cancelamento,
-                        sum(finalizado)as somatorio_finalizado,
-                        sum(atendimento)as somatorio_atendimento,
-                        servicos.servico as setor,
-                        servicos.id as id_setor
-                    from selectGrid2$nomeTabela
-                    right join servicos on servicos.id = selectGrid2$nomeTabela.servico
-                    group by servicos.id";
-
-
-                    // $file = fopen("query.txt", 'a+');
-                    // fwrite($file, $query);
-                    // fclose($file);
 
 /*
  * ----------------------Comparação para gerar o json----------------------
  */
 
-$select = "select sum(aguardando)as somatorio_aguardando,
-                sum(cancelado)as somatorio_cancelamento,
-                sum(finalizado)as somatorio_finalizado,
-                sum(atendimento)as somatorio_atendimento,
-                servicos.servico as setor,
-                servicos.id as id_setor
-                from selectGrid2$nomeTabela
-                right join servicos on servicos.id = selectGrid2$nomeTabela.servico
-                group by servicos.id"; //transforma o parametro em uma variavel
+$select = " select  distinct * from tempFinal$nomeTabela;"; //transforma o parametro em uma variavel
 
-comparação($parametro, $conexao, $select); //chama a função
 
-function comparação($parametro, $conexao, $select)
+comparação( $conexao, $select); //chama a função
+
+function comparação($conexao, $select)
 {
-    $parametro == $parametro ? geraJson($select, $conexao) : var_dump("Erro de paramentro");
+   geraJson($select, $conexao) ;
 }
 
 /*

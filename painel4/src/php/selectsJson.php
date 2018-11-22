@@ -274,17 +274,29 @@ $status_consolidado_por_setor = "SELECT
  *--------------------Status por setor-----------------------------
  */
 
-
 $card_com_informacoes_do_setores = "SELECT es.codigo_servico as id, s.servico as setor ,count(distinct(a.nome_paciente)) as agendamento_do_dia, count(a.nome_paciente) as exames FROM agendamento as a
                                                                 INNER JOIN exame_servico as es on es.codigo_exame = a.codigo_exame or (a.codigo_exame REGEXP '[0-9]' = 0 and es.codigo_servico = 232)
                                                                 inner join servicos as s on es.codigo_servico = s.id
-                                                                where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() group by(es.codigo_servico);;";
+                                                                where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() group by(es.codigo_servico);";
+
+$informacoes_com_quantidade_nos_card = "SELECT count(checklist.id) as Qt_exames,
+                                                                        status,
+                                                                        servicos.servico ,
+                                                                        servicos.id ,
+                                                                        CASE 
+                                                                            WHEN status = 1 THEN 'Arguadando'
+                                                                            WHEN status = 2 THEN 'Cancelado'
+                                                                            WHEN status = 3 THEN 'Arguadando'
+                                                                            WHEN status = 4 THEN 'Em Atendimento'
+                                                                            WHEN status = 5 THEN 'Cancelado'
+                                                                            ELSE '' END AS 'Status_nome'
+                                                                        FROM hcor.checklist 
+                                                                        inner join servicos on servicos.id = checklist.servico
+                                                                        where  date(hora_agendamento) = curdate()
+                                                                        group by servico,status;";
 
 
 
-$informacoes_com_quantidade_nos_card = "SELECT codigo_servico_atual ,cod_cor_status , count(cod_cor_status) as qtd FROM agendamento as a 
-                                                                        INNER JOIN servicos as s on a.codigo_servico_atual = s.id
-                                                                        where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() group by codigo_servico_atual, cod_cor_status";
 /*
  *--------------------Quandade de status da unidade-----------------------------
  */
