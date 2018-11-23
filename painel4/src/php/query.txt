@@ -1,17 +1,14 @@
+                    
+                    
+                    
+                    
+                 
+                    + "<b class='right'>" + se_null(data[i].atendimento) + "</b>"
+                    + "</p>"
 
-
-                              + "<p>Procedimentos:"
-            + "<b class='right'  id=procedimentos" + se_null(data[i].id_setor) + ">" + '0' + "</b>"
-            + "</p>"
-            + "<p>Aguardando:"
-            + "<b class='right con_card_aguardando'>" + se_null(data[i].somatorio_aguardando) + "</b>"
-            + "</p>"
-            + "<p>Em atendimento:"
-            + "<b class='right'>" + se_null(data[i].somatorio_aguardando) + "</b>"
-            + "</p>"
-            + "<p>Cancelados:"
-            + "<b class='right'>" + se_null(data[i].somatorio_cancelamento) + "</b>"
-            + "</p>"
-            + "<p>Finalizados:"
-            + "<b class='right'>" + se_null(data[i].somatorio_finalizado) + "</b>"
-            + "</p>"
+                   
+                    + "<b class='right'>" + se_null(data[i].cancelado) + "</b>"
+                    + "</p>"
+                 
+                    + "<b class='right'>" + se_null(data[i].finalizado) + "</b>"
+                    + "</p>"
