@@ -34,81 +34,99 @@ $nomeTabela = '_temp'.rand();
 $query = "
 SET SQL_SAFE_UPDATES = 0;
 CREATE  TEMPORARY TABLE  Temp$nomeTabela
-SELECT count(checklist.id) as Qt_exames,
-status,
-servicos.servico ,
-servicos.id ,
-  CASE 
-    WHEN status = 1 or status = 3 THEN 'Aguardando'
-    WHEN status = 2 THEN 'Em Atendimento'
-    WHEN status = 4 THEN 'Finalizado'
-    WHEN status = 5 THEN 'Cancelado'
-	ELSE '' END AS 'Status_nome'
-FROM hcor.checklist 
-inner join servicos on servicos.id = checklist.servico
-where  date(hora_agendamento) = curdate()
-group by servico,status;
+SELECT
+	case
+    when cl2.status = 1 or cl2.status = 3 then count(cl2.id)
+    end as 'aguardando',
+	case
+    when cl2.status = 2 then count(cl2.id)
+    end as 'atendimento',
+	case
+    when cl2.status = 4 then count(cl2.id)
+    end as 'finalizado',
+	case
+    when cl2.status = 5 then count(cl2.id)    
+    end as 'cancelado',
+	cl2.servico,
+    (select servico from servicos where id =cl2.servico ) as nome_servico
+FROM
+    checklist cl2
+        INNER JOIN
+    (SELECT 
+        MAX(id) AS id
+    FROM
+        hcor.checklist
+    WHERE
+        DATE(hora_agendamento) = CURDATE()
+    GROUP BY agendamento , etapa) cl1 ON cl1.id = cl2.id
+GROUP BY servico , status;
 
 
 CREATE  TEMPORARY TABLE  tempFinal$nomeTabela
-select servico as servico_nome,id as id_servico from Temp$nomeTabela ;
+select distinct nome_servico , servico as id_servico from Temp$nomeTabela ;
+
+
+select * from Temp$nomeTabela;
 
 
 CREATE  TEMPORARY TABLE  TempAguardando$nomeTabela
-select qt_exames as qt_Aguardando,servico,id from Temp$nomeTabela where status_nome='Aguardando';
+select aguardando  ,servico,nome_servico  from Temp$nomeTabela where aguardando is not null;
+
 
 CREATE  TEMPORARY TABLE  TempAtendimento$nomeTabela
-select qt_exames as qt_Atendimento,servico,id from Temp$nomeTabela where status_nome='Em Atendimento';
+select atendimento  ,servico,nome_servico  from Temp$nomeTabela where atendimento is not null;
 
 
 
 CREATE  TEMPORARY TABLE  TempFinalizado$nomeTabela
-select qt_exames as qt_Finalizados,servico,id from Temp$nomeTabela where status_nome='Finalizado';
+select finalizado  ,servico,nome_servico  from Temp$nomeTabela where finalizado is not null;
+
+
 
 CREATE  TEMPORARY TABLE  TempCancelado$nomeTabela
-select qt_exames as qt_Cancelado,servico,id from Temp$nomeTabela where status_nome='Cancelado';
-
-
-
+select cancelado  ,servico,nome_servico  from Temp$nomeTabela where cancelado is not null;
 
 
  ALTER TABLE tempFinal$nomeTabela
-       ADD aguardando varchar(30);
+       ADD aguardando_final varchar(30);
 
  ALTER TABLE tempFinal$nomeTabela
-       ADD atendimento varchar(30);
+       ADD atendimento_final varchar(30);
        
 
  ALTER TABLE tempFinal$nomeTabela
-       ADD cancelado varchar(30);      
+       ADD cancelado_final varchar(30);      
    
  ALTER TABLE tempFinal$nomeTabela
-       ADD finalizado varchar(30);   
-       
-        
-       
-       
+       ADD finalizado_final  varchar(30);   
 
-update tempFinal$nomeTabela
-inner join TempFinalizado$nomeTabela on TempFinalizado$nomeTabela.id = tempFinal$nomeTabela.id_servico
-set tempFinal$nomeTabela.finalizado = TempFinalizado$nomeTabela.qt_Finalizados;
+
+
 
 
 
 update tempFinal$nomeTabela
-inner join TempCancelado$nomeTabela on TempCancelado$nomeTabela.id = tempFinal$nomeTabela.id_servico
-set tempFinal$nomeTabela.cancelado = TempCancelado$nomeTabela.qt_Cancelado;
+inner join TempFinalizado$nomeTabela on TempFinalizado$nomeTabela.servico = tempFinal$nomeTabela.id_servico
+set tempFinal$nomeTabela.finalizado_final = TempFinalizado$nomeTabela.finalizado;
 
 
 
 update tempFinal$nomeTabela
-inner join TempAguardando$nomeTabela on TempAguardando$nomeTabela.id = tempFinal$nomeTabela.id_servico
-set tempFinal$nomeTabela.aguardando = TempAguardando$nomeTabela.qt_Aguardando;
+inner join TempAguardando$nomeTabela on TempAguardando$nomeTabela.servico = tempFinal$nomeTabela.id_servico
+set tempFinal$nomeTabela.aguardando_final = TempAguardando$nomeTabela.aguardando;
+
 
 
 update tempFinal$nomeTabela
-inner join TempAtendimento$nomeTabela on TempAtendimento$nomeTabela.id = tempFinal$nomeTabela.id_servico
-set tempFinal$nomeTabela.atendimento = TempAtendimento$nomeTabela.qt_Atendimento";
+inner join  TempAtendimento$nomeTabela on  TempAtendimento$nomeTabela.servico = tempFinal$nomeTabela.id_servico
+set tempFinal$nomeTabela.atendimento_final =  TempAtendimento$nomeTabela.atendimento;
+
+
+
+update tempFinal$nomeTabela
+inner join  TempCancelado$nomeTabela on  TempCancelado$nomeTabela .servico = tempFinal$nomeTabela.id_servico
+set tempFinal$nomeTabela.cancelado_final =  TempCancelado$nomeTabela.cancelado;
+";
 
 
 
@@ -121,10 +139,9 @@ set tempFinal$nomeTabela.atendimento = TempAtendimento$nomeTabela.qt_Atendimento
  * ----------------------Comparação para gerar o json----------------------
  */
 
-$select = "select servicos.servico,servicos.id , aguardando,atendimento,cancelado,finalizado
-                    from tempFinal$nomeTabela
-                    right join servicos on servicos.id =  id_servico
-                    where aguardando is  null or atendimento is  null  or cancelado is  null or finalizado is  null"; 
+$select = "select id,servico,aguardando_final,atendimento_final,cancelado_final,finalizado_final
+                from tempFinal$nomeTabela
+                right join servicos on servicos.id =  tempFinal$nomeTabela.id_servico"; 
 
 
 comparação( $conexao, $select); //chama a função
