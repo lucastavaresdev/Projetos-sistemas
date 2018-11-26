@@ -33,7 +33,7 @@
                                 <th>Exame</th>
                                 <th class="ocultar">Data Agendamento</th>
                                 <th>Setor</th>
-                                <th>Status</th>
+                                <!-- <th>Status</th> -->
                             </tr>
                         </thead>
                         <tbody id="listadePacientes"></tbody>
