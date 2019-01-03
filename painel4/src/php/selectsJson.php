@@ -229,7 +229,7 @@ $cards_com_dados_setores = "SELECT
                                                 on st.id = cl_max_c.status
                                                 where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = curdate() and
                                                 es.codigo_servico = $setor
-                                                order by hora";
+                                                order by cl_max_c.status desc";
 
                                                 
 

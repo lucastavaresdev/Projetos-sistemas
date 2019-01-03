@@ -292,7 +292,8 @@ function MasculinoouFeminino(sexo) {
 function data_table(d) {
     $(document).ready(function () {
         var table = $('#tabela_pacientes').DataTable({
-            responsive: true,
+            "order": [[ 9, "asc" ]],
+            "responsive": true,
             "language": {
                 "lengthMenu": " Quantidade por Pagina _MENU_  ",
                 "zeroRecords": "Não encontrado pacientes",
@@ -342,10 +343,7 @@ function data_table(d) {
                 { 'data': "desc_status" },
                 { 'data': "tempo_espera" },
                 { 'data': "hora_agendamento" },
-
-
             ],
-            "order": [[1, 'asc']],
             "columnDefs": [
                 {
                     "targets": [14],

@@ -55,7 +55,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="dashboard.php?setor=225">
+                    <a href="dashboard.php?setor=92">
                         <i class="material-icons">dashboard</i>Dashboard</a>
                 </li>
                 <li>
