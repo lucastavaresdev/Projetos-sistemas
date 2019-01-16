@@ -58,7 +58,7 @@ function status_consolidado(data) {
     id_emAtendimento.innerHTML = data[0].andamento;
     id_con_cancelado.innerHTML = data[0].cancelado;
     id_con_finalizado.innerHTML = data[0].finalizado;
-    setTimeout(naoIniciado(data[0].aguardando, data[0].andamento, data[0].cancelado, data[0].finalizado), 2000)
+   // setTimeout(naoIniciado(data[0].aguardando, data[0].andamento, data[0].cancelado, data[0].finalizado), 2000)
 }
 
 

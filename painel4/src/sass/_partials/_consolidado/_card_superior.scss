@@ -1,8 +1,8 @@
 .c_total_card {
-    @include fontebase($monte-serrat, '30px ', 300, $cor-primaria);
+    @include fontebase($monte-serrat, '29px ', 300, $cor-primaria);
     letter-spacing: 4px;
     b {
-        @include fontebase($monte-serrat, '30px', 600, $cor-primaria);
+        @include fontebase($monte-serrat, '29px', 600, $cor-primaria);
     }
 }
 

@@ -6,55 +6,56 @@
     height: 280px;
     width: 100%;
     margin-bottom: 40px;
-    .imagem-img92 {
+
+    .imagem-img102 {
         @include imagem-card-setor('../img/ergometria.jpg')
     }
-    .imagem-img239 {
+    .imagem-img85 {
         @include imagem-card-setor('../img/cardiopumonar.jpg')
     }
-    .imagem-img97 {
+    .imagem-img105 {
         @include imagem-card-setor('../img/mapa.jpg')
     }
-    .imagem-img99 {
+    .imagem-img97 {
         @include imagem-card-setor('../img/medicina_nuclear.jpg')
     }
-    .imagem-img229 {//aqui
+    .imagem-img101 {
         @include imagem-card-setor('../img/tomografia.jpg')
     }
-    .imagem-img81 {
+    .imagem-img82 {
         @include imagem-card-setor('../img/tomografia2.jpg')
     }
-    .imagem-img231 {//aqui
+    .imagem-img81 {
         @include imagem-card-setor('../img/ultrassom.jpg')
     }
-    .imagem-img955 {
+    .imagem-img92 {
         @include imagem-card-setor('../img/laboratorio.jpg')
     }
-    .imagem-img82 {
+    .imagem-img99 {
         @include imagem-card-setor('../img/radiologia.jpg')
     }
-    .imagem-img105 {
+    .imagem-img995 {
         @include imagem-card-setor('../img/mamografia.jpg')
     }
-    .imagem-img102 {
+    .imagem-img89 {
         @include imagem-card-setor('../img/endoscopia.jpg')
     }
-    .imagem-img101 {
+    .imagem-img {
         @include imagem-card-setor('../img/setor_aritimias.jpg')
     }
-    .imagem-img89{
+    .imagem-img86{
         @include imagem-card-setor('../img/eletro.jpg')
     }
-    .imagem-img84 {
+    .imagem-img239 {
         @include imagem-card-setor('../img/checkup.jpg')
     }
-    .imagem-img85 {
+    .imagem-img {
         @include imagem-card-setor('../img/banco_de_sangue.jpg')
     }
-    .imagem-img87 {
+    .imagem-img84 {
         @include imagem-card-setor('../img/colonoscopia.jpg')
     }
-    .imagem-img86 {
+    .imagem-img87 {
         @include imagem-card-setor('../img/ecocardiograma.jpg')
     }
     .c_conteudo_card {

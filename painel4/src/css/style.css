@@ -576,13 +576,13 @@ table.dataTable tbody td.no-padding {
       color: #007DCC; } }
 .c_total_card {
   font-family: Montserrat, sans-serif;
-  font-size: 30px ;
+  font-size: 29px ;
   font-weight: 300;
   color: #007DCC;
   letter-spacing: 4px; }
   .c_total_card b {
     font-family: Montserrat, sans-serif;
-    font-size: 30px;
+    font-size: 29px;
     font-weight: 600;
     color: #007DCC; }
 
@@ -676,87 +676,87 @@ table.dataTable tbody td.no-padding {
   height: 280px;
   width: 100%;
   margin-bottom: 40px; }
-  .cards .imagem-img92 {
+  .cards .imagem-img102 {
     background: url(../img/ergometria.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
-  .cards .imagem-img239 {
+  .cards .imagem-img85 {
     background: url(../img/cardiopumonar.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
-  .cards .imagem-img97 {
+  .cards .imagem-img105 {
     background: url(../img/mapa.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
-  .cards .imagem-img99 {
+  .cards .imagem-img97 {
     background: url(../img/medicina_nuclear.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
-  .cards .imagem-img229 {
+  .cards .imagem-img101 {
     background: url(../img/tomografia.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
-  .cards .imagem-img81 {
+  .cards .imagem-img82 {
     background: url(../img/tomografia2.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
-  .cards .imagem-img231 {
+  .cards .imagem-img81 {
     background: url(../img/ultrassom.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
-  .cards .imagem-img955 {
+  .cards .imagem-img92 {
     background: url(../img/laboratorio.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
-  .cards .imagem-img82 {
+  .cards .imagem-img99 {
     background: url(../img/radiologia.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
-  .cards .imagem-img105 {
+  .cards .imagem-img995 {
     background: url(../img/mamografia.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
-  .cards .imagem-img102 {
+  .cards .imagem-img89 {
     background: url(../img/endoscopia.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
-  .cards .imagem-img101 {
+  .cards .imagem-img {
     background: url(../img/setor_aritimias.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
-  .cards .imagem-img89 {
+  .cards .imagem-img86 {
     background: url(../img/eletro.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
-  .cards .imagem-img84 {
+  .cards .imagem-img239 {
     background: url(../img/checkup.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
-  .cards .imagem-img85 {
+  .cards .imagem-img {
     background: url(../img/banco_de_sangue.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
-  .cards .imagem-img87 {
+  .cards .imagem-img84 {
     background: url(../img/colonoscopia.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
-  .cards .imagem-img86 {
+  .cards .imagem-img87 {
     background: url(../img/ecocardiograma.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
