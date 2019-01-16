@@ -177,59 +177,59 @@ $total_de_procedimentos_de_todos_os_setores = "SELECT COUNT(nome_paciente) AS to
 
 
 $cards_com_dados_setores = "SELECT 
-                                                a.id_agendamento,
-                                                a.nome_paciente as paciente,
-                                                left(a.hora_servico_selecionado, 5) as hora, 
-                                                a.codigo_agenda as atividade,
-                                                a.ih_paciente as IH,
-                                                a.codigo_exame,
-                                                es.codigo_servico,
-                                                s.servico,
-                                                a.descricao_exame,
-                                                a.anotacao,
-                                                sexo_paciente as sexo,
-                                                data_nascimento,
-                                                nome_medico,
-                                                crm_medico as crm,
-                                                ch.checkin as checkin_unidade,
-                                                ch.checkout as checkout_unidade,
-                                                if( ch.checkout is null, timediff(now(), ch.checkin), null) as tempo_vinculado,
-                                                cl_min_c.checkin as checkin_exame,
-                                                cl_max_c.checkout as checkout_exame,
-                                                timediff(cl_max_c.checkout, cl_min_c.checkin) as tempo_exame,
-                                                if(cl_max_c.checkout, null, timediff(now(), cl_min_c.checkin)) as tempo_decorrido_do_exame,
-                                                cl_max_c.status,
-                                                st.descricao as desc_status,
-                                                if( ch.checkout is null, timediff(now(), cl_last.checkout), null) as tempo_espera,
-                                                se.nome as localizacao
-                                                FROM agendamento as a 
-                                                left join exame_servico es 
-                                                on es.codigo_exame = a.codigo_exame or (a.codigo_exame REGEXP '[0-9]' = 0 and es.codigo_servico = 232)
-                                                left join servicos s 
-                                                on s.id = es.codigo_servico	
-                                                left join checkin ch 
-                                                on ch.agendamento = a.id_agendamento
-                                                left join (select min(id) as id, agendamento, etapa from checklist where (date(hora_agendamento) = curdate()) group by agendamento, etapa) cl_min
-                                                on cl_min.agendamento = a.id_agendamento and cl_min.etapa = a.codigo_exame
-                                                left join checklist cl_min_c
-                                                on cl_min_c.id = cl_min.id
-                                                left join (select max(id) as id, agendamento, etapa from checklist where (date(hora_agendamento) = curdate()) group by agendamento, etapa) cl_max
-                                                on cl_max.agendamento = a.id_agendamento and cl_max.etapa = a.codigo_exame
-                                                left join checklist cl_max_c
-                                                on cl_max_c.id = cl_max.id
-                                                left join (select max(checkout) as checkout, agendamento, etapa from checklist where (date(hora_agendamento) = curdate()) group by agendamento) cl_last
-                                                on cl_last.agendamento = a.id_agendamento
-                                                LEFT JOIN (SELECT max(checkout) as checkout, id_vinculado from tracking_pacientes where fechado is null group by id_vinculado) tp1 
-                                                on tp1.id_vinculado = a.id_agendamento
-                                                LEFT JOIN tracking_pacientes tp 
-                                                on tp.checkout = tp1.checkout and tp.id_vinculado = tp1.id_vinculado
-                                                LEFT JOIN setores se
-                                                on se.id = tp.id_sala
-                                                LEFT JOIN status st 
-                                                on st.id = cl_max_c.status
-                                                where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = curdate() and
-                                                es.codigo_servico = $setor
-                                                order by cl_max_c.status desc";
+                                                        a.id_agendamento,
+                                                        a.nome_paciente as paciente,
+                                                        left(a.hora_servico_selecionado, 5) as hora, 
+                                                        a.codigo_agenda as atividade,
+                                                        a.ih_paciente as IH,
+                                                        a.codigo_exame,
+                                                        es.codigo_servico,
+                                                        s.servico,
+                                                        a.descricao_exame,
+                                                        a.anotacao,
+                                                        sexo_paciente as sexo,
+                                                        data_nascimento,
+                                                        nome_medico,
+                                                        crm_medico as crm,
+                                                        ch.checkin as checkin_unidade,
+                                                        ch.checkout as checkout_unidade,
+                                                        if( ch.checkout is null, timediff(now(), ch.checkin), null) as tempo_vinculado,
+                                                        cl_min_c.checkin as checkin_exame,
+                                                        cl_max_c.checkout as checkout_exame,
+                                                        timediff(cl_max_c.checkout, cl_min_c.checkin) as tempo_exame,
+                                                        if(cl_max_c.checkout, null, timediff(now(), cl_min_c.checkin)) as tempo_decorrido_do_exame,
+                                                        cl_max_c.status,
+                                                        st.descricao as desc_status,
+                                                        if( ch.checkout is null, timediff(now(), cl_last.checkout), null) as tempo_espera,
+                                                        se.nome as localizacao
+                                                        FROM agendamento as a 
+                                                        left join exame_servico es 
+                                                        on es.codigo_exame = a.codigo_exame or (a.codigo_exame REGEXP '[0-9]' = 0 and es.codigo_servico = 232)
+                                                        left join servicos s 
+                                                        on s.id = es.codigo_servico	
+                                                        left join checkin ch 
+                                                        on ch.agendamento = a.id_agendamento
+                                                        left join (select min(id) as id, agendamento, etapa from checklist where (date(hora_agendamento) = curdate()) group by agendamento, etapa) cl_min
+                                                        on cl_min.agendamento = a.id_agendamento and cl_min.etapa = a.codigo_exame
+                                                        left join checklist cl_min_c
+                                                        on cl_min_c.id = cl_min.id
+                                                        left join (select max(id) as id, agendamento, etapa from checklist where (date(hora_agendamento) = curdate()) group by agendamento, etapa) cl_max
+                                                        on cl_max.agendamento = a.id_agendamento and cl_max.etapa = a.codigo_exame
+                                                        left join checklist cl_max_c
+                                                        on cl_max_c.id = cl_max.id
+                                                        left join (select max(checkout) as checkout, agendamento, etapa from checklist where (date(hora_agendamento) = curdate()) group by agendamento) cl_last
+                                                        on cl_last.agendamento = a.id_agendamento
+                                                        LEFT JOIN (SELECT max(updt) as checkout, id_vinculado from tracking_pacientes where fechado is null group by id_vinculado) tp1 
+                                                        on tp1.id_vinculado = a.id_agendamento
+                                                        LEFT JOIN tracking_pacientes tp 
+                                                        on tp.updt = tp1.checkout and tp.id_vinculado = tp1.id_vinculado
+                                                        LEFT JOIN setores se
+                                                        on se.id = tp.id_localizacao
+                                                        LEFT JOIN status st 
+                                                        on st.id = cl_max_c.status
+                                                        where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = curdate() and
+                                                        es.codigo_servico = $setor
+                                                        order by cl_max_c.status desc";
 
                                                 
 
@@ -290,7 +290,7 @@ $informacoes_com_quantidade_nos_card = "SELECT count(checklist.id) as Qt_exames,
                                                                             WHEN status = 4 THEN 'Em Atendimento'
                                                                             WHEN status = 5 THEN 'Cancelado'
                                                                             ELSE '' END AS 'Status_nome'
-                                                                        FROM hcor.checklist 
+                                                                        FROM checklist 
                                                                         inner join servicos on servicos.id = checklist.servico
                                                                         where  date(hora_agendamento) = curdate()
                                                                         group by servico,status;";
@@ -347,38 +347,35 @@ $qtd_por_horario_de_pacientes = "SELECT  CONCAT(HOUR(a.hora_servico_selecionado)
 
 
 $relatorio_de_paciente_ativos = 'SELECT
-                                                    distinct(a.id_agendamento) as atendimento,
-                                                    a.ih_paciente ,
-                                                    a.nome_paciente as paciente,
-                                                    a.sexo_paciente as sexo,
-                                                    a.nome_medico ,
-                                                    a.data_agendamento,
-													tp.id_sala as sala_id,
-                                                    (SELECT nome FROM  setores where id = sala_id )  as nome_setor,
-                                                    (SELECT ds_etapa FROM  checklist where  agendamento = atendimento order by checkin desc limit 1) as exame,
-                                                    (SELECT abrev_etapa FROM  checklist where   agendamento = atendimento order by checkin desc limit 1) as cod_exame,
-                                                    (SELECT status FROM  checklist where agendamento = atendimento  order by checkin desc limit 1) as status_final,
-                                                    timediff(tp.checkout, tp.checkin) as tempo
-                                                    FROM agendamento a
-                                                    left join checklist c
-                                                    on c.agendamento = a.id_agendamento
-                                                    left join agendamento cu
-                                                    on cu.id_agendamento = c.tipo_checkup
-                                                    left join checkin ch
-                                                    on ch.agendamento = a.id_agendamento
-                                                    left join (select max(checkin) as checkin, id, id_vinculado, categoria from tracking_pacientes group by id_vinculado) tp2
-                                                    on tp2.id_vinculado = a.id_agendamento and tp2.categoria = "Paciente"
-                                                    left join tracking_pacientes tp
-                                                    on tp.checkin = tp2.checkin and tp.id_vinculado = tp2.id_vinculado
-                                                    left join setores s 
-                                                    on s.id = tp.id_sala
-                                                    inner join beacons b
-                                                    on b.id_vinculado = a.id_agendamento
-                                                    where date(a.data_agendamento)  = curdate()  and  s.nome is not null and  
-                                                    a.nome_paciente like "%%"
-                                                    group by a.id_agendamento
-                                                    order by a.nome_paciente asc';
- 
+                                                            distinct(a.id_agendamento) as atendimento,
+                                                            a.ih_paciente ,
+                                                            a.nome_paciente as paciente,
+                                                            a.sexo_paciente as sexo,
+                                                            a.nome_medico ,
+                                                            a.data_agendamento,
+                                                            tp.id_gateway as gatewayId,
+                                                            (select setores.nome from setores inner join gateways on gateways.id_sala= setores.id where id_gateway = gatewayId)  as nome_setor,
+                                                            (SELECT ds_etapa FROM  checklist where  agendamento = atendimento order by checkin desc limit 1) as exame,
+                                                            (SELECT abrev_etapa FROM  checklist where   agendamento = atendimento order by checkin desc limit 1) as cod_exame,
+                                                            (SELECT status FROM  checklist where agendamento = atendimento  order by checkin desc limit 1) as status_final,
+                                                            timediff(tp.updt, tp.checkin) as tempo
+                                                            FROM agendamento a
+                                                            left join checklist c
+                                                            on c.agendamento = a.id_agendamento
+                                                            left join agendamento cu
+                                                            on cu.id_agendamento = c.tipo_checkup
+                                                            left join checkin ch
+                                                            on ch.agendamento = a.id_agendamento
+                                                            left join (select max(checkin) as checkin, id_localizacao, id_vinculado from tracking_pacientes group by id_vinculado) tp2
+                                                            on tp2.id_vinculado = a.id_agendamento 
+                                                            left join tracking_pacientes tp
+                                                            on tp.checkin = tp2.checkin and tp.id_vinculado = tp2.id_vinculado
+                                                            inner join beacons b
+                                                            on b.id_vinculado = a.id_agendamento
+                                                            where date(a.data_agendamento)  = curdate()        
+                                                            group by a.id_agendamento
+                                                            order by a.nome_paciente asc';
+                                    
 
 
 /*

@@ -3,7 +3,7 @@
   try{
 
 	
-    $conexao = new PDO("mysql:host=itechbd.mysql.database.azure.com;dbname=hcor", "itechflow@itechbd", "Itechm@ster_2018"); 
+    $conexao = new PDO("mysql:host=itechbd.mysql.database.azure.com;dbname=hcor2", "itechflow@itechbd", "Itechm@ster_2018"); 
     }catch(PDOException $e){
         echo "Erro gerado " . $e->getMessage(); 
     }
@@ -55,7 +55,7 @@ FROM
     (SELECT 
         MAX(id) AS id
     FROM
-        hcor.checklist
+            checklist
     WHERE
         DATE(hora_agendamento) = CURDATE()
     GROUP BY agendamento , etapa) cl1 ON cl1.id = cl2.id
