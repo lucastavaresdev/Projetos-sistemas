@@ -64,7 +64,8 @@ if (isset($_GET['data'])) {
  *-----------------Lista de Pacientes----------------
  */
  
-  $lista_do_setor = "SELECT 
+  $lista_do_setor = "
+                                SELECT 
                                     a.id_agendamento,
                                     a.nome_paciente as paciente,
                                     left(a.hora_servico_selecionado, 5) as hora, 
@@ -79,6 +80,7 @@ if (isset($_GET['data'])) {
                                     data_nascimento,
                                     nome_medico,
                                     crm_medico as crm,
+                                    tp.id_gateway as gatewayId,
                                     ch.checkin as checkin_unidade,
                                     ch.checkout as checkout_unidade,
                                         if( ch.checkout is null, timediff(now(), ch.checkin), null) as tempo_vinculado,
@@ -89,7 +91,7 @@ if (isset($_GET['data'])) {
                                             cl_max_c.status,
                                             st.descricao as desc_status,
                                         if( ch.checkout is null, timediff(now(), cl_last.checkout), null) as tempo_espera,
-                                            se.nome as localizacao,
+                                            (select setores.nome from setores inner join gateways on gateways.id_sala= setores.id where id_gateway = gatewayId)  as localizacao,
                                             o.descricao as observacao,
                                             cl_min_c.hora_agendamento,
                                     (SELECT s.servico FROM checklist where agendamento = a.id_agendamento and checkin is null order by hora_agendamento asc limit 1) as proximo_exame
@@ -116,17 +118,15 @@ if (isset($_GET['data'])) {
                                     on tp1.id_vinculado = a.id_agendamento
                                     LEFT JOIN tracking_pacientes tp 
                                     on tp.updt = tp1.checkout and tp.id_vinculado = tp1.id_vinculado
-                                    LEFT JOIN setores se
-                                    on se.id = tp.id_localizacao
                                     LEFT JOIN status st 
                                     on st.id = cl_max_c.status
                                     LEFT JOIN observacoes o 
                                     on o.id = cl_min_c.observacao
                                     left join (select * from checklist where (date(hora_agendamento) ) = curdate() group by agendamento, etapa order by hora_agendamento limit 1) ck_prox
                                     on ck_prox.agendamento = a.id_agendamento and timediff(ck_prox.hora_agendamento, cl_min_c.hora_agendamento) > 0
-                                    where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  '$data' and
-                                    es.codigo_servico = $setor
-                                    order by hora";
+                                    where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  '2019-01-16' and
+                                    es.codigo_servico = 81
+                                    order by hora  ;";
 /*
  *---------------------Procedimentos---------------------------
  */
@@ -176,7 +176,8 @@ $total_de_procedimentos_de_todos_os_setores = "SELECT COUNT(nome_paciente) AS to
 
 
 
-$cards_com_dados_setores = "SELECT 
+$cards_com_dados_setores = "
+                                                        SELECT 
                                                         a.id_agendamento,
                                                         a.nome_paciente as paciente,
                                                         left(a.hora_servico_selecionado, 5) as hora, 
@@ -193,6 +194,7 @@ $cards_com_dados_setores = "SELECT
                                                         crm_medico as crm,
                                                         ch.checkin as checkin_unidade,
                                                         ch.checkout as checkout_unidade,
+                                                        tp.id_gateway as gatewayId,
                                                         if( ch.checkout is null, timediff(now(), ch.checkin), null) as tempo_vinculado,
                                                         cl_min_c.checkin as checkin_exame,
                                                         cl_max_c.checkout as checkout_exame,
@@ -201,7 +203,7 @@ $cards_com_dados_setores = "SELECT
                                                         cl_max_c.status,
                                                         st.descricao as desc_status,
                                                         if( ch.checkout is null, timediff(now(), cl_last.checkout), null) as tempo_espera,
-                                                        se.nome as localizacao
+                                                        (select setores.nome from setores inner join gateways on gateways.id_sala= setores.id where id_gateway = gatewayId)  as localizacao
                                                         FROM agendamento as a 
                                                         left join exame_servico es 
                                                         on es.codigo_exame = a.codigo_exame or (a.codigo_exame REGEXP '[0-9]' = 0 and es.codigo_servico = 232)
