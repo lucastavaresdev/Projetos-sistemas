@@ -97,7 +97,7 @@ if (isset($_GET['data'])) {
                                     (SELECT s.servico FROM checklist where agendamento = a.id_agendamento and checkin is null order by hora_agendamento asc limit 1) as proximo_exame
                                     FROM agendamento as a 
                                     left join exame_servico es 
-                                    on es.codigo_exame = a.codigo_exame or (a.codigo_exame REGEXP '[0-9]' = 0 and es.codigo_servico = 232)
+                                    on es.codigo_exame = a.codigo_exame or (a.codigo_exame REGEXP '[0-9]' = 0 and es.codigo_servico = 92)
                                     left join servicos s 
                                     on s.id = es.codigo_servico	
                                     left join (select max(id) as id, agendamento from checkin group by agendamento) ch2
